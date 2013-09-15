@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper]{geometry}
+\usepackage[tiny,compact]{titlesec}
+\geometry{margin=2cm}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text,Scale=MatchUppercase}
+\newcommand\euro[1]{€#1}
+\newcommand\ukp[1]{£#1}
+
+\setmainfont{Times New Roman}
+\setmonofont{Consolas}
+
+\setlength{\headheight}{14pt}
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+\lhead{Dr.~Richard Mortier: Publications}
+\chead{}
+\rhead{}
+\lfoot{\today}
+\cfoot{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage{multibib}
+\newcites{j,c,w,p,t,u}{
+\hbox{Journal Papers},
+\hbox{Conference Papers},
+\hbox{Workshop Papers},
+\hbox{Patents},
+\hbox{Technical Reports},
+\hbox{Unpublished}
+}
+
+\begin{document}
+\part*{Publications}
+
+The most highly rated venues in systems/networking, and to a lesser extent the other fields in which I have published (databases, HCI), tend to be the top tier-1 conference venues. For example, the highest rated conferences are: in systems, USENIX OSDI~\cite{barham04:using.magpie} and ACM SOSP (biennial); in networking, ACM SIGCOMM~\cite{karagiannis08:networ} and NSDI~\cite{cooke06:dark.oracl}; in databases, ACM SIGMOD and VLDB~\cite{narayanan06:delay.seaweed}; and in HCI, ACM CHI and UIST~\cite{mortier12:homew}. There are several high-quality tier-2 conferences which are also widely valued, e.g.,~IEEE INFOCOM~\cite{kosta12:think}, USENIX ATC~\cite{cooke06:reclaim}, ACM DIS~\cite{crabtree12:unrem.networ}. The highest rated journals in these fields include ACM/IEEE Transactions on Networking~\cite{fay10:weigh.spect.distr.inter.topol.analy} and the VLDB Journal~\cite{narayanan08:delay.seaweed}; these often invite extended versions of papers at flagship conferences. Finally, due to the fast moving nature of computing technology, there are several workshops that are also considered prestigious publication venues, often focused on more radical or early-stage work, e.g.,~ACM HotNets~\cite{bahl06:discov.depen.networ.manag,roscoe02:predic.routin}, USENIX HotOS~\cite{barham03:magpie,stratford99:econom.approac.adapt.resour.manag}, IMW~\cite{hengartner02:routin.loops,iannacone02:analy.link.failur.ip.backb}.
+
+There is no fixed convention concerning ordering of authors on papers. In general, the first author was the major contributor to the work (often the Ph.D. student or intern), and the last author supervised the work. However in some cases, authorship is simply given as alphabetical (not uncommon in industrial labs where authors are more likely to work as peers).
+
+Citation counts are taken from Google Scholar (other systems such as Scopus have poor coverage for computer science).
+
+{
+\nocitej{*}
+\bibliographystylej{plainyr-rev}
+\bibliographyj{strings,rmm-journal}
+
+\nocitec{*}
+\bibliographystylec{plainyr-rev}
+\bibliographyc{strings,rmm-conference}
+
+\nocitew{*}
+\bibliographystylew{plainyr-rev}
+\bibliographyw{strings,rmm-workshop}
+
+\nocitep{*}
+\bibliographystylep{plainyr-rev}
+\bibliographyp{strings,rmm-patent}
+
+\nocitet{*}
+\bibliographystylet{plainyr-rev}
+\bibliographyt{strings,rmm-techreport}
+
+\nociteu{*}
+\bibliographystyleu{plainyr-rev}
+\bibliographyu{strings,rmm-unpublished}
+}
+\end{document}
