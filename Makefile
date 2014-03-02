@@ -19,7 +19,7 @@ all: publications.pdf
 
 clean:
 	$(RM) *.aux *.blg *.toc *.dvi *.out _region_.tex *.log
-	$(RM) publications.pdf
+	$(RM) publications.pdf all.bib
 
 all.bib: strings.bib rmm-*.bib
 	cat strings.bib rmm-*.bib >| all.bib
