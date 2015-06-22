@@ -37,8 +37,12 @@ all.bib: $(wildcard *.bib)
 
 publish:
 	git stash
-	git co gh-pages
-	git co master -- pdf/*.pdf
-	git co master
-	git stash pop
+
+	git checkout gh-pages
+	git checkout master pdf
+	git add pdf/*.pdf
+	git commit -m "pdf: sync to master" pdf/
 	git push
+
+	git checkout master
+	git stash pop -q
