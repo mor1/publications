@@ -34,3 +34,11 @@ distclean:
 
 all.bib: $(wildcard *.bib)
 	cat strings.bib rmm-*.bib >| all.bib
+
+publish:
+	git stash
+	git co gh-pages
+	git co master -- pdf/*.pdf
+	git co master
+	git stash pop
+	git push
