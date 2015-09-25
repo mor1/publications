@@ -41,8 +41,8 @@ publish:
 	git checkout gh-pages
 	git checkout master pdf
 	git add pdf/*.pdf
-	git commit -m "pdf: sync to master" pdf/
+	git commit -m "pdf: sync to master" pdf/ || true
 	git push
 
 	git checkout master
-	git stash pop -q
+	git stash pop -q || true
