@@ -28,15 +28,25 @@
 \rfoot{\thepage/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt}
 
-\usepackage{multibib}
-\newcites{j,c,w,p,t,u}{
-\hbox{Journal Papers},
-\hbox{Conference Papers},
-\hbox{Workshop Papers},
-\hbox{Patents},
-\hbox{Technical Reports},
-\hbox{Unpublished}
-}
+%% include the actual bibliographies
+
+\usepackage[sorting=ydnt]{biblatex}
+\addbibresource{strings.bib}
+
+\addsectionbib[label=conference]{rmm-conference.bib}
+\addbibresource{rmm-conference.bib}
+
+\addsectionbib[label=journal]{rmm-journal.bib}
+\addbibresource{rmm-journal.bib}
+
+\addsectionbib[label=patent]{rmm-patent.bib}
+\addbibresource{rmm-patent.bib}
+
+\addsectionbib[label=techreport]{rmm-techreport.bib}
+\addbibresource{rmm-techreport.bib}
+
+\addsectionbib[label=workshop]{rmm-workshop.bib}
+\addbibresource{rmm-workshop.bib}
 
 \begin{document}
 \part*{Publications}
@@ -48,28 +58,50 @@ There is no fixed convention concerning ordering of authors on papers. In genera
 Citation counts are taken from Google Scholar (other systems such as Scopus have poor coverage for computer science).
 
 {
-\nocitej{*}
-\bibliographystylej{plainyr-rev}
-\bibliographyj{strings,rmm-journal}
+  \newrefsection[journal]
+  \nocite{*}
+  \printbibliography[title=Journal]
 
-\nocitec{*}
-\bibliographystylec{plainyr-rev}
-\bibliographyc{strings,rmm-conference}
+  \newrefsection[conference]
+  \nocite{*}
+  \printbibliography[title=Peer-Reviewed Conference]
 
-\nocitew{*}
-\bibliographystylew{plainyr-rev}
-\bibliographyw{strings,rmm-workshop}
+  \newrefsection[workshop]
+  \nocite{*}
+  \printbibliography[title=Peer-Reviewed Workshop]
 
-\nocitep{*}
-\bibliographystylep{plainyr-rev}
-\bibliographyp{strings,rmm-patent}
+  \newrefsection[patent]
+  \nocite{*}
+  \printbibliography[title=Patents]
 
-\nocitet{*}
-\bibliographystylet{plainyr-rev}
-\bibliographyt{strings,rmm-techreport}
-
-\nociteu{*}
-\bibliographystyleu{plainyr-rev}
-\bibliographyu{strings,rmm-unpublished}
+  \newrefsection[techreport]
+  \nocite{*}
+  \printbibliography[title=Technical Reports]
 }
+
+% {
+% \nocitej{*}
+% % \bibliographystylej{plainyr-rev}
+% \bibliographyj{strings,rmm-journal}
+
+% \nocitec{*}
+% % \bibliographystylec{plainyr-rev}
+% \bibliographyc{strings,rmm-conference}
+
+% \nocitew{*}
+% % \bibliographystylew{plainyr-rev}
+% \bibliographyw{strings,rmm-workshop}
+
+% \nocitep{*}
+% % \bibliographystylep{plainyr-rev}
+% \bibliographyp{strings,rmm-patent}
+
+% \nocitet{*}
+% % \bibliographystylet{plainyr-rev}
+% \bibliographyt{strings,rmm-techreport}
+
+% % \nociteu{*}
+% % \bibliographystyleu{plainyr-rev}
+% % \bibliographyu{strings,rmm-unpublished}
+% }
 \end{document}
