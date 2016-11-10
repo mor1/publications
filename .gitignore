@@ -2,3 +2,13 @@
 all.bib
 publications.pdf
 
+auto/
+publications.aux
+publications.bbl
+publications.bcf
+publications.blg
+publications.fdb_latexmk
+publications.fls
+publications.log
+publications.out
+publications.run.xml
