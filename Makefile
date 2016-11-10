@@ -27,10 +27,12 @@ all: publications.pdf
 
 clean:
 	$(LATEXMK) -c
+	$(RM) *.run.xml
 
 distclean:
 	$(LATEXMK) -C
-	$(RM) *.bbl
+	$(RM) *.bbl all.bib
+	$(RM) -r auto
 
 all.bib: $(wildcard *.bib)
 	cat strings.bib rmm-*.bib >| all.bib
