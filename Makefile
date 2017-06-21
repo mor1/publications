@@ -14,9 +14,10 @@
 # PERFORMANCE OF THIS SOFTWARE.
 #
 
-TEXINPUTS := .:
-BIBINPUTS := .:
-BSTINPUTS := .:
+TEXINPUTS := .:/Users/mort/src/tex:
+BIBINPUTS := .:/Users/mort/me/publications:
+BSTINPUTS := .:/Users/mort/me/publications:/Users/mort/src/tex:
+.EXPORT_ALL_VARIABLES: BIBINPUTS
 
 LATEXMK = latexmk -xelatex
 

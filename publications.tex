@@ -1,11 +1,11 @@
 \documentclass[11pt]{article}
 
 \usepackage[a4paper]{geometry}
-\usepackage[tiny,compact]{titlesec}
 \geometry{margin=2cm}
+\usepackage[tiny,compact]{titlesec}
+\usepackage{fullpage}
 \usepackage{graphicx}
 \usepackage{wrapfig}
-\usepackage{hyperref}
 
 \usepackage[T1]{fontenc}
 \usepackage{fontspec}
@@ -13,12 +13,26 @@
 \defaultfontfeatures{Mapping=tex-text,Scale=MatchUppercase}
 \newcommand\euro[1]{€#1}
 \newcommand\ukp[1]{£#1}
-
+\renewcommand{\familydefault}{\rmdefault}
 \setmainfont{Times New Roman}
 \setmonofont{Hack}
 
-\setlength{\headheight}{14pt}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{breaklinks=true,
+  bookmarks=true,
+  pdfauthor={},
+  pdftitle={},
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue,
+  pdfborder={0 0 0}}
+\newcommand\fnurl[2]{%
+  \href{#1}{#2}%
+}
+
 \usepackage{fancyhdr,lastpage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{20pt}
 \pagestyle{fancy}
 \lhead{Dr.~Richard Mortier: Publications}
 \chead{}
@@ -26,57 +40,78 @@
 \lfoot{\today}
 \cfoot{}
 \rfoot{\thepage/\pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.4pt}
+
+\fancypagestyle{firststyle}
+{
+  \fancyhf{}
+  \rfoot{\thepage/\pageref{LastPage}}
+}
+
 
 %% include the actual bibliographies
+\usepackage[
+backend=biber,
+natbib=true,
+%%
+style=numeric,
+sorting=ydnt,
+minnames=7,
+maxnames=7,
+firstinits=true,
+defernumbers=true,
+%%
+url=true,
+doi=true,
+eprint=false,
+isbn=false
+]{biblatex}
 
-\usepackage[sorting=ydnt]{biblatex}
 \addbibresource{strings.bib}
-
-\addsectionbib[label=conference]{rmm-conference.bib}
-\addbibresource{rmm-conference.bib}
-
-\addsectionbib[label=journal]{rmm-journal.bib}
 \addbibresource{rmm-journal.bib}
-
-\addsectionbib[label=patent]{rmm-patent.bib}
-\addbibresource{rmm-patent.bib}
-
-\addsectionbib[label=techreport]{rmm-techreport.bib}
-\addbibresource{rmm-techreport.bib}
-
-\addsectionbib[label=workshop]{rmm-workshop.bib}
+\addbibresource{rmm-conference.bib}
 \addbibresource{rmm-workshop.bib}
+\addbibresource{rmm-patent.bib}
+\addbibresource{rmm-techreport.bib}
+\addbibresource{rmm-unpublished.bib}
+
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \perdatasource{rmm-journal.bib}
+      \step[fieldset=keywords, fieldvalue={, journal}, append]
+    }
+    \map{
+      \perdatasource{rmm-conference.bib}
+      \step[fieldset=keywords, fieldvalue={, conference}, append]
+    }
+    \map{
+      \perdatasource{rmm-workshop.bib}
+      \step[fieldset=keywords, fieldvalue={, workshop}, append]
+    }
+    \map{
+      \perdatasource{rmm-patent.bib}
+      \step[fieldset=keywords, fieldvalue={, patent}, append]
+    }
+    \map{
+      \perdatasource{rmm-techreport.bib}
+      \step[fieldset=keywords, fieldvalue={, techreport}, append]
+    }
+  }
+}
 
 \begin{document}
-\part*{Publications}
-
-The most highly rated venues in systems/networking, and to a lesser extent the other fields in which I have published (databases, HCI), tend to be the top tier-1 conference venues. For example, the highest rated conferences are: in systems, USENIX OSDI~\cite{barham04:using.magpie} and ACM SOSP (biennial); in networking, ACM SIGCOMM~\cite{karagiannis08:networ} and NSDI~\cite{cooke06:dark.oracl}; in databases, ACM SIGMOD and VLDB~\cite{narayanan06:delay.seaweed}; and in HCI, ACM CHI and UIST~\cite{mortier12:homew}. There are several high-quality tier-2 conferences which are also widely valued, e.g.,~IEEE INFOCOM~\cite{kosta12:think}, USENIX ATC~\cite{cooke06:reclaim}, ACM DIS~\cite{crabtree12:unrem.networ}. The highest rated journals in these fields include ACM/IEEE Transactions on Networking~\cite{fay10:weigh.spect.distr.inter.topol.analy} and the VLDB Journal~\cite{narayanan08:delay.seaweed}; these often invite extended versions of papers at flagship conferences. Finally, due to the fast moving nature of computing technology, there are several workshops that are also considered prestigious publication venues, often focused on more radical or early-stage work, e.g.,~ACM HotNets~\cite{bahl06:discov.depen.networ.manag,roscoe02:predic.routin}, USENIX HotOS~\cite{barham03:magpie,stratford99:econom.approac.adapt.resour.manag}, IMW~\cite{hengartner02:routin.loops,iannacone02:analy.link.failur.ip.backb}.
-
-There is no fixed convention concerning ordering of authors on papers. In general, the first author was the major contributor to the work (often the Ph.D. student or intern), and the last author supervised the work. However in some cases, authorship is simply given as alphabetical (not uncommon in industrial labs where authors are more likely to work as peers).
-
-Citation counts are taken from Google Scholar (other systems such as Scopus have poor coverage for computer science).
+\thispagestyle{firststyle}
+\part*{\Large Dr.~Richard Mortier, Publications}
 
 {
-  \newrefsection[journal]
   \nocite{*}
-  \printbibliography[title=Journal]
 
-  \newrefsection[conference]
-  \nocite{*}
-  \printbibliography[title=Peer-Reviewed Conference]
-
-  \newrefsection[workshop]
-  \nocite{*}
-  \printbibliography[title=Peer-Reviewed Workshop]
-
-  \newrefsection[patent]
-  \nocite{*}
-  \printbibliography[title=Patents]
-
-  \newrefsection[techreport]
-  \nocite{*}
-  \printbibliography[title=Technical Reports]
+  \printbibliography[keyword=journal, prefixnumbers=J, title={Journal Papers}]
+  \printbibliography[keyword=conference, prefixnumbers=C, title={Conference Papers}]
+  \printbibliography[keyword=workshop, prefixnumbers=W, title={Workshop Papers}]
+  \printbibliography[keyword=patent, prefixnumbers=P, title={Patents}]
+  \printbibliography[keyword=techreport, prefixnumbers=T, title={Technical Reports}]
+  \printbibliography[keyword=unpublished, prefixnumbers=U, title={Posters, Book Chapters, etc.}]
 }
 
 \end{document}
