@@ -106,12 +106,24 @@ isbn=false
 {
   \nocite{*}
 
-  \printbibliography[keyword=journal, prefixnumbers=J, title={Journal Papers}]
-  \printbibliography[keyword=conference, prefixnumbers=C, title={Conference Papers}]
-  \printbibliography[keyword=workshop, prefixnumbers=W, title={Workshop Papers}]
-  \printbibliography[keyword=patent, prefixnumbers=P, title={Patents}]
-  \printbibliography[keyword=techreport, prefixnumbers=T, title={Technical Reports}]
-  \printbibliography[keyword=unpublished, prefixnumbers=U, title={Posters, Book Chapters, etc.}]
+  \newrefcontext
+  % \newrefcontext[labelprefix=J]
+  \printbibliography[keyword=journal, title={Journal Papers}]
+
+  % \newrefcontext[labelprefix=C]
+  \printbibliography[keyword=conference, title={Conference Papers}]
+
+  % \newrefcontext[labelprefix=W]
+  \printbibliography[keyword=workshop, title={Workshop Papers}]
+
+  % \newrefcontext[labelprefix=P]
+  \printbibliography[keyword=patent, title={Patents}]
+
+  % \newrefcontext[labelprefix=TR]
+  \printbibliography[keyword=techreport, title={Technical Reports}]
+
+  % \newrefcontext[labelprefix=U]
+  \printbibliography[keyword=unpublished, title={Posters, Book Chapters, etc.}]
 }
 
 \end{document}

@@ -28,7 +28,7 @@ all: publications.pdf
 
 clean:
 	$(LATEXMK) -c
-	$(RM) *.run.xml
+	$(RM) *.run.xml *.xdv
 
 distclean:
 	$(LATEXMK) -C
