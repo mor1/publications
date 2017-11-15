@@ -28,15 +28,15 @@ all: publications.pdf
 
 clean:
 	$(LATEXMK) -c
-	$(RM) *.run.xml *.xdv
+	$(RM) *.run.xml *.xdv *.bbl
 
 distclean:
 	$(LATEXMK) -C
 	$(RM) *.bbl all.bib
 	$(RM) -r auto
 
-all.bib: $(wildcard *.bib)
-	cat strings.bib rmm-*.bib >| all.bib
+# all.bib: $(wildcard *.bib)
+#	cat strings.bib rmm-*.bib >| all.bib
 
 publish:
 	git stash
