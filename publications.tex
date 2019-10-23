@@ -62,7 +62,7 @@ defernumbers=true,
 %%
 url=true,
 doi=true,
-eprint=false,
+eprint=true,
 isbn=false
 ]{biblatex}
 
@@ -76,25 +76,29 @@ isbn=false
 
 \DeclareSourcemap{
   \maps[datatype=bibtex]{
-    \map{
+    \map[overwrite]{
       \perdatasource{rmm-journal.bib}
       \step[fieldset=keywords, fieldvalue={, journal}, append]
     }
-    \map{
+    \map[overwrite]{
       \perdatasource{rmm-conference.bib}
       \step[fieldset=keywords, fieldvalue={, conference}, append]
     }
-    \map{
+    \map[overwrite]{
       \perdatasource{rmm-workshop.bib}
       \step[fieldset=keywords, fieldvalue={, workshop}, append]
     }
-    \map{
+    \map[overwrite]{
       \perdatasource{rmm-patent.bib}
       \step[fieldset=keywords, fieldvalue={, patent}, append]
     }
-    \map{
+    \map[overwrite]{
       \perdatasource{rmm-techreport.bib}
       \step[fieldset=keywords, fieldvalue={, techreport}, append]
+    }
+    \map[overwrite]{
+      \perdatasource{rmm-unpublished.bib}
+      \step[fieldset=keywords, fieldvalue={, unpublished}, append]
     }
   }
 }
