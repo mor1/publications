@@ -26,10 +26,16 @@ all: publications.pdf
 %.pdf: %.tex $(wildcard *.bib)
 	$(LATEXMK) $*
 
+.PHONY: sort
+%.sort:
+	bib2bib -r -s date $* > $*.sorted
+
+.PHONY: clean
 clean:
 	$(LATEXMK) -c
 	$(RM) *.run.xml *.xdv *.bbl
 
+.PHONY: distclean
 distclean:
 	$(LATEXMK) -C
 	$(RM) *.bbl all.bib
@@ -38,6 +44,7 @@ distclean:
 # all.bib: $(wildcard *.bib)
 #	cat strings.bib rmm-*.bib >| all.bib
 
+.PHONY: publish
 publish:
 	git stash
 
