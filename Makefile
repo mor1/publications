@@ -27,6 +27,9 @@ all: publications.pdf
 	$(LATEXMK) $*
 
 .PHONY: sort
+sort: $(patsubst %,%.sort,$(wildcard rmm-*.bib))
+
+.PHONY: %.sort
 %.sort:
 	bib2bib -r -s date $* > $*.sorted
 
