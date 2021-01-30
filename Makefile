@@ -32,6 +32,7 @@ sort: $(patsubst %,%.sort,$(wildcard rmm-*.bib))
 .PHONY: %.sort
 %.sort:
 	bib2bib -r -s date $* > $*.sorted
+	mv $*.sorted $*
 
 .PHONY: clean
 clean:

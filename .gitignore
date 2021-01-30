@@ -1,7 +1,5 @@
 **/.DS_Store
 all.bib
-publications.pdf
-
 auto/
 publications.aux
 publications.bbl
@@ -11,4 +9,6 @@ publications.fdb_latexmk
 publications.fls
 publications.log
 publications.out
+publications.pdf
 publications.run.xml
+publications.xdv
