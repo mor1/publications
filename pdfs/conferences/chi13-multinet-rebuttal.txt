@@ -1,0 +1,30 @@
+We thank the reviewers for their time. We believe systems papers like this are important to HCI as they show how HCI can inform low-level systems design. Our approach to Wi-Fi network configuration accounts for the sociotechnical aspects of the home environment to produce a system where the configuration burden moves from client devices to network infrastructure. We are also responding to user needs by maintaining backwards compatibility with existing devices. Our emphasis is thus, reinventing the network stack to allow novel interactional techniques for device association. Considering the issues raised by reviewers.
+
++Device association is not an issue
+R4 states  SSID and passkey has "worked nicely for all devices that I tried". Unfortunately this has not been the general experience reported in previous ethnographic studies by ourselves and others. User difficulties also motivate the significant investment in standards such as WPS to improve the experience.
+The challenge of adding devices to the network is amplified by the number of devices that have constrained user interfaces (e.g. printers, games consoles, TVs, media appliances and cameras). These create well-documented usability challenges in selecting SSIDs from a list and entering passphrases.
+
++Adding a device to reduce overhead
+R1, R3, R4 disagree that adding a controller reduces interaction overhead, despite our evaluation demonstrating so. The reason for this counterintuitive result is that the remote device removes the need to interact through constrained client devices. It also stops users from having to experience the heterogeneous set of different and inconsistent techniques currently used.
+
++Bootstrapping of the controller
+R4 and others are concerned that we ignore the significant overhead of bootstrapping the controller (pp.3-4). As we describe, bootstrapping a new controller is, where necessary, identical to association of a new device. Our initial trials with the mechanisms showed no difference between bootstrapping and association. This interaction is amortised across all subsequent associations so we did not think it worth including.
+
++Relation to prior art
+Reviewers requested clearer positioning against prior art, notably SiB (R1) and Blinking Lights (R4). In short, SiB requires devices to be connected have a camera to capture the bar code, and software to decode it and self-configure appropriately. Blinking Lights uses a flashing LED on one device to convey a secret association key to another device, imposing similar constraints on clients. In contrast, MultiNet places no constraints, either hardware or software, on clients. Only the router software must be modified and the remote provides the necessary hardware sensors for out of band transfer.
+
++Security implications
+R1, R3, R4 raise security issues. An earlier draft contained a security analysis later removed as were uncertain of its interest to a CHI audience.  We would be happy to reintroduce. It discusses the sociotechnical aspects of the security model, reliance on "physical access", possible attack vectors, mitigation strategies, and benefits over currently deployed methods (e.g., unlike WPS, MultiNet never leaves the network in an open state). Revocation of credentials (R4), is partially covered by the pre-configuration discussion (pp.2, 10) which we will enhance and add to the security section.  We will make space for this security section by clarifying technical evaluation and testbed as requested.
+
++Rationale for the system and user evaluations
+In short, throughput, latency and jitter are the standard performance metrics of the networking community, and we set up a homogenous testbed to support a repeatable performance evaluation. In contrast, we felt it better to evaluate MultiNet's usability using a smaller set of common Wi-Fi devices to better simulate real deployments.
+
++Use of QR codes and lab-based evaluation
+We outline why QR codes are chosen above NFC and other OOB channels (pp.3-4), but to recap: they are familiar to users, low cost, robust, can be easily retrofitted, and compatible devices are already widely deployed. We will clarify this when discussing credential encoding. We evaluated in a lab setting to draw a fair comparison between methods, which is difficult to do in the wild due to environmental effects and the complexity of deploying replacement home routers for a meaningful duration. Our post experiment interviews probe these issues highlighting, among others, problems of access to the router.
+
+We believe all of these points can be addressed through editing. Thus we will:
++clarify the problem statement and motivation
++further clarify relation to prior art, notably SiB and Blinking Lights
++clarify and expand description of MultiNet bootstrapping
++better rationalize the choice of QR codes as our interaction method
++reintroduce discussion of system security, making space by reducing and clarifying the confusing network performance evaluation

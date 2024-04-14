@@ -1,0 +1,73 @@
+
+> Reviewer #1: The paper has fixed some of the comments from the
+> previous review except the most important one, the unfairness of the
+> analytical evaluation. The paper claims several orders of magnitude
+> of better bandwidth usage with respect to other approaches such as
+> PIER, DHT-replicated and centralized. The analytical comparison
+> involves 4 dimensions: number of sites, database size, database
+> update rate, and churn rate. The first dimension does not
+> distinguish systems among them since they grow in the same way with
+> the number of sites (parallel curves for all systems). Each of the
+> other three dimensions affects the performance of 1-2 systems.
+
+> The database size is the only parameter that affects the PIER
+> system.  The worst case for PIER, namely, a 2.6 GB database per
+> endsystem and a refresh rate of 5 minutes is use for the rest of the
+> evaluation (i.e. PIER is setup to update the DHT at a rate of 8.6
+> GB/s). It does not seem a very realistic combination of values. The
+> fact that seaweed shows several orders of magnitude better
+> performance is only because this set of values for PIER.  With a DB
+> size of 10 MB and a period for updating the full database of 1 hour,
+> PIER would be more than 3 orders of magnitude better and Seaweed
+> would not be as good as it is shown.  My suggestion was and is to
+> include another curve for PIER in all graphs with a more reasonable
+> combination of d and r as the one suggested above.
+
+> A similar situation happens with the update rate and the centralized
+> approach. If instead of an update rate of 1 KB/s, one chooses 100
+> B/s, still reasonably high, then the centralized approach would be
+> as good as Seaweed and would even beat it for high churn rates. My
+> suggestion is also to include a second curve for centralized with a
+> lower update rate.  The analytical evaluation should show the
+> interval in which the presented approach, delay-aware queries, works
+> well. Currently, it is biased for its best scenarios and provides an
+> unfair comparison with the other approaches.
+
+We have added a new set of graphs (now labelled as Fig 4) with lower
+values of d and u; we have also added an extra line to all graphs
+representing PIER with a lower refresh rate; we have added some
+sentences in the main text explaining these new results.
+
+> A couple of minor comments:
+
+> - The estimation error in 7.b and 8, and following graphs does not
+> show the unit (it could be percentage, ?).
+
+The unit is now % error on all graphs and is labelled as such.
+
+> - Graph in Fig. 8 should be resized to have the same size as the
+> other graphs of the same kind. Currently it is too large.
+
+We have rescaled the fonts in Fig 8 (now labelled Fig 5) to match the
+others. However the figure does represent many more data points than
+the other graphs of the same kind, and becomes unreadable at smaller
+size, so we have not changed the overall figure size.
+
+> If possible, I'd like to read more discussion on why the simple
+> availability model affects the prediction error. The authors may be
+> able to extend the paragraph, starting with "We have determined that
+> the primary source of error for these queries is in the availability
+> prediction", by giving more details or examples.
+
+We have expanded this paragraph slightly to explain why we think the
+availability prediction is the main source of error in our
+experiments; however we have not done any deep analysis or wider
+evaluation of this effect.
+
+> In addition, the legends of 7(b), 9(b), 10(b), 11(b) have no visible
+> difference when I read the graphs, though I can recognize them by
+> the order. The authors may be able to improve this legend a little
+> bit.
+
+We have now changed the patterns to be more distinguishable, and also
+added text labels above each bar.

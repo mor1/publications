@@ -1,0 +1,810 @@
+CHI 2013 Papers and Notes (Refereed)
+
+Reviews of submission #1435: "MultiNet: Reducing Interaction Overhead in
+Domestic Wireless Networks"
+
+------------------------ Submission 1435, Review 4 ------------------------
+
+Reviewer:           primary
+Overall rating:     3.5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   The paper contributes the prototype implementation and evaluation of
+   MultiNet, a method for joining new devices to a domestic wireless network
+   with the goal of reducing interaction overhead. In contrast to earlier
+   approaches, MultiNet dynamically re-configures the network to accept new
+   devices instead of configuring the devices themselves. Device association
+   is performed out-of-band using visual QR markers. MultiNet introduces a
+   third device, a trusted and permanently associated network controller
+   (such as a smartphone), that detects and reads these markers using its
+   integrated camera. The authors compare MultiNet with Wi-Fi Protected
+   Setup (WPS) in a usability study with 16 participants asked to create a
+   network consisting of three devices. Results of a SUS questionnaire and
+   post-hoc interviews as well as lower task completion times show the
+   advantages of MultiNet over WPS.
+
+Overall Rating
+
+   3.5 . . . Between neutral and possibly accept 
+
+Review
+
+   Overall, I very much enjoyed reading this paper given that it's well
+   written, clearly motivated and nicely describes the design and
+   implementation of MultiNet. Although adding a link to a personal website
+   reduces anonymity to absurdity, I applaud the authors for providing the
+   MultiNet source code at all as this makes it very easy for others to
+   reproduce the results and findings of the paper. While I personally don't
+   see any serious problems with state-of-the-art device association in
+   typical domestic networks (the wireless router comes preconfigured, SSID
+   and password on a label attached to the router, selecting the network on
+   the device, enter password, done) I certainly wouldn't claim that the
+   problem of secure device association is solved. In that sense, further
+   work on this problem is definitely interesting although I'm not fully
+   convinced that CHI is a suitable/the best venue to publish such research.
+
+   While the idea of using a proxy between the access point (AP) and the
+   device to be associated is not entirely new [1], the paper presents the
+   first ever prototype implementation of this idea which, I think, still
+   makes the work sufficiently novel (please explain more explicitly how
+   your approach compares to Blinking Lights, reference 19). I don't fully
+   share the criticism of the authors concerning device association using
+   SSID and password given that it worked just nicely for all devices that I
+   ever tried to associate with an AP. My main concern with the paper,
+   however, is the fact that I don't buy into the authors' central argument
+   that -- to solve this alleged problem -- adding a third device indeed
+   reduces interaction overhead. While this seems to be the case when
+   looking at the results of the user study and the questionnaire, it's
+   important to note that the evaluation completely left out the
+   bootstrapping procedure (the initial association of the controller) as
+   well as the scanning of the QR markers, which may fail in difficult
+   lighting conditions. This is certainly not a realistic evaluation of the
+   proposed system and IMHO also represents an unfair comparison with WPS. A
+   realistic usage scenario and experimental procedure that should have been
+   studied in the evaluation is the following: The user gets a MultiNet
+   wireless AP that comes readily configured (just as WPS routers). The user
+   also gets a new smartphone or an older, unused phone that he already owns
+   to act as a controller in the network. The user then has to associate
+   that controller to the wireless AP. Given that both devices are most
+   likely from different vendors, this initial association is a non-trivial
+   task but one that has not been studied or discussed in the paper at all.
+   If the user succeeds with this bootstrapping, he can enjoy the benefits
+   of MultiNet, namely to simply scan QR codes with the smartphone to
+   associate new devices to the network. This may fail in some cases but
+   overall most devices are associable. If the bootstrapping fails, however,
+   the user is completely stuck as he won't be able to associate a single
+   device to the network. 
+
+   My second main concern relates to the chosen out-of-band channel and its
+   security. While QR markers are indeed easy to use, at least if the
+   lighting conditions don't prevent the markers from being scanned, the
+   paper doesn't discuss at all which security implications and problems
+   freely available SSID and passphrases (encoded in QR code) might have
+   (and I'm absolutely sure cracking these codes is feasible and would
+   happen if the potential benefits are high enough). In addition, the
+   additional controller - particularly because it is fully trusted by the
+   AP - represents a major potential security problem to the network. If the
+   controller is stolen or hacked or the QR code photographed by a malicious
+   user, any device can be associated with the network without further
+   security checks. So, in summary, while usability might indeed be higher
+   with MultiNet (given the realistic evaluation described above yields
+   similar results) the paper didn't convince me at all that the same is
+   true for security.
+
+   [1] KL Calvert et al. "Moving toward the middle: The case against the
+   end-to-end argument in home networking"
+   Proceedings of 6th ACM Workshop on Hot Topics in Networks (HotNets 2007)
+
+Expertise
+
+   3  (Knowledgeable)
+
+The Meta-Review
+
+   ORIGINAL REVIEW:
+   Overall, all reviewers seemed to like the work although scores are kind
+   of split into two groups with R4 giving the highest score. R2 mentioned
+   that "this is an interesting paper, that provides a very novel take on
+   the problem of device association to home networks." and continued by
+   saying that "There's a good amount of technical ingenuity behind this
+   approach". Novelty didn't seem to be a critical issue for most reviewers
+   with R2 saying that the work "presents a novel mechanism for associating
+   devices to a home network" and R4 that the "prototype implementation of
+   this idea makes the work sufficiently novel". Only R3 raised "concerns
+   about whether the interaction technique is novel enough" and mentioned
+   that "the interaction is the same as Seeing is Believing". The major
+   criticisms revolved around the fact that the paper is very technical and
+   therefore makes "very little contribution to field of HCI" (R1), that the
+   evaluation is not realistic given that the authors "completely left out
+   the bootstrapping procedure as well as the scanning of the QR code"
+   (Ro4), as well as concerns "whether it would be as usable in real world
+   settings" (R3). Three reviewers didn't believe the paper's central
+   argument that adding a controller really reduces interaction overhead
+   (R1, R4), whether it's "worthwhile to install controller to pair 3-5
+   devices" (R3) and said that they don't believe the assumptions of the
+   system are practical (R1). R1 and R2 mentioned that the description of
+   the testbed wasn't clear enough and also criticised the discussion that
+   doesn't discuss "caveats of the system" (R2) and lacks results on the
+   interviews (R1). Finally, R1 and R4 questioned the security and usability
+   of the used QR codes if they are compromised or used in dim environments.
+
+   At this point, this AC is inclined toward rejection given the above
+   points, particularly those of R1, R3 and R4. But, if the authors choose
+   to write a rebuttal, then they could most usefully use that space to help
+   better motivate and characterize the real-world usability of the system,
+   the significance of the claimed contribution and perhaps argue why the
+   evaluation may still be realistic.
+
+   POST-REBUTTAL COMMENT:
+   I'm afraid the rebuttal didn't at all address my major concern regarding
+   the evaluation that I still don't think was fair (due to bootstrapping
+   and QR scanning left out) and thus realistic. This, in turn, still lets
+   me doubt the superiority of the proposed approach in terms of usability.
+   Although adding the (apparently existing but left-out) section on
+   security would potentially have addressed my second main concern, I can
+   only review what's there and I can't recommend acceptance without having
+   confirmed that the section is as expected/required.
+
+   POST-TPC MEETING COMMENT: 
+   This paper will be shepherded. The paper will be accepted if you make the
+   changes  requested by your shepherd and he/she approves them. Work
+   together with your shepherd to ensure that you do what is required and
+   clearly revise your paper based on the recommendations you have had. 
+   Ensure you have sent an updated version of your paper to your shepherd by
+   January 4th at the latest. Your  paper may need several revisions before
+   it meets meet the acceptance criteria. 
+
+Associate Chairs Additional Comments 
+
+
+The Review
+
+
+Areas for Improvement
+
+
+
+------------------------ Submission 1435, Review 5 ------------------------
+
+Reviewer:           secondary
+Overall rating:     4  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+
+Overall Rating
+
+   4.0 - Possibly Accept: I would argue for accepting this paper 
+
+Review
+
+
+Expertise
+
+   2  (Passing Knowledge)
+
+The Meta-Review
+
+   -- Post Rebuttal Before PC Meeting --
+
+   I really like this work, but regretfully agree the current submission
+   cannot be accepted.  We need to review the version of the paper that is
+   submitted, and so the CHI process won't allow proper review of the
+   promised security discussion.  This seems beyond a simple shepherding
+   process where a single AC can agree to review the changes.  Instead, the
+   promised security discussion needs to actually be properly reviewed.
+
+   I agree with R2 and the authors that a move to a controller is a novel
+   contribution beyond Seeing is Believing.  For me, the easiest way to see
+   this is to think about devices that want to attach to a network but do
+   not have displays or cameras (e.g., sensors or some other very small form
+   factor devices).  This begs the question of whether such devices should
+   just include a button for WPS, but I am convinced by author arguments
+   that routers are increasingly hidden away and not near the device that
+   needs associated.  The controller approach also suggests other
+   possibilities, such as including a virtual WPS button on the remote (in
+   addition to the physical WPS button on the router and instead of
+   requiring scanning of a QR code).  So I see a bit of a contribution in
+   the controller idea itself.
+
+   I also find it entirely reasonable to believe that bootstrapping can be
+   removed by simply shipping a pre-associated controller together with the
+   router.  My experience has been that routers have a relatively short life
+   (for one reason or another, mine seems to be replaced approximately every
+   5 years).  And the design seems to allow MultiNet-capable devices to
+   co-exist with non-capable devices, so I can imagine marketing this as a
+   feature (or perhaps eventually a requirement for sensors or other
+   non-interactive devices which otherwise cannot be connected to the
+   network).
+
+   I also really enjoyed the presented "inversion", wherein the router is
+   given the information that allows the client to connect.  The ability to
+   delete access of a single device also seems obviously better than needing
+   to change my router secret on all my devices.  I am not familiar with the
+   state-of-the-art in networking, so I cannot really speak to the novelty
+   of this inversion.  But none of the reviewers really seem to question its
+   novelty, and I definitely feel this type of technical contribution has a
+   place at CHI.
+
+   I really hope the authors find reviewer reactions to this submission
+   helpful in preparing future submissions.  I think there's good work here
+   that can be a strong paper after some iteration on motivation and
+   presentation based on reviewer comments.
+
+   -- Post PC Meeting --
+
+   ACs agreed this system is compelling and novel.  I think the paper could
+   do a better job selling the novelty of this contribution.  My original
+   review above notes that a continuing emergence of increasingly small
+   devices, such as sensors or headsets or whatever, seems to motivate this
+   problem even more than current devices.  Some reviewers picked up on
+   this, while others didn't see the difference versus Seeing is Believing
+   (which requires all devices have sufficient capabilities to do this
+   themselves).  So the authors really need to motivate this better.  And
+   the current submission only briefly mentions that the technology enables
+   revocation of access, something current systems do not seem to enable at
+   all (instead I change the password and re-authenticate all devices that
+   should still have access).
+
+   The 3AC convinced me that a simple security analysis can be handled
+   within the revision process.  I will also plan to examine that addition
+   to the paper.
+
+Associate Chairs Additional Comments 
+
+
+2AC Additional Comments
+
+
+The Review
+
+
+Areas for Improvement
+
+
+2AC Additional Comments to Rebuttal
+
+
+
+------------------------ Submission 1435, Review 6 ------------------------
+
+Reviewer:           secondary
+Overall rating:     5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+
+Overall Rating
+
+   5.0 - Strong Accept: I would argue strongly for accepting this paper. 
+
+Review
+
+
+Expertise
+
+   3  (Knowledgeable)
+
+The Meta-Review
+
+
+Associate Chairs Additional Comments 
+
+
+2AC Additional Comments
+
+   After discussion at the PC meeting I agreed to take a look at this paper.
+   I strongly support acceptance. I think this paper solves an important
+   usability problem in home networking through a novel and creative
+   technological approach (use of private virtual networks, one per
+   connected device).
+
+   Having tried to associate a network printer with my password-protected
+   home network via an unusable touch-screen interface, I am very excited
+   about the usability and creativity of this approach. I would like to see
+   ideas like this presented at CHI.
+
+   I disagree with R1's criticism about the network controller configuration
+   being a crucial part of this approach. If the approach is successful, AP
+   manufacturers could ship a network controller as part of their product;
+   in addition, smartphone app installation becomes easier every year.
+   Therefore I believe that it's plausible to assume the presence of a
+   network controller for the purposes of this paper.
+
+   Another point that came up in the PC meeting discussion is about the
+   "missing" security section in the paper. I believe based on the rebuttal
+   that the authors have thoughtfully considered this topic and are capable
+   of adding it to the paper. I don't think a security discussion is
+   necessary for acceptance.  However, adding a short section on the
+   sociotechnical aspects would be interesting to readers because it
+   considers the problem from a broader perspective.
+
+   One concern with adding new content to a paper post-submission is that
+   new content is introduced which has not gone through the normal review
+   process. If the authors decide to add this section, I would like to
+   proofread the additional text just to make sure it doesn't say anything
+   too embarrassing for CHI. However, based on the authors' original draft I
+   have every confidence that the final work will be clear and thoughtful.
+
+
+
+The Review
+
+
+Areas for Improvement
+
+
+2AC Additional Comments to Rebuttal
+
+
+
+------------------------ Submission 1435, Review 1 ------------------------
+
+Reviewer:           external
+Overall rating:     1.5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   This paper presents MultiNet. It uses a mobile device with a camera, such
+   as a smartphone, as a intermediary for a wireless access point. The
+   system uses QR code for capturing information for device association. The
+   paper presented the design, implementation and an evaluation of MultiNet.
+
+   The authors motivated by today's complex approaches of configuring
+   wireless devices to an access point (AP). They designed MultiNet that is
+   intended to reduce the user interaction during device association with an
+   AP.
+
+   Frankly, I find this paper have very little contribution to field of HCI.
+   I suggested the authors to read up more on the related work from the
+   previous CHI, UIST, Ubicomp and Pervasive conferences. Many issues in
+   device association were not considered in the paper.
+
+Overall Rating
+
+   1.5 . . . Between reject and possibly reject 
+
+Review
+
+   Firstly, I feel that the paper is missing an argument of why adding a
+   third device actually reduces the interactional overhead of joining
+   devices to a network. From my understanding, MultiNet did not reduce the
+   overhead, instead it transformed a device-to-access-point association to
+   a device-to-device association (i.e. via a controller). However, this
+   require an extra step of associating the controller to the AP.
+
+   The authors argued that this is neglegible as it is a one-off
+   interaction. However, I disagree and I do not understand why the authors
+   considered this task as trivial. If people fail to associate the
+   controller to the access point, everything fails thereafter. I think this
+   step is the most crucial. The authors suggested that to bootstrap the
+   network controller, users can install software on their devices or the
+   manufacturer can provide a dedicated scanner. These suggestions are very
+   artificial, and I do not believe they will be pracrtical.
+
+   The authors assumed that QR code is the best out-of-band channel for
+   device association. Did they consider alternatives, such as NFC,
+   synchronous gestures (please check out Hinckley's paper presented at UIST
+   2003), etc. ? MultiNet heavily relies on QR code, but the authors failed
+   to consider the disadvantages of using it. For example, QR code doesn't
+   work well in dim environment.
+
+   Just by purely looking from a user's perspective, without considering any
+   underlying system differences, the user interaction of MultiNet is the
+   same as Seeing-is-Believing (SiB). To be honest, I don't see a
+   difference.
+
+   I appreciate the authors made the code open source. However, giving a URL
+   that links to a website that reveals the author's identity kind of
+   defeats the purpose of anonymity (Mr. Brown). Please be careful next time
+   and use the features provided by the submission system.
+
+   While reading the paper, there are several parts where things just
+   suddenly mentioned without a clear explanation. For example, what is
+   "hostapd" configuration file (p.5, 1st column, 1st paragraph)? What does
+   it do? what is it for? It seems the authors assumed the readers to have
+   the technical knowledge, but this is something that not everyone knows.
+   Also, in the Technical Feasibility section, there is no explanation of
+   why the authors chose throughput, latency and jitter as testing
+   parameters. A motivation is required.
+
+   In the technical feasibility test, Fig. 5, 6 and 7 show there is an
+   abnormality when the number of networks is 15. I was hoping that the
+   authors would explain or at least discuss what happened.
+
+   The paper stated that for the technical feasibility test, 27 samsung
+   laptops were used as clients and a netbook was used as an AP. However, a
+   printer and a squeezebox suddenly appear in Fig.8 and the Device
+   Connection Time section. Nothing about them were mentioned beforehand. I
+   have no idea why those devices were selected or even why they were there.
+
+
+   For the usability analysis, the authors chose to compare MultiNet with
+   WPS with push-button configuration because this is the best alternative
+   standard method. Who said this is the best alternative? reference?
+
+   During the usability evaluation, task completion time and number of times
+   the participants used the instructions were collect. What about number of
+   errors made by the participants? And, what types of errors were made?
+   Some important usability variables were not collected.
+
+   I dislike the usability test. It mainly presented averages and t-test
+   results. It doesn't provide much on understanding how people feel towards
+   using MultiNet. The post trial interview shows extracts of what people
+   said, but what are the underlying meanings? I think a discussion on the
+   interview results is needed. Also, the authors only presented the
+   positives of MultiNet, are there really no negatives at all?
+
+   --
+   Suggestions for reading:
+   HINCKLEY, K. 2003. Synchronous gestures for multiple persons and
+   computers. In Proceedings of the 16th annual ACM symposium on User
+   interface software and technology. UIST ’03. ACM, New York, NY, USA,
+   149–158.
+
+   REKIMOTO, J. 2004. SyncTap: synchronous user operation for spontaneous
+   network connection. Personal Ubiquitous Comput. 8, 126–134.
+
+   AYATSUKA, Y. AND REKIMOTO, J. 2005. transticks: physically manipulatable
+   virtual connections. In Proceedings of the SIGCHI conference on Human
+   factors in computing systems. CHI ’05. ACM, New York, NY, USA,
+   251–260.
+
+   KAINDA, R., FLECHAIS, I., AND ROSCOE, A. W. 2009. Usability and security
+   of out-of-band channels in secure device pairing protocols. In
+   Proceedings of the 5th Symposium on Usable Privacy and Security. SOUPS
+   ’09. ACM, New York, NY, USA, 11:1–11:12.
+
+   VARSHAVSKY, A., SCANNELL, A., LAMARCA, A., AND DE LARA, E. 2007. Amigo:
+   proximity-based authentication of mobile devices. In Proceedings of the
+   9th international conference on Ubiquitous computing. UbiComp ’07.
+   Springer-Verlag, Berlin, Heidelberg, 253–270.
+
+   CHONG, M. K. AND GELLERSEN, H. 2011. How users associate wireless
+   devices. In Proceedings of the 2011 annual conference on Human factors in
+   computing systems. CHI ’11. ACM, New York, NY, USA, 1909–1918.
+
+   CHONG, M. K. AND GELLERSEN, H. 2012. Usability classification for
+   spontaneous device association. Personal Ubiquitous Comput. 16, 1,
+   77–89.
+
+   KUMAR, A., SAXENA, N., TSUDIK, G., AND UZUN, E. 2009. A comparative study
+   of secure device pairing methods. Pervasive Mob. Comput. 5, 734–749.
+
+   International Journal of Security and Networks 2009 Vol. 4 No. 1/2
+   Special Issue on Secure Spontaneous Interaction
+   ---
+
+   =============
+   POST REBUTTAL
+
+   As an HCI researcher, I do believe that system design papers deserve to
+   be published in CHI. However, the system design contribution in this
+   paper is in the network level, which I find very little relevance for
+   CHI. I'll leave it for the AC members to decide whether low-level system
+   design is related to the CHI community.
+
+   "R1, R3, R4 disagree that adding a controller reduces interaction
+   overhead, despite our evaluation demonstrating so." As I stated in the
+   review, MultiNet "transformed" one type of association to another type.
+   Subsequently, the overhead is also transformed. What I do disagree is
+   that the evaluation never really shows it "reduced" the overhead, because
+   the user study was an unfair study (because the bootstrapping was never
+   considered), and therefor the validity does NOT hold.
+
+   "bootstrapping a new controller is, where necessary, identical to
+   association of a new device." I don't believe this is true. The authors
+   are assuming that everything is already setup (e.g. the barcodes are
+   already generated, printed and affixed), but this is a wrong assumption,
+   which essentially biased the user study because important usability
+   aspects were neglected. Secondly, without the bootstrapping, the user
+   study is just investigating user performance of SiB vs WPS.
+
+   "MultiNet places no constraints, either hardware or software, on
+   clients." Why shouldn't the proxy device also be considered as "client"?
+   The user is required to have it at the time of association, so it is part
+   of the association. The hardware and software requirements are shifted to
+   the proxy, which still requires the proxy to have "a camera to capture
+   the bar code" and software "to decode", and hence still the same as SiB.
+
+   The "security implications" point in the rebuttal is the part that upsets
+   me the most. I found it utterly irresponsible that the authors admit
+   removing an important part (security analysis) from the paper and then in
+   retrospect realised that they should have included it after the review. I
+   interpret this as the authors admitting that their submitted version was
+   incomplete, and they have the audacity to "reintroduce" the missing part
+   after the reviewers pointed it out. Promising that an entire new analysis
+   will be added after the reviews, and knowing that there is no second
+   reviewing stage for CHI, I want to know how are the reviewers suppose to
+   judge the submission now? How are we supposed to know whether the new
+   section would improve or worsen the paper? Honestly, the authors doing
+   this is just plain wrong.
+
+   I suggest the authors to have a look at the paper "Why Is My Internet
+   Slow?: Making Network Speeds Visible" by Chetty et al, in CHI2011. The
+   paper described a field study of deploying their wireless router system
+   in households. Their methodology is definitely useful for evaluating
+   MultiNet in the real world.
+
+   Overall, I strongly believe that this paper should NOT be accepted for
+   publication in CHI, especially knowing that there will be major changes.
+
+Expertise
+
+   4  (Expert )
+
+Areas for Improvement
+
+   The paper mentioned that the fundamental difference between MultiNet and
+   SiB is in the way how information is convey and argued that SiB places
+   constraints on the hardware and software, while MultiNet does not (p.3,
+   1st column, last paragraph). This is not clear to me at all. How does the
+   flow of conveying information constraints the hardware and software?
+
+   The authors said that they imagine QR code containing SSID/passphrases
+   credentials are produced during manufacturing or point-of-sale. Using
+   static QR code provides little no opportunity for customisation. If it is
+   compromised, there is no way for the user to switch to another one. I
+   wish the authors can discuss more on this, or at least change their
+   design to allow users to edit the QR code.
+
+   In the last sentence of the latency section, the authors mentioned "the
+   degree of variation observed suggests that there are other more
+   significant factors affecting per-packet latency." What are the factors?
+   Ending the discussion like that feels incomplete.
+
+   Is table 2 really necessary? It is only necessary if results were
+   analysed according to age, but the evaluation did not consider age as a
+   factor of influence.
+
+   The 2nd paragraph of the Results section can easily shorten by using a
+   table.
+
+
+------------------------ Submission 1435, Review 2 ------------------------
+
+Reviewer:           external
+Overall rating:     4  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   This paper presents a novel mechanism for associating devices to a home
+   network. This is an area where users currently have substantial trouble. 
+   Even purported "easy to use" solutions like Wifi Protected Setup have
+   usability challenges, and aren't implemented consistently across devices.
+
+   Thus, the topic has been a focus of the research community for some time.
+   What's important about this paper--and what makes it worthy of acceptance
+   I'd argue--is that it takes a very clever approach to association, which
+   doesn't require customized software on each client device. 
+
+   While perhaps a somewhat non-traditional contribution to HCI--since much
+   of the work here is on the architectural approach of configuring the
+   access point rather than the client, and on the technical level of
+   ensuring the performance of the network--this paper is set in an
+   established body of work looking at network usability issues in the home,
+   and presents a substantial new approach to the device association
+   problem.
+
+Overall Rating
+
+   4.0 - Possibly Accept: I would argue for accepting this paper 
+
+Review
+
+   This is an interesting paper, that provides a very novel take on the
+   problem of device association to home networks.
+
+   Traditional commercial approaches have well-known (and well reported in
+   the CHI community) usability problems.  "Manual" setup often involves
+   tedious configuration of the new device in order to enter in network
+   parameters such as SSID and pre-shared security keys. Even newer
+   approaches such as Wifi Protected Setup have usability challenges, and
+   are implemented inconsistently across devices.
+
+   Thus, the research community has focused on ways to approach the device
+   association problem that are easier for users.  Most of these follow a
+   similar pattern: some form of out-of-band channel (such as infrared) is
+   used to carry credentials and configuration information from the network
+   access point to the new client device. While these approaches provide
+   better usability, they have two important practical disadvantages. 
+   First, many use location-limited channels, such as IR communication with
+   the access point; this means that they are impractical for large devices
+   that can't be brought close to the access point. Second, and perhaps more
+   fundamental, they require that customized software be installed on each
+   client device, so that it can receive the new parameters from the access
+   point and set up its configuration accordingly. This limitation makes
+   these solutions largely impractical, given the heterogeneity of devices
+   on the home network--you'd need custom configuration code installed on
+   your PC, laptop, camera, bathroom scales, Xbox, and so on.
+
+   The solution presented here overcomes both of these problems.  The
+   solution to the first problem is relatively straightforward:  a third
+   device acts as the "controller" for the network, and acts as the conduit
+   for passing credentials.  Thus, no need to drag your Internet
+   refrigerator to your access point.
+
+   The solution to the second problem is the where the chief cleverness of
+   this solution resides: rather than pass the access point's credentials to
+   the new client device (which would require specialized software on each
+   and every type of client), this solution passes the client's
+   configuration information to the access point.  By "inverting" the
+   problem, this solution is able to deal with greater client diversity,
+   without the need for specialized software on each; the intelligence to
+   deal with the new configuration interaction need only be built into the
+   access point itself.  
+
+   This is quite a clever solution, since virtually every other approach to
+   this problem (at least, the ones I'm aware of) take the opposite approach
+   with its attendant pragmatic hurdles.  There's a good amount of technical
+   ingenuity behind this approach, where the access point creates separate
+   virtual Wifi networks for each client.
+
+   The authors provide an evaluation that shows minimal performance impacts
+   of having large numbers of virtual Wifi networks, and the user testing
+   shows improved usability and decreased time-to-completion.  (This latter
+   finding isn't perhaps especially surprising, since other systems have
+   shown similar results with "point-to-configure" approaches to device
+   association.)
+
+   On the whole I think this is solid work, and I'd argue for its
+   acceptance. It's technically clever, and demonstrates a new approach to
+   device association than others that have been tried in the research
+   community.
+
+Expertise
+
+   4  (Expert )
+
+Areas for Improvement
+
+   My main suggestions for areas of improvement would be a more thorough
+   discussion of the caveats of the system.  Specifically:
+
+   1) While the approach of the client configuring the access point is very
+   clever, it does rely on the assumption that clients are pre-configured
+   for association with a given SSID, and that this information is printed
+   on the QR Code. I don't think you really talk about this disadvantage of
+   the system, or how it compares with the disadvantages of previous systems
+   (the need for installing specialized software on each client) until the
+   end of the paper. Those familiar with the issues around device
+   association will "get" the tradeoffs immediately, but readers less
+   familiar may assume that this approach is a panacea.  (To be clear, I
+   think the approach here is better than others; but I would prefer the
+   authors to be a bit more up-front about the need for some prior
+   configuration of devices, and what this means for acceptance of this
+   solution in the near term.)
+
+   2) What are the security implications of using printed QR Codes for
+   credentialling? If someone snaps a picture of the QR code on my laptop
+   while I'm in a coffee shop, do they know everything they need in order to
+   spoof a network that my laptop will associate with? What are the
+   implications of having the administrative network credentials on the AP?
+   Certainly, I can imagine an argument that once you have physical access
+   to the AP, all bets are off, but having the QR code printed on the AP may
+   allow quicker and more surreptitious sorts of attacks... some discussion
+   around these issues would be good.
+
+   A few other areas where I had questions, or would have liked a bit more
+   detail:
+
+   - The virtual Wifi network approach is quite clever.  Does this approach
+   provide you with any other abilities that might be difficult on a single
+   Wifi network?  For example, can you provision quality of service
+   differently, or prevent some devices from routing traffic onto other
+   virtual networks?  It seems there might be a lot of potential to add
+   functionality here.
+
+   - The description of the testbed setup in the Technical Feasibility
+   section says that you're using 27 identical Windows laptops... then later
+   it seems you're using a printer and a squeezebox also, which was
+   confusing.  Can you clarify the terms of the testbed?  Also, can you say
+   whether you think different devices might have very different performance
+   characteristics in the face of large numbers of virtual networks, given
+   different TCP or Wifi implementations?
+
+   - The paper by Ken Calvert from HotNets 2007, "Moving Toward the Middle:
+   the Case Against the End-to-End Argument in Home Networking," appears to
+   make some similar arguments for solutions to home networking as this
+   paper does. 
+
+   I caught a few typos in my reading of the paper:
+
+   - page 3, second paragraph "not easily inaccessible" should be "not
+   easily accessible"
+   - page 3, last paragraph in the Device Pairing Approaches section,
+   "joining" is misspelled
+
+
+------------------------ Submission 1435, Review 3 ------------------------
+
+Reviewer:           external
+Overall rating:     2.5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   The paper presents MultiNet, which is a method for joining devices to a
+   domestic wireless network. The goal of the method is to minimise the
+   interaction overhead in joining a network by using a third device's
+   camera to read a QR code previously printed on the joining device. The
+   method relies heavily on pre-existing conditions, namely the joining
+   devices being tagged with QR codes and the smartphone (refered in the
+   paper as the network controller) being configured in the network. The
+   method is evaluated in terms of its network performance and in terms of
+   the usability of interaction. The results found by the authors are
+   positive and the there is enough data to support their claims. However,
+   even though the implementation is novel, I do have some concerns about
+   whether the interaction technique is novel enough and whether it would be
+   as usable in real world settings.
+
+Overall Rating
+
+   2.5 . . . Between possibly reject and neutral 
+
+Review
+
+   The paper is generally very well written. The authors define the problem
+   and state their contribution clearly, cover related work adequately,
+   describe the system implementation in detail, as well as the interaction
+   techniques. They evaluate the system's viability by measuring the TCP
+   throughput, latency, jitter and device connection time. As networking is
+   outside my area of expertise, I can't make any claims regarding this
+   study, but it seems sound enough. The authors seemed aware of the
+   limitations of the system, but these limitations seemed to suit its
+   purpose.
+
+   The focus of the paper, however was in the usability analysis. I didn't
+   find any methodological issues with the study. There were enough
+   participants, with a fair age and gender distribution. The statistical
+   tests and the usability metrics were also fine. They successfully
+   demonstrated that the system is significantly faster in joining devices
+   to a network. 
+
+   I do have some criticisms though. The first one regards the overhead in
+   pairing. The authors state that the average number of devices in domestic
+   networks is somewhere between 4 and 6 devices. While they succesfully
+   demonstrate that the system is faster in pairing devices once the first
+   device is configured, I question whether the overhead of installing a new
+   application on the phone and configuring it to work with the access point
+   is worthwhile just to pair 3 to 5 other devices, especially considering
+   that this is usually a one-off task. The authors do not discuss this
+   configuration effort. 
+
+   My other concern regards the technique itself. Firstly, the essence of
+   the interaction is the same as Seeing is Believing, because it consists
+   of taking a photo of a QR code to pair devices, the difference being that
+   while in SiB the device that takes the photo is being paired, in
+   MultiNet, the device taking the photo is used to pair the device to a
+   third one. On one hand, one could argue that the technique is the same,
+   with the smartphone acting as merely a proxy for the access point. One
+   could also argue that because the smartphone is a separate device from
+   the acess point, the interaction techniques are distinct. However, this
+   creates a problem regarding the affordances of the technique. While in
+   SiB the metaphor is clear, I can't say the same for MultiNet. Also, while
+   in the reported study users were comfortable using the system in a
+   controlled environment where everything is has been previously set up, I
+   wonder if the technique would flow as naturally in a real setting.
+
+
+   All taken into account, this is a good work, but I still got some
+   reservations regarding its actual applicability in real world settings.
+
+Expertise
+
+   2  (Passing Knowledge)
+
+Areas for Improvement
+
+   Having little experience with network performance numbers, I would have
+   liked to see the plots of state-of-the-art approaches as well as
+   MultiNet's in figures 5,6 and 7 so that I could have a benchmark to
+   compare it to.
+
+   A good reference about what people would do naturally when pairing
+   devices is Chong, Ming Ki, and Hans Gellersen. "How users associate
+   wireless devices." In Proceedings of the 2011 annual conference on Human
+   factors in computing systems, pp. 1909-1918. ACM, 2011.
+
+
+

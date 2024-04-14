@@ -1,0 +1,330 @@
+CHI 2013 Papers and Notes (Refereed)
+
+Reviews of submission #1214: "From Codes to Patterns:  Designing
+Interactive Decoration for Tableware"
+
+------------------------ Submission 1214, Review 4 ------------------------
+
+Reviewer:           primary
+Overall rating:     3.5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+
+Overall Rating
+
+   3.5 . . . Between neutral and possibly accept 
+
+Review
+
+   This paper describes the co-design process of developing visual codes
+   among designers and technologists. The codes were used for vision
+   recognition on ceramics, placemats and menus through a series of
+   workshops.
+
+   This paper explores an interesting and worthwhile intersection of pattern
+   illustration (drawing) and code (computer vision) that is in relatively
+   early stages of development in terms of the field's interest in this
+   topic. Reviewers are generally positive toward the paper's contribution,
+   noting that the domain has "tremendous potential for widespread impact"
+   (R2). I agree with this assessment: the approach is compelling, if thin
+   on detail (R2), and presents some useful insights into how we might
+   create visually identifiable patterns that reflect, complement, or blend
+   in with their environment. Near the end of the paper, for instance, the
+   authors suggest developing tools for designers to develop visual codes.
+   Building on this suggestion, R3 asks, "how could existing designs and
+   patterns be used as a start point for recognition algorithms?" How might
+   we enable artists and designers to receive feedback on the degree to
+   which their design is identifiable given a range of backgrounds and
+   contexts? While one pattern may be identifiable under varying curvatures,
+   another pattern may be identifiable under varying lighting conditions.
+   These issues hold promise, and expanding on the authors' design
+   considerations could strengthen the discussion.
+
+   That being said, reviewers raised several critical concerns that deserve
+   attention in the rebuttal. Firstly, the paper's descriptions are missing
+   key details, including the development of the constraints, the production
+   of the place settings, the setting of the Basuba workshops, and even the
+   software itself (R2). As R2 points out, providing more detail would allow
+   readers to take on a similar design strategy in future work. Secondly,
+   the design takeaways and methods could use clarification. R1 is unsure
+   what new insights are revealed in the workshops with designers, and what
+   people who use the codes make of the unique patterning. While it seems
+   reasonable to explore these ideas using a system that's already built, R1
+   also asks how insights from these explorations might translate across
+   domains and tools. The authors do not sufficiently motivate the use of
+   vision technologies beyond noting the popularity of such systems.Why we
+   would want to stick digital identifiers on ceramics? Are there
+   limitations (social, temporal, material) to such an approach? The authors
+   should speak to these concerns in the rebuttal, filling in missing
+   details and elaborating on the motivations and takeaways for HCI.
+
+Expertise
+
+   4  (Expert )
+
+The Meta-Review
+
+
+Associate Chairs Additional Comments 
+
+
+The Review
+
+
+Areas for Improvement
+
+
+
+------------------------ Submission 1214, Review 5 ------------------------
+
+Reviewer:           secondary
+Overall rating:     4  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+
+Overall Rating
+
+   4.0 - Possibly Accept: I would argue for accepting this paper 
+
+Review
+
+
+Expertise
+
+   
+
+The Meta-Review
+
+
+Associate Chairs Additional Comments 
+
+
+2AC Additional Comments
+
+
+The Review
+
+
+Areas for Improvement
+
+
+2AC Additional Comments to Rebuttal
+
+
+
+------------------------ Submission 1214, Review 1 ------------------------
+
+Reviewer:           external
+Overall rating:     3.5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   The paper presented an iterative process of developing visual codes that
+   are aesthetically pleasing and refining the d-touch based recognition
+   system that supports these visual codes. The authors worked with
+   designers and programmers to explore the boundary of visually aesthetic
+   patterns and functional codes. They also deployed the visual code system
+   in a real restaurant using real ceramics and placemats and menus. The
+   authors explored possible use cases of such visual pattern/code based
+   interactions.
+
+Overall Rating
+
+   3.5 . . . Between neutral and possibly accept 
+
+Review
+
+   The paper was generally well written. It was interesting to see just how
+   far the d-touch based visual codes could be stretched. It was nice to see
+   examples of codes that are more aesthetically pleasing patterns rather
+   than the usual bland code. The paper demonstrated aesthetic potential of
+   codes usually not objects of beauty or even medium to be played with in a
+   creative way. 
+
+   The paper seemed to present three different findings: 1) aesthetic
+   possibilities with an existing visual code system, 2) designers’
+   creative strategies in camouflaging the codes, 3) how people (who are not
+   part of the design process) interact with the codes and patterns in a
+   restaurant setting. For each of these, I had concerns.
+
+   First, the aesthetic possibilities with the d-touch code system. While it
+   was interesting to see all those examples, one major concern I had with
+   the paper was that the paper kept me wondering, why focus so much on the
+   specific constrains set by the current d-touch system or the marker based
+   vision system in general? What if other computer vision possibilities
+   without reliance on any code system came along? How do authors’ current
+   findings inform how people might produce and interact with patterns that
+   act as codes, beyond this specific code-based interaction? The paper does
+   not seem to address this issue.
+
+   Second, the authors showed how designers “learned to work with and
+   creatively exploit the technology,” and came up with different
+   strategies to camouflage the code in their design. However, this is a
+   predictable result since designers are used to working with some type of
+   constrains to come up with creative solutions. Other than the fact
+   designers are indeed creative and can design things, I am not sure what
+   new insight might be here.
+
+   Third concern I had with the paper was that the people who might use the
+   system were disconnected from the design process of the new visual codes.
+   On pages 7-8, the paper hinted at how people (not the designers) interact
+   with visually aesthetic codes in a restaurant setting, and how that
+   informs the design of future codes. This was interesting, yet, at the
+   moment, it is quite disconnected from the actual design process of the
+   codes and patterns. Designers and technologists seemed to have engaged in
+   an iterative process of developing aesthetically pleasing codes, but not
+   the actual people who might use them. Therefore, it is not clear what the
+   significance of these aesthetically pleasing codes is in the context of
+   people who use them.
+
+   Therefore, while the paper does have some interesting findings at
+   different places, they do not currently seem to feed into each other to
+   make a compelling case for why and for whom the transition from “codes
+   to patterns” needs to happen.
+
+Expertise
+
+   3  (Knowledgeable)
+
+Areas for Improvement
+
+
+
+------------------------ Submission 1214, Review 2 ------------------------
+
+Reviewer:           external
+Overall rating:     4  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   This paper explores the co-creation by technologists and designers of
+   machine readable patterns that are aesthetically varied (& beautiful!) &
+   recognition systems to identify them.  This domain is important and
+   relevant with clear potential for broad real-world impact.  The paper
+   illustrates how it is possible (indeed easy) to embed machine readable
+   codes into a wide variety of patterned everyday objects.  It describes a
+   framework for creating such patterns (that was based on earlier work) and
+   discusses a user study in which ceramic place settings with embedded
+   codes were designed. The study involved real-world designers and
+   restauranteurs and the creation of novel ceramics.
+
+Overall Rating
+
+   4.0 - Possibly Accept: I would argue for accepting this paper 
+
+Review
+
+   This is a compelling paper with some unfortunate weaknesses.  I would
+   lean toward acceptance because I think the authors have some wonderful
+   and unusual insights to share.  The paper explores a relatively new
+   domain that has tremendous potential for widespread impact.  The authors
+   do an excellent job of integrating new technological developments into
+   traditional design practices and then exploring the implications of this
+   integration.  They do so in an impressively real-world setting using real
+   (and very challenging) materials, real designers, and real
+   restauranteurs.  
+
+   The paper's most significant weakness is in not providing enough detail
+   in the descriptions of the user studies.  Though it is clear that the
+   authors conducted a thoughtful and successful exploration, the paper
+   doesn't do as good a job as it could of teaching us how to follow a
+   similar process.  In more scientific terms, it would be hard to replicate
+   their experience because they don't provide enough detail about their
+   process.  I believe that the authors could, without a lot of effort, add
+   details to the paper that would significantly strengthen the paper on
+   this dimension.  See more on this below.
+
+   The other major disappointment is that the system was never
+   deployed/tested.  It would be terrific to have some feedback about the
+   system in use.  It seems like it would not be difficult to stage a dinner
+   that used the place settings & software that were developed.  Why wasn't
+   this done?  At a minimum, it would be good to have some
+   explanation/discussion of this omission.  The "interacting with patterns"
+   discussion section feels especially thin without some real-world feedback
+   from other people to refer to & reflect on.
+
+Expertise
+
+   3  (Knowledgeable)
+
+Areas for Improvement
+
+   The paper is basically well written.  It is nicely organized; the
+   arguments are clear, compelling, and easy to follow.  However, there are
+   many grammatical errors throughout the text and it would benefit from a
+   careful proof reading.
+
+   Perhaps the most important flaw is that the paper should provide more
+   details about the (rich & fascinating) co-design process.  
+
+   For instance, I had several questions about the first phase of the study
+   (developing the constraints and rules that define readable patterns). 
+   How many designers and technologists were involved?  What were their
+   basic backgrounds?  How exactly did you elicit feedback from them &/or
+   codevelop the system?  How did you create and test sample patterns before
+   deciding on the rule set?  How many times did the team meet?  How many
+   design iterations did you go through before deciding on the rule set? 
+   etc.  It would be extremely useful for other designers to have more
+   information about this part of the process.    
+
+   I had a similar set of questions for the other phases.  How long was the
+   first development workshop you held with designers?  Were the designers
+   male or female, what ages?  How many workshops did you hold with the
+   Bashuba staff members?  Were designers also involved in this phase?  Can
+   you say more about the process of actually (physically) producing the
+   place settings?  
+
+   The paper should include a practical system description (one that
+   includes a description of the actual software & not just the conceptual
+   rules) early on in the paper. The user studies are centered around the
+   software as much as the design rules.  Certain things are difficult to
+   make sense of without this introduction, for example the discussion of
+   reliability issues and discussions of the use of the software during the
+   user studies.
+
+
+------------------------ Submission 1214, Review 3 ------------------------
+
+Reviewer:           external
+Overall rating:     4.5  (scale is 1..5; 5 is best)
+
+Your Assessment of this Paper's Contribution to HCI
+
+   The paper From Codes to Patterns is nominated by the authors as making a
+   contribution to the Development or Refinement of Interface Artifacts or
+   Techniques. The authors present a clear discussion of an iterative design
+   process relating to a clear use case which brings together ceramic
+   designers, a restaurant and technologists. The contribution lies
+   specifically in the collaborative features of a design process that
+   enables the  aesthetic constraints of the code elements of an image
+   recognition system to be extended and deepened by the design sensibility
+   of pattern makers.
+
+Overall Rating
+
+   4.5 . . . Between possibly accept and strong accept 
+
+Review
+
+   A clear description of a collaborative case design case involving ceramic
+   designers, a restaurant and technologists. Good structure which includes
+   a careful selection of underlying technology and unusually, and to the
+   credit of the authors, provides something of a symmetrical handling of
+   the value and skill of both the technologists and designers.
+
+Expertise
+
+   3  (Knowledgeable)
+
+Areas for Improvement
+
+   It would be interesting to see how the collaboration features discussed
+   in the paper might be developed. For example how could existing designs
+   and patterns be used as a start point for recognition algorithms? How
+   might the approaches and workflow of designers be better understood by
+   technologists?
+
+
+

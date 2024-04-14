@@ -1,0 +1,166 @@
+Received: from EA-EXMSG-C307.europe.corp.microsoft.com ([65.53.221.50]) by
+ DUB-EXHUB-C303.europe.corp.microsoft.com ([65.53.213.93]) with mapi; Wed, 9
+ May 2007 16:18:00 +0100
+From: Dushyanth Narayanan <dnarayan@microsoft.com>
+To: "alonso@inf.ethz.ch" <alonso@inf.ethz.ch>
+CC: Ant Rowstron <antr@microsoft.com>, Austin Donnelly
+	<Austin.Donnelly@microsoft.com>, Richard Mortier <mort@microsoft.com>
+Subject: RE: VLDB: Your manuscript entitled Delay Aware Querying With Seaweed
+Thread-Topic: VLDB: Your manuscript entitled Delay Aware Querying With
+ Seaweed
+Thread-Index: AceHNeYlatwxZ55eSKeyTDXaJi56KQBqnTxQAlsnXuA=
+Date: Wed, 9 May 2007 15:17:57 +0000
+Message-ID: <5F00B7852089CC449EC2200FE2C1D1D028B97253@EA-EXMSG-C307.europe.corp.microsoft.com>
+References: <WEB4fbQv7Fl4eAkwzs300015a5f@web4.editorialmanager.com>
+ <5F00B7852089CC449EC2200FE2C1D1D023C5E9C5@EA-EXMSG-C307.europe.corp.microsoft.com>
+ <462F4A82.8040709@inf.ethz.ch> 
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Exchange-Organization-AuthMechanism: 04
+X-MS-Exchange-Organization-AuthSource: DUB-EXHUB-C303.europe.corp.microsoft.com
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Gustavo
+
+We have made the changes mentioned below, and I have just submitted a fresh=
+ PDF and also a text file summarizing the changes made.
+
+Regards
+Dushyanth
+
+-----Original Message-----
+From: Dushyanth Narayanan
+Sent: 27 April 2007 16:37
+To: alonso@inf.ethz.ch
+Cc: Ant Rowstron
+Subject: RE: VLDB: Your manuscript entitled Delay Aware Querying With Seawe=
+ed
+
+Dear Gustavo
+
+We will add a second set of four graphs (varying N,d,u, and c respectively =
+as in the first set), keeping the same default values for N and c as before=
+ but with d=3D100 MB and u=3D100 B/s. On both old and new graphs we will ad=
+d a fifth curve for PIER using a refresh period of 1 hour.
+
+I must point out that this does not result in any qualititative change: the=
+ scalability trends are the same as before (PIER is still not scalable) but=
+ the crossover points will shift slightly (although they may change by an o=
+rder of magnitude, the difference between the systems is several orders of =
+magnitude, which is why we use the log-log scale).
+
+We still do not believe that the new graphs add any information to the exis=
+ting ones; however we are doing this in good faith, in the understanding th=
+at these new graphs should completely address reviewer 1's concerns.
+
+Regards
+
+Dushyanth and Ant
+
+-----Original Message-----
+From: Gustavo Alonso [mailto:alonso@inf.ethz.ch]
+Sent: 25 April 2007 13:33
+To: Dushyanth Narayanan
+Subject: Re: VLDB: Your manuscript entitled Delay Aware Querying With Seawe=
+ed
+
+Dear Dushyanth,
+
+I have received the reply from the reviewer. I think the point being made a=
+nd
+what the complaint is about is very clear. I would suggest that you add the
+experiments indicated.
+
+Regards,
+
+      Gustavo
+
+The main issue with the evaluation is that there are 4 dimensions across wh=
+ich
+the system is evaluated (N, d, u, c).
+The authors take one point in this 4-dimensional space ((300000, 2.6GB, 970=
+b/s,
+5.5 microsec)) taken from an aggregation of experiences
+from different real in-home applications (Anemone, Farsite, Seaweed) and th=
+en
+traverse one dimension at a time
+and show it in the corresponding graph. The authors claim in the rebuttal:
+"The underlying issue seems to be that reviewer 1 considers our default
+parameter values unrealistic. We obtained these from real-world traces
+(summarized in Table 1)
+which we are happy to share to let you confirm the values. If reviewer 1 ca=
+n
+point us at a real-world source for a different set of default values,
+we are happy to include a second set of graphs using these."
+The merit of the paper is not a system that works for a single environment =
+such
+as "Anemone" (from where the authors took the value of d =3D 2.6 GB).
+Instead the merit lies in showing that the proposed approach works for diff=
+erent
+profiles showing its limits and comparing it with other approaches.
+The current comparison is partial and a somewhat misleading. Currently, in =
+3 out
+of 4 graphs your are comparing against a worst case of PIER, and a bad case=
+ of
+centralized,
+and this is what I am asking to fix, since it is a biased comparison. you s=
+hould
+also compare against a good case of PIER and centralized.
+
+Regarding the rebuttal:
+"As I understand it, the suggestion is to add extra lines on all graphs wit=
+h a
+lower value of d for PIER and a lower value of u for centralized. But these
+would not be comparable with the existing curves. The point of each graph i=
+s to
+show the scalability of each approach with a single parameter while fixing
+default values for the remaining. So if we give PIER a non-default value fo=
+r d
+while varying some other parameter then I don't understand how PIER's
+performance can be compared against the systems using the default value of =
+d.
+I'm sure nobody would suggest comparing, for example, TPC-C results for one
+system using a 100 MB database with those of another system using a 1 GB da=
+tabase."
+
+You can do this in two ways. One is to have a second set of graphs in which=
+ the
+default parameters are more favorable to PIER and centralized.
+The other would be adding new curves for PIER 100MB and similarly for
+centralized with a different update rate.
+I am not asking comparing pears with apples as you suggest.
+You can just tag Seaweed and DHT with both 100MB and 2.6 GB, whilst using
+different tags for each curve of PIER.
+But this was only a suggestion to save space, you can just provide a second=
+ set
+of graphs.
+Anyway, it does not matter how you do it, the important issue it is to show=
+ the
+comparison of Seaweed with PIER and centralized
+with other reasonable values in which they are more competitive.
+
+Regarding the rebuttal:
+
+"Alternatively we could include a table that clearly states which approache=
+s are
+sensitive to which parameters, and whether a high or low value of the param=
+eter
+favours the approach. "
+
+This table certainly would enrich the paper and clarify under which conditi=
+ons
+each approach can be used.
+
+Finally regarding:
+"The other suggestion was a lower refresh rate r for PIER. This is a parame=
+ter
+that affects only PIER, so we would be happy to add an additional curve to =
+all
+graphs showing PIER with an update rate of 1 hour. "
+
+This certainly has to be fixed. Fully updating the DB every 5 minutes is
+nonsense for medium-large DB sizes.
