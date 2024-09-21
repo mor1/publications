@@ -1,43 +1,70 @@
-\documentclass[11pt]{article}
+\documentclass[a4paper, 10pt]{article}
 
-\usepackage[a4paper]{geometry}
-\geometry{margin=2cm}
-\usepackage[tiny,compact]{titlesec}
+% urls
+\usepackage[hyphens]{url}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+  bookmarks=true,
+  bookmarksopen=true,
+  breaklinks=true,
+  citecolor=blue,
+  colorlinks=true,
+  pdfborder={0 0 0},
+  pdfpagemode=UseOutlines,
+  urlcolor=black,
+}
+\usepackage{relsize}
+\renewcommand*{\UrlFont}{\ttfamily\smaller\relax}
+
+%% layout
+\usepackage[margin=2cm]{geometry}
 \usepackage{fullpage}
-\usepackage{graphicx}
-\usepackage{wrapfig}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+\usepackage{float}
 
+%% titles
+\usepackage[compact]{titlesec}
+
+% titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+% titlespacing{command}{left}{before-sep}{after-sep}[right-sep]
+% *n = n * (1ex plus .3ex minus .06ex} [ before ]
+% *n = n * (1ex plus .1ex} [ after ]
+
+\titleformat{\section}{\Large\bfseries}{}{0pt}{}
+\titlespacing{\section}{0pt}{*2}{*1.5}
+
+\titleformat{\subsection}{\large\bfseries}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{*2}{*0.75}
+
+\titleformat{\subsubsection}{\bfseries}{}{0pt}{}
+\titlespacing{\subsubsection}{0pt}{*2}{*0.5}
+
+%% fonts
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{eurosym}
+\usepackage{upquote}
+\usepackage{microtype}
 \usepackage{fontspec}
 \usepackage{xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text,Scale=MatchUppercase}
-\newcommand\euro[1]{€#1}
-\newcommand\ukp[1]{£#1}
 \renewcommand{\familydefault}{\rmdefault}
-\setmainfont{Times New Roman}
+\setmainfont{Arial}
 \setmonofont{Hack Nerd Font}
 
-\usepackage[unicode=true]{hyperref}
-\hypersetup{breaklinks=true,
-  bookmarks=true,
-  pdfauthor={},
-  pdftitle={},
-  colorlinks=true,
-  urlcolor=blue,
-  linkcolor=blue,
-  pdfborder={0 0 0}}
-\newcommand\fnurl[2]{%
-  \href{#1}{#2}%
-}
-
+%% headers/footers
 \usepackage{fancyhdr,lastpage}
-\renewcommand{\headrulewidth}{0.4pt}
-\setlength{\headheight}{20pt}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength{\headheight}{3ex}
 \pagestyle{fancy}
-\lhead{Dr.~Richard Mortier: Publications}
+\lhead{Prof.~Richard Mortier: Publications}
 \chead{}
-\rhead{}
-\lfoot{\today}
+\rhead{\today}
+\lfoot{}
 \cfoot{}
 \rfoot{\thepage/\pageref{LastPage}}
 
@@ -74,60 +101,106 @@ isbn=false
 \addbibresource{rmm-techreport.bib}
 \addbibresource{rmm-unpublished.bib}
 
-\DeclareSourcemap{
-  \maps[datatype=bibtex]{
-    \map[overwrite]{
-      \perdatasource{rmm-journal.bib}
-      \step[fieldset=keywords, fieldvalue={, journal}, append]
-    }
-    \map[overwrite]{
-      \perdatasource{rmm-conference.bib}
-      \step[fieldset=keywords, fieldvalue={, conference}, append]
-    }
-    \map[overwrite]{
-      \perdatasource{rmm-workshop.bib}
-      \step[fieldset=keywords, fieldvalue={, workshop}, append]
-    }
-    \map[overwrite]{
-      \perdatasource{rmm-patent.bib}
-      \step[fieldset=keywords, fieldvalue={, patent}, append]
-    }
-    \map[overwrite]{
-      \perdatasource{rmm-techreport.bib}
-      \step[fieldset=keywords, fieldvalue={, techreport}, append]
-    }
-    \map[overwrite]{
-      \perdatasource{rmm-unpublished.bib}
-      \step[fieldset=keywords, fieldvalue={, unpublished}, append]
-    }
-  }
+
+\defbibfilter{unreviewed}{%
+  (  keyword=abstract
+  or keyword=blog
+  or keyword=chapter
+  or keyword=magazine
+  or keyword=poster
+  ) and not keyword=unpublished
 }
+
+\defbibfilter{techreport}{%
+  keyword=techreport
+}
+
+\defbibfilter{patent}{%
+  keyword=patent
+}
+
+\defbibfilter{journal}{%
+  keyword=journal
+  and not (
+  keyword=abstract
+  or keyword=editorial
+  or keyword=demo
+  )
+}
+
+\defbibfilter{conference}{%
+  keyword=conference
+  and not (
+  keyword=abstract
+  or keyword=demo
+  or keyword=editorial
+  or keyword=invited
+  or keyword=poster
+  )
+}
+
+\defbibfilter{workshop}{%
+  keyword=workshop
+  and not (
+  keyword=abstract
+  or keyword=demo
+  )
+}
+
+% \DeclareSourcemap{
+% \maps[datatype=bibtex]{
+% \map[overwrite]{
+% \perdatasource{rmm-journal.bib}
+% \step[fieldset=keywords, fieldvalue={, journal}, append]
+% }
+%   \map[overwrite]{
+%   \perdatasource{rmm-conference.bib}
+%   \step[fieldset=keywords, fieldvalue={, conference}, append]
+% }
+%   \map[overwrite]{
+%   \perdatasource{rmm-workshop.bib}
+%   \step[fieldset=keywords, fieldvalue={, workshop}, append]
+% }
+%   \map[overwrite]{
+%   \perdatasource{rmm-patent.bib}
+%   \step[fieldset=keywords, fieldvalue={, patent}, append]
+% }
+%   \map[overwrite]{
+%   \perdatasource{rmm-techreport.bib}
+%   \step[fieldset=keywords, fieldvalue={, techreport}, append]
+% }
+%   \map[overwrite]{
+%   \perdatasource{rmm-unpublished.bib}
+%   \step[fieldset=keywords, fieldvalue={, unpublished}, append]
+% }
+% }
+% }
 
 \begin{document}
 \thispagestyle{firststyle}
-\part*{\Large Dr.~Richard Mortier, Publications}
+\part*{\Large Prof.~Richard Mortier, Publications}
+
 
 {
   \nocite{*}
-
   \newrefcontext
-  % \newrefcontext[labelprefix=J]
-  \printbibliography[keyword=journal, title={Journal Papers}]
+  \printbibliography[heading=subbibintoc,
+  filter=journal, title={Peer-Reviewed Journal Papers}
+  ]
+  \printbibliography[heading=subbibintoc,
+  filter=conference, title={Peer-Reviewed Conference Papers}
+  ]
+  \printbibliography[heading=subbibintoc,
+  filter=workshop, title={Peer-Reviewed Workshop Papers}
+  ]
 
-  % \newrefcontext[labelprefix=C]
-  \printbibliography[keyword=conference, title={Conference Papers}]
-
-  % \newrefcontext[labelprefix=W]
-  \printbibliography[keyword=workshop, title={Workshop Papers}]
-
-  % \newrefcontext[labelprefix=P]
   \printbibliography[keyword=patent, title={Patents}]
 
-  % \newrefcontext[labelprefix=TR]
   \printbibliography[keyword=techreport, title={Technical Reports}]
 
-  % \newrefcontext[labelprefix=U]
-  \printbibliography[keyword=unpublished, title={Posters, Book Chapters, etc.}]
+  \printbibliography[heading=subbibintoc,
+  filter=unreviewed, title={Editorials, Book Chapters, etc.}
+  ]
 }
 
 \end{document}

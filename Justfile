@@ -8,7 +8,7 @@ latexmk := "latexmk -xelatex"
     {{latexmk}} -C
     rm -rf auto
 
-# remove build droppings     
+# remove build droppings
 @clean:
     {{latexmk}} -c
     rm -f *.run.xml *.xdv *.bbl
@@ -27,12 +27,9 @@ latexmk := "latexmk -xelatex"
 	git stash pop -q || true
 
 # format and sort all bibtex files
-@sort:
-    #!/usr/bin/env bash
-    for f in rmm-*.bib; do
-    	bib2bib -r -s date $f > $f.sorted
-    	mv $f.sorted $f
-    done
+@sort tgt:
+    bib2bib -r -s date {{tgt}} > {{tgt}}.sorted
+    [ ! -z "{{tgt}}.sorted" ] && mv {{tgt}}.sorted {{tgt}}
 
 # build publications list
 @build:
