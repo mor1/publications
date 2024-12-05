@@ -1,0 +1,136 @@
+\documentclass[a4paper, 10pt]{article}
+
+% urls
+\usepackage[hyphens]{url}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+  bookmarks=true,
+  bookmarksopen=true,
+  breaklinks=true,
+  citecolor=blue,
+  colorlinks=true,
+  pdfborder={0 0 0},
+  pdfpagemode=UseOutlines,
+  urlcolor=black,
+}
+\usepackage{relsize}
+\renewcommand*{\UrlFont}{\ttfamily\smaller\relax}
+
+%% layout
+\usepackage[margin=2cm]{geometry}
+\usepackage{fullpage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+\usepackage{float}
+
+%% titles
+\usepackage[compact]{titlesec}
+
+% titleformat{command}[shape]{format}{label}{sep}{before-code}[after-code]
+% titlespacing{command}{left}{before-sep}{after-sep}[right-sep]
+%   *n = n * (1ex plus .3ex minus .06ex} [ before ]
+%   *n = n * (1ex plus .1ex} [ after ]
+
+\titleformat{\section}{\Large\bfseries}{}{0pt}{}
+\titlespacing{\section}{0pt}{*2}{*1.5}
+
+\titleformat{\subsection}{\large\bfseries}{}{0pt}{}
+\titlespacing{\subsection}{0pt}{*2}{*0.75}
+
+\titleformat{\subsubsection}{\bfseries}{}{0pt}{}
+\titlespacing{\subsubsection}{0pt}{*2}{*0.5}
+
+%% headers/footers
+\pagestyle{empty}
+
+%% fonts
+\usepackage{fontspec}
+\renewcommand{\familydefault}{\rmdefault} % alt. \sfdefault, \ttdefault
+\setmainfont{Arial} % Times New Roman}
+\setmonofont{Hack Nerd Font}
+
+%% tables
+\usepackage[table]{xcolor}
+\definecolor{grey}{gray}{0.8}
+
+% https://tex.stackexchange.com/questions/603349/tabularray-and-new-command-for-multicolumn-cells
+% \usepackage{tabularray-2021}
+\usepackage{tabularray}
+\UseTblrLibrary{booktabs}
+
+% bare table: no headers or footers
+\NewTblrTheme{bare}{
+  \SetTblrTemplate{head}{empty}
+  \DefTblrTemplate{contfoot-text}{default}{[Continued]}
+  \SetTblrStyle{firstfoot}{\itshape\small}
+  \SetTblrStyle{middlefoot}{\itshape\small}
+}
+
+% bare table: date column, info column, lightgrey vline
+\NewTblrEnviron{baret}
+\SetTblrOuter[baret]{
+  long,
+  theme=bare,
+  %
+  caption={},
+  entry=none,
+  footsep=0.5ex,
+  headsep=0pt,
+  label=none,
+  postsep=0pt,
+  presep=1ex,
+}
+\SetTblrInner[baret]{
+  colspec={X[1,r] |[grey] X[7,l]},
+  %
+  rowhead=1,
+  rowsep=0.2ex,
+}
+
+% grant table: dates, amounts, info
+\NewTblrEnviron{grantt}
+\SetTblrOuter[grantt]{
+  long,
+  theme=bare,
+  %
+  caption={},
+  entry=none,
+  footsep=0.5ex,
+  headsep=0pt,
+  label=none,
+  postsep=0pt,
+  presep=0pt,
+}
+\SetTblrInner[grantt]{
+  colspec={X[1.1,l] X[1.2,l] X[4,l]},
+  %
+  rowhead=1,
+  rowsep=0.2ex,
+}
+
+%% debugging
+% \floatstyle{boxed}
+% \restylefloat{table}
+% \restylefloat{figure}
+
+%% misc
+\newcommand\anote[2]{{\color{#1}\bf #2}}
+\newcommand\mort[1]{{\anote{red}{mort: #1}}}
+
+\newcommand{\one}{({\em i})}
+\newcommand{\two}{({\em ii})}
+\newcommand{\three}{({\em iii})}
+\newcommand{\four}{({\em iv})}
+\newcommand{\five}{({\em v})}
+
+%% pdf inputs
+\usepackage{pdfpages}
+\makeatletter
+\newcommand\pdf[1]{
+  \includepdf[
+  pages=-,
+  pagecommand={}
+  ]{#1}}
+\makeatother
