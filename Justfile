@@ -1,17 +1,20 @@
 _default:
     @just --list
 
-latexmk := "latexmk -pdflua"
+bibtox := "uv run --directory ~/u/src/python/bibtox bibtox -"
+latex := "latexmk -pdflua"
+target := "publications"
+droppings := "*-blx.bib *.bbl *.run.xml *.xdv *.fls _region_.tex *.out *.aux *-SAVE-ERRORwork"
 
-# aggressively remove build droppings
-@distclean:
-    {{latexmk}} -C
-    rm -rf auto
-
-# remove build droppings
+# remove droppings
 @clean:
-    {{latexmk}} -c
-    rm -f *.run.xml *.xdv *.bbl
+    {{latex}} -c {{target}}
+    rm -f {{droppings}}
+
+# remove outputs
+@distclean: clean
+    {{latex}} -C {{target}}
+    # rm -rf auto
 
 # publish PDFs to GitHub
 @publish:
@@ -27,8 +30,9 @@ latexmk := "latexmk -pdflua"
     git stash pop -q || true
 
 # format and sort a bibtex file
-@sort tgt:
-    cat strings.bib {{tgt}} | bib2bib --no-comment -r -s date > {{tgt}}.sorted
+sort tgt:
+    # cat strings.bib {{tgt}} | bib2bib --no-comment -r -s date > {{tgt}}.sorted
+    cat strings.bib {{tgt}} | {{bibtox}} --sort > {{tgt}}.sorted
     [ ! -z "{{tgt}}.sorted" ] && mv {{tgt}}.sorted {{tgt}}
 
 # format and sort all bibtex files
@@ -37,4 +41,4 @@ latexmk := "latexmk -pdflua"
 
 # build publications list
 @pdf:
-    {{latexmk}} publications
+    {{latex}} {{target}}

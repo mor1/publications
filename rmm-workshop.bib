@@ -1,135 +1,85 @@
+%%commment{datetime={2025-01-16T16:18:52.001204+00:00}, section={}}
 @inproceedings{wilkins24:offlin.energ.optim.llm.servin,
-  author = {Wilkins, Grant and Keshav, Srinivasan and Mortier, Richard},
-  title = {Offline Energy-Optimal LLM Serving: Workload-Based Energy Models for LLM Inference on Heterogeneous Systems},
-  date = {2024-07-11},
-  booktitle = {Proceedings of the 3rd HotCarbon Workshop on Sustainable Computer Systems (HotCarbon)},
-  url = {https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final30.pdf}
+  author       = {Wilkins, Grant and Keshav, Srinivasan and Mortier, Richard},
+  title        = {Offline Energy-Optimal LLM Serving: Workload-Based Energy Models for LLM Inference on Heterogeneous Systems},
+  date         = {2024-07-11},
+  booktitle    = {Proceedings of the 3rd HotCarbon Workshop on Sustainable Computer Systems (HotCarbon)},
+  url          = {https://hotcarbon.org/assets/2024/pdf/hotcarbon24-final30.pdf}
 }
+
 
 @inproceedings{jensen24:unanim,
-  author = {Jensen, Chris and Howard, Heidi and Katsarakis, Antonios and Mortier, Richard},
-  title = {Unanimous 2PC: Fault-tolerant Distributed Transactions Can be Fast and Simple},
-  year = 2024,
-  isbn = 9798400705441,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3642976.3653035},
-  doi = {10.1145/3642976.3653035},
-  abstract = {Distributed transactional datastores are pivotal in supporting the needs of modern applications and services. Datastores rely on distributed transactional protocols to tolerate faults while also aiming for strong consistency and high performance. State-of-the-art transactional protocols, such as FaRM, provide a lock-free execution phase, thus improving performance and simplifying recovery. However, these protocols often come with lengthy and complicated commit phases, requiring multiple round-trips to commit a transaction (or additional replicas). This completely contrasts with the simplicity and efficiency of the traditional two-phase commit (2PC) protocol, which can commit a transaction after a single round-trip, albeit lacking fault tolerance.To address the limitations of both approaches, we introduce U2PC, a novel 2PC variant that combines simplicity, efficiency, and fault tolerance. U2PC frugally replicates data (f + 1) times to tolerate up to f faults with strong consistency. It offers a single round-trip commit after unanimous responses of all replicas of the involved shards and ensures safe recovery via an extra "pre-abort" round before aborting a transaction. Our verification in TLA+ confirms that U2PC achieves strict serializability and recovers safely. In short, U2PC ensures fault tolerance, optimizes performance for common scenarios, and offers uniform transaction handling.},
-  booktitle = {Proceedings of the 11th Workshop on Principles and Practice of Consistency for Distributed Data (PAPOC)},
-  pages = {44-–57},
-  numpages = 14,
-  keywords = {distributed transactions, 2PC, FastPaxos},
-  addres = {Athens, Greece}
+  author       = {Jensen, Chris and Howard, Heidi and Katsarakis, Antonios and Mortier, Richard},
+  title        = {Unanimous 2PC: Fault-tolerant Distributed Transactions Can be Fast and Simple},
+  date         = {2024-04-22},
+  isbn         = {9798400705441},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3642976.3653035},
+  doi          = {10.1145/3642976.3653035},
+  abstract     = {Distributed transactional datastores are pivotal in supporting the needs of modern applications and services. Datastores rely on distributed transactional protocols to tolerate faults while also aiming for strong consistency and high performance. State-of-the-art transactional protocols, such as FaRM, provide a lock-free execution phase, thus improving performance and simplifying recovery. However, these protocols often come with lengthy and complicated commit phases, requiring multiple round-trips to commit a transaction (or additional replicas). This completely contrasts with the simplicity and efficiency of the traditional two-phase commit (2PC) protocol, which can commit a transaction after a single round-trip, albeit lacking fault tolerance.To address the limitations of both approaches, we introduce U2PC, a novel 2PC variant that combines simplicity, efficiency, and fault tolerance. U2PC frugally replicates data (f + 1) times to tolerate up to f faults with strong consistency. It offers a single round-trip commit after unanimous responses of all replicas of the involved shards and ensures safe recovery via an extra "pre-abort" round before aborting a transaction. Our verification in TLA+ confirms that U2PC achieves strict serializability and recovers safely. In short, U2PC ensures fault tolerance, optimizes performance for common scenarios, and offers uniform transaction handling.},
+  booktitle    = {Proceedings of the 11th Workshop on Principles and Practice of Consistency for Distributed Data (PAPOC)},
+  pages        = {44--57},
+  numpages     = {14},
+  keywords     = {distributed transactions, 2PC, FastPaxos},
+  addres       = {Athens, Greece}
 }
+
 
 @inproceedings{brazauskas24:cerber,
-  author = {Brazauskas, Justas and Jensen, Chris and Danish, Matthew and Lewis, Ian and Mortier, Richard},
-  title = {Cerberus: Privacy-Preserving Crowd Counting and Localisation using Face Detection in Edge Devices},
-  year = 2024,
-  isbn = 9798400705397,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3642968.3654817},
-  doi = {10.1145/3642968.3654817},
-  abstract = {Cerberus uses face detection in edge devices to perform privacy-preserving crowd counting and localisation. We describe its deployment in a university setting where ceiling-mounted cameras perform real-time face detection to report occupied seats without storing or transmitting images. Cerberus' aim is ultimately to integrate with digital twins over a LoRa network enabling data visualisation and support applications in building informatics, while balancing data accuracy and individual privacy. The paper describes the system's design, deployment, and potential for broader urban informatics applications, highlighting its effectiveness in privacy-preserving crowd monitoring.},
-  booktitle = {Proceedings of the 7th International Workshop on Edge Systems, Analytics and Networking (EdgeSys)},
-  pages = {25–-30},
-  numpages = 6,
-  keywords = {Domain-specific security, Embedded systems, Human-centered computing, Privacy protection mechanisms, Security architectures, Sensor networks, Ubiquitous computing},
-  address = {Athens, Greece}
+  author       = {Brazauskas, Justas and Jensen, Chris and Danish, Matthew and Lewis, Ian and Mortier, Richard},
+  title        = {Cerberus: Privacy-Preserving Crowd Counting and Localisation using Face Detection in Edge Devices},
+  year         = {2024},
+  isbn         = {9798400705397},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3642968.3654817},
+  doi          = {10.1145/3642968.3654817},
+  abstract     = {Cerberus uses face detection in edge devices to perform privacy-preserving crowd counting and localisation. We describe its deployment in a university setting where ceiling-mounted cameras perform real-time face detection to report occupied seats without storing or transmitting images. Cerberus' aim is ultimately to integrate with digital twins over a LoRa network enabling data visualisation and support applications in building informatics, while balancing data accuracy and individual privacy. The paper describes the system's design, deployment, and potential for broader urban informatics applications, highlighting its effectiveness in privacy-preserving crowd monitoring.},
+  booktitle    = {Proceedings of the 7th International Workshop on Edge Systems, Analytics and Networking (EdgeSys)},
+  pages        = {25--30},
+  numpages     = {6},
+  keywords     = {Domain-specific security, Embedded systems, Human-centered computing, Privacy protection mechanisms, Security architectures, Sensor networks, Ubiquitous computing},
+  address      = {Athens, Greece}
 }
 
-@inproceedings{howard20:paxos.raft,
-  keywords = {workshop},
-  author = {Howard, Heidi and Mortier, Richard},
-  title = {Paxos vs Raft: have we reached consensus on distributed consensus?},
-  year = 2020,
-  isbn = 9781450375245,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3380787.3393681},
-  doi = {10.1145/3380787.3393681},
-  abstract = {Distributed consensus is a fundamental primitive for constructing fault-tolerant, strongly-consistent distributed systems. Though many distributed consensus algorithms have been proposed, just two dominate production systems: Paxos, the traditional, famously subtle, algorithm; and Raft, a more recent algorithm positioned as a more understandable alternative to Paxos.In this paper, we consider the question of which algorithm, Paxos or Raft, is the better solution to distributed consensus? We analyse both to determine exactly how they differ by describing a simplified Paxos algorithm using Raft's terminology and pragmatic abstractions.We find that both Paxos and Raft take a very similar approach to distributed consensus, differing only in their approach to leader election. Most notably, Raft only allows servers with up-to-date logs to become leaders, whereas Paxos allows any server to be leader provided it then updates its log to ensure it is up-to-date. Raft's approach is surprisingly efficient given its simplicity as, unlike Paxos, it does not require log entries to be exchanged during leader election. We surmise that much of the understandability of Raft comes from the paper's clear presentation rather than being fundamental to the underlying algorithm being presented.},
-  booktitle = {Proceedings of the 7th Workshop on Principles and Practice of Consistency for Distributed Data (PAPOC)},
-  articleno = 8,
-  numpages = 9,
-  address = {Heraklion, Greece}
+
+@inproceedings{perez23:local.differ.privat.embed.model,
+  keywords     = {workshop},
+  author       = {Perez, Iker and Wong, Jason and Skalski, Piotr and Burrell, Stuart and Mortier, Richard and McAuley, Derek and Sutton, David},
+  booktitle    = {Proceedings of the IEEE International Conference on Data
+                  Mining Workshops (ICDMW)},
+  title        = {Locally Differentially Private Embedding Models in Distributed
+                  Fraud Prevention Systems},
+  year         = {2023},
+  month        = {dec},
+  pages        = {475--484},
+  doi          = {10.1109/ICDMW60847.2023.00068}
 }
 
-@inproceedings{howard21:fast.flexib.paxos,
-  keywords = {workshop},
-  author = {Howard, Heidi and Charapko, Aleksey and Mortier, Richard},
-  title = {Fast Flexible Paxos: Relaxing Quorum Intersection for Fast Paxos},
-  year = 2021,
-  isbn = 9781450389334,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3427796.3427815},
-  doi = {10.1145/3427796.3427815},
-  abstract = {Paxos, the de facto standard approach to solving distributed consensus, operates in two phases, each of which requires an intersecting quorum of nodes. Multi-Paxos reduces this to one phase by electing a leader but this leader is also a performance bottleneck. Fast Paxos bypasses the leader but has stronger quorum intersection requirements. In this paper we observe that Fast Paxos’ intersection requirements can be safely relaxed, reducing to just one additional intersection requirement between phase-1 quorums and any pair of fast round phase-2 quorums. We thus find that the quorums used with Fast Paxos are larger than necessary, allowing alternative quorum systems to obtain new tradeoffs between performance and fault-tolerance.},
-  booktitle = {Proceedings of the 22nd International Conference on Distributed Computing and Networking (ICDCN)},
-  pages = {186-–190},
-  numpages = 5,
-  address = {Nara, Japan}
+
+@inproceedings{pan23:anony.video.data.collec.edge.using.deepd,
+  keywords     = {workshop},
+  author       = {Pan, William and Kolcun, Roman and Mortier, Richard},
+  booktitle    = {Proceedings of the IEEE International Conference on High
+                  Performance Switching and Routing (HPSR)},
+  title        = {Anonymising Video Data Collection at the Edge Using DeepDish},
+  year         = {2023},
+  month        = {jun},
+  pages        = {7--13},
+  doi          = {10.1109/HPSR57248.2023.10147953}
 }
 
-@inproceedings{brazauskas21:real,
-  keywords = {workshop},
-  author = {Brazauskas, Justas and Verma, Rohit and Safronov, Vadim and Danish, Matthew and Lewis, Ian and Mortier, Richard},
-  title = {Real-time data visualisation on the adaptive city platform},
-  year = 2021,
-  isbn = 9781450391146,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3486611.3492225},
-  doi = {10.1145/3486611.3492225},
-  abstract = {In smart buildings research, the integration of Building Information Models (BIM), Building Management Systems (BMS), and Internet of Things (IoT) is of paramount importance. However, such integration often overlooks real-time building data visualisation. In this demo, we examine challenges related to spatiotemporal data representation and novel visualisation methods in smart environments. Following this, we present the front-end design of our Adaptive City Platform (ACP), a system for collecting, processing and visualising building information and sensor data in real-time.},
-  booktitle = {Proceedings of the 8th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation},
-  pages = {210–-211},
-  numpages = 2,
-  address = {Coimbra, Portugal},
-  series = {BuildSys '21}
-}
-
-@inproceedings{danish22:deepd,
-  keywords = {workshop},
-  author = {Danish, Matthew and Verma, Rohit and Brazauskas, Justas and Lewis, Ian and Mortier, Richard},
-  title = {DeepDish on a diet: low-latency, energy-efficient object-detection and tracking at the edge},
-  year = 2022,
-  isbn = 9781450392532,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3517206.3526273},
-  doi = {10.1145/3517206.3526273},
-  abstract = {Intelligent sensors using deep learning to comprehend video streams have become commonly used to track and analyse the movement of people and vehicles in public spaces. The models and hardware become more powerful at regular and frequent intervals. However, this computational marvel has come at the expense of heavy energy usage. If intelligent sensors are to become ubiquitous, such as being installed at every junction and frequently along every street in a city, then their power draw will become non-trivial, posing a severe downside to their usage. We explore Multi-Object Tracking (MOT) solutions based on our custom system that use less power while still maintaining reasonable accuracy.},
-  booktitle = {Proceedings of the 5th International Workshop on Edge Systems, Analytics and Networking (EDGESYS)},
-  pages = {43-–48},
-  numpages = 6,
-  address = {Rennes, France}
-}
-
-@inproceedings{howard22:relax.paxos,
-  author = {Howard, Heidi and Mortier, Richard},
-  title = {Relaxed Paxos: quorum intersection revisited (again)},
-  year = 2022,
-  isbn = 9781450392563,
-  publisher = {Association for Computing Machinery},
-  url = {https://doi.org/10.1145/3517209.3524040},
-  doi = {10.1145/3517209.3524040},
-  abstract = {Distributed consensus, the ability to reach agreement in the face of failures, is a fundamental primitive for constructing reliable distributed systems. The Paxos algorithm is synonymous with consensus and widely utilized in production. Paxos uses two phases: phase one and phase two, each requiring a quorum of acceptors, to reach consensus during a round of the protocol. Traditionally, Paxos requires that all quorums, regardless of phase or round, intersect and majorities are often used for this purpose. Flexible Paxos proved that it is only necessary for phase one quorum of a given round to intersect with the phase two quorums of all previous rounds.In this paper, we re-examine how Paxos approaches the problem of consensus. We look again at quorum intersection in Flexible Paxos and observe that quorum intersection can be safely weakened further. Most notably, we observe that if a proposer learns that a value was proposed in some previous round then its phase one no longer needs to intersect with the phase two quorums from that round or from any previous rounds. Furthermore, in order to provide an intuitive explanation of our results, we propose a novel abstraction for reasoning about Paxos which utilizes write-once registers.},
-  booktitle = {Proceedings of the 9th Workshop on Principles and Practice of Consistency for Distributed Data (PAPOC)},
-  pages = {16-–23},
-  numpages = 8,
-  keywords = {workshop},
-  address = {Rennes, France}
-}
 
 @inproceedings{isstaif23:towar.laten.aware.linux.sched.server.workl,
-  keywords = {workshop},
-  author = {Isstaif, Al-Amjad Tawfiq and Mortier, Richard},
-  title = {Towards Latency-Aware Linux Scheduling for Serverless
+  keywords     = {workshop},
+  author       = {Isstaif, Al-Amjad Tawfiq and Mortier, Richard},
+  title        = {Towards Latency-Aware Linux Scheduling for Serverless
                   Workloads},
-  year = 2023,
-  month = may # {~8},
-  isbn = 9798400701856,
-  publisher = {Association for Computing Machinery},
-  doi = {10.1145/3592533.3592807},
-  abstract = {A key principle in the design of the Linux kernel's Completely
+  year         = {2023},
+  month        = {may # {~8}},
+  isbn         = {9798400701856},
+  publisher    = {Association for Computing Machinery},
+  doi          = {10.1145/3592533.3592807},
+  abstract     = {A key principle in the design of the Linux kernel's Completely
                   Fair Scheduler (CFS) is fairness: all running tasks receive a
                   minimum time slice during every scheduling period, ensuring
                   that none starve. However, this may lead to a significant
@@ -154,52 +104,59 @@
                   scenarios synthesised from real-world traces, our modified CFS
                   can introduce a 5--30\% increase in attainment of latency
                   targets.},
-  booktitle = {Proceedings of the 1st Workshop on SErverless Systems,
+  booktitle    = {Proceedings of the 1st Workshop on SErverless Systems,
                   Applications and MEthodologies (SESAME)},
-  pages = {19-–26},
-  numpages = 8,
-  location = {Rome, Italy}
+  pages        = {19--26},
+  numpages     = {8},
+  location     = {Rome, Italy}
 }
 
-@inproceedings{pan23:anony.video.data.collec.edge.using.deepd,
-  keywords = {workshop},
-  author = {Pan, William and Kolcun, Roman and Mortier, Richard},
-  booktitle = {Proceedings of the IEEE International Conference on High
-                  Performance Switching and Routing (HPSR)},
-  title = {Anonymising Video Data Collection at the Edge Using DeepDish},
-  year = 2023,
-  month = jun,
-  pages = {7--13},
-  doi = {10.1109/HPSR57248.2023.10147953}
+
+@inproceedings{danish22:deepd,
+  keywords     = {workshop},
+  author       = {Danish, Matthew and Verma, Rohit and Brazauskas, Justas and Lewis, Ian and Mortier, Richard},
+  title        = {DeepDish on a diet: low-latency, energy-efficient object-detection and tracking at the edge},
+  year         = {2022},
+  isbn         = {9781450392532},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3517206.3526273},
+  doi          = {10.1145/3517206.3526273},
+  abstract     = {Intelligent sensors using deep learning to comprehend video streams have become commonly used to track and analyse the movement of people and vehicles in public spaces. The models and hardware become more powerful at regular and frequent intervals. However, this computational marvel has come at the expense of heavy energy usage. If intelligent sensors are to become ubiquitous, such as being installed at every junction and frequently along every street in a city, then their power draw will become non-trivial, posing a severe downside to their usage. We explore Multi-Object Tracking (MOT) solutions based on our custom system that use less power while still maintaining reasonable accuracy.},
+  booktitle    = {Proceedings of the 5th International Workshop on Edge Systems, Analytics and Networking (EDGESYS)},
+  pages        = {43--48},
+  numpages     = {6},
+  address      = {Rennes, France}
 }
 
-@inproceedings{perez23:local.differ.privat.embed.model,
-  keywords = {workshop},
-  author = {Perez, Iker and Wong, Jason and Skalski, Piotr and Burrell,
-                  Stuart and Mortier, Richard and McAuley, Derek and Sutton,
-                  David},
-  booktitle = {Proceedings of the IEEE International Conference on Data
-                  Mining Workshops (ICDMW)},
-  title = {Locally Differentially Private Embedding Models in Distributed
-                  Fraud Prevention Systems},
-  year = 2023,
-  month = dec,
-  pages = {475--484},
-  doi = {10.1109/ICDMW60847.2023.00068}
+
+@inproceedings{howard22:relax.paxos,
+  author       = {Howard, Heidi and Mortier, Richard},
+  title        = {Relaxed Paxos: quorum intersection revisited (again)},
+  year         = {2022},
+  isbn         = {9781450392563},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3517209.3524040},
+  doi          = {10.1145/3517209.3524040},
+  abstract     = {Distributed consensus, the ability to reach agreement in the face of failures, is a fundamental primitive for constructing reliable distributed systems. The Paxos algorithm is synonymous with consensus and widely utilized in production. Paxos uses two phases: phase one and phase two, each requiring a quorum of acceptors, to reach consensus during a round of the protocol. Traditionally, Paxos requires that all quorums, regardless of phase or round, intersect and majorities are often used for this purpose. Flexible Paxos proved that it is only necessary for phase one quorum of a given round to intersect with the phase two quorums of all previous rounds.In this paper, we re-examine how Paxos approaches the problem of consensus. We look again at quorum intersection in Flexible Paxos and observe that quorum intersection can be safely weakened further. Most notably, we observe that if a proposer learns that a value was proposed in some previous round then its phase one no longer needs to intersect with the phase two quorums from that round or from any previous rounds. Furthermore, in order to provide an intuitive explanation of our results, we propose a novel abstraction for reasoning about Paxos which utilizes write-once registers.},
+  booktitle    = {Proceedings of the 9th Workshop on Principles and Practice of Consistency for Distributed Data (PAPOC)},
+  pages        = {16--23},
+  numpages     = {8},
+  keywords     = {workshop},
+  address      = {Rennes, France}
 }
+
 
 @inproceedings{safronov21:do.we.want.new.old.inter,
-  keywords = {workshop},
-  author = {Safronov, Vadim and Brazauskas, Justas and Danish, Matthew and
-                  Verma, Rohit and Lewis, Ian and Mortier, Richard},
-  title = {Do We Want the New Old Internet? Towards Seamless and
+  keywords     = {workshop},
+  author       = {Safronov, Vadim and Brazauskas, Justas and Danish, Matthew and Verma, Rohit and Lewis, Ian and Mortier, Richard},
+  title        = {Do We Want the New Old Internet? Towards Seamless and
                   Protocol-Independent IoT Application Interoperability},
-  year = 2021,
-  month = nov,
-  isbn = 9781450390873,
-  publisher = {ACM},
-  doi = {10.1145/3484266.3487374},
-  abstract = {IoT is developing rapidly with frequently appearing new
+  year         = {2021},
+  month        = {nov},
+  isbn         = {9781450390873},
+  publisher    = {ACM},
+  doi          = {10.1145/3484266.3487374},
+  abstract     = {IoT is developing rapidly with frequently appearing new
                   wireless standards and applications. However, besides a large
                   number of IoT benefits, its further development is now being
                   slowed down due to the repetition of old Internet development
@@ -223,37 +180,37 @@
                   the model's prototype which showed 1.6-2 times faster MQTT
                   application operation over LoRa and WiFi compared to the
                   legacy IP-based MQTT provisioning over that protocols.},
-  booktitle = {Proceedings of the Twentieth ACM Workshop on Hot Topics in
+  booktitle    = {Proceedings of the Twentieth ACM Workshop on Hot Topics in
                   Networks (HotNets)},
-  pages = {185-–191},
-  numpages = 7,
-  location = {Virtual Event, United Kingdom}
+  pages        = {185--191},
+  numpages     = {7},
+  location     = {Virtual Event, United Kingdom}
 }
+
 
 @inproceedings{kolcun21:revis.iot.devic.ident,
-  title = {Revisiting {IoT} Device Identification},
-  url = {https://tma.ifip.org/2021/wp-content/uploads/sites/10/2021/08/tma2021-paper6.pdf},
-  doi = {10.17863/CAM.72776},
-  author = {Kolcun, Roman and Popescu, Diana Andreea and Safronov, Vadim
-                  and Yadav, Poonam and Mandalari, Anna Maria and Mortier,
-                  Richard and Haddadi, Hamed},
-  year = 2021,
-  month = sep # {~14},
-  booktitle = {Proceedings of IFIP Network Traffic Measurement and Analysis
+  title        = {Revisiting {IoT} Device Identification},
+  url          = {https://tma.ifip.org/2021/wp-content/uploads/sites/10/2021/08/tma2021-paper6.pdf},
+  doi          = {10.17863/CAM.72776},
+  author       = {Kolcun, Roman and Popescu, Diana Andreea and Safronov, Vadim and Yadav, Poonam and Mandalari, Anna Maria and Mortier, Richard and Haddadi, Hamed},
+  year         = {2021},
+  month        = {sep # {~14}},
+  booktitle    = {Proceedings of IFIP Network Traffic Measurement and Analysis
                   Conference (TMA)},
-  location = {online}
+  location     = {online}
 }
 
+
 @inproceedings{jeffery21:rearc.kuber.edge,
-  keywords = {workshop},
-  author = {Jeffery, Andrew and Howard, Heidi and Mortier, Richard},
-  title = {Rearchitecting Kubernetes for the Edge},
-  year = 2021,
-  isbn = 9781450382915,
-  publisher = {ACM},
-  month = apr,
-  doi = {10.1145/3434770.3459730},
-  abstract = {Recent years have seen Kubernetes emerge as a primary choice
+  keywords     = {workshop},
+  author       = {Jeffery, Andrew and Howard, Heidi and Mortier, Richard},
+  title        = {Rearchitecting Kubernetes for the Edge},
+  year         = {2021},
+  isbn         = {9781450382915},
+  publisher    = {ACM},
+  month        = {apr},
+  doi          = {10.1145/3434770.3459730},
+  abstract     = {Recent years have seen Kubernetes emerge as a primary choice
                   for container orchestration. Kubernetes largely targets the
                   cloud environment but new use cases require performant,
                   available and scalable orchestration at the edge. Kubernetes
@@ -270,22 +227,58 @@
                   whilst still supporting the broad needs of Kubernetes. This
                   aims to make Kubernetes much more suitable for
                   performance-critical, dynamically-scaled edge solutions.},
-  booktitle = {Proceedings of the 4th International Workshop on Edge Systems,
+  booktitle    = {Proceedings of the 4th International Workshop on Edge Systems,
                   Analytics and Networking (EdgeSys)},
-  pages = {7-–12},
-  numpages = 6,
-  location = {Online, United Kingdom}
+  pages        = {7--12},
+  numpages     = {6},
+  location     = {Online, United Kingdom}
 }
 
+
+@inproceedings{howard21:fast.flexib.paxos,
+  keywords     = {workshop},
+  author       = {Howard, Heidi and Charapko, Aleksey and Mortier, Richard},
+  title        = {Fast Flexible Paxos: Relaxing Quorum Intersection for Fast Paxos},
+  year         = {2021},
+  isbn         = {9781450389334},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3427796.3427815},
+  doi          = {10.1145/3427796.3427815},
+  abstract     = {Paxos, the de facto standard approach to solving distributed consensus, operates in two phases, each of which requires an intersecting quorum of nodes. Multi-Paxos reduces this to one phase by electing a leader but this leader is also a performance bottleneck. Fast Paxos bypasses the leader but has stronger quorum intersection requirements. In this paper we observe that Fast Paxos’ intersection requirements can be safely relaxed, reducing to just one additional intersection requirement between phase-1 quorums and any pair of fast round phase-2 quorums. We thus find that the quorums used with Fast Paxos are larger than necessary, allowing alternative quorum systems to obtain new tradeoffs between performance and fault-tolerance.},
+  booktitle    = {Proceedings of the 22nd International Conference on Distributed Computing and Networking (ICDCN)},
+  pages        = {186--190},
+  numpages     = {5},
+  address      = {Nara, Japan}
+}
+
+
+@inproceedings{brazauskas21:real,
+  keywords     = {workshop},
+  author       = {Brazauskas, Justas and Verma, Rohit and Safronov, Vadim and Danish, Matthew and Lewis, Ian and Mortier, Richard},
+  title        = {Real-time data visualisation on the adaptive city platform},
+  year         = {2021},
+  isbn         = {9781450391146},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3486611.3492225},
+  doi          = {10.1145/3486611.3492225},
+  abstract     = {In smart buildings research, the integration of Building Information Models (BIM), Building Management Systems (BMS), and Internet of Things (IoT) is of paramount importance. However, such integration often overlooks real-time building data visualisation. In this demo, we examine challenges related to spatiotemporal data representation and novel visualisation methods in smart environments. Following this, we present the front-end design of our Adaptive City Platform (ACP), a system for collecting, processing and visualising building information and sensor data in real-time.},
+  booktitle    = {Proceedings of the 8th ACM International Conference on Systems for Energy-Efficient Buildings, Cities, and Transportation},
+  pages        = {210--211},
+  numpages     = {2},
+  address      = {Coimbra, Portugal},
+  series       = {BuildSys '21}
+}
+
+
 @inproceedings{jensen21:examin.rafts.behav.partial.networ.failur,
-  keywords = {workshop},
-  author = {Jensen, Chris and Howard, Heidi and Mortier, Richard},
-  title = {Examining Raft's Behaviour during Partial Network Failures},
-  year = 2021,
-  isbn = 9781450383363,
-  publisher = {ACM},
-  doi = {10.1145/3447851.3458739},
-  abstract = {State machine replication protocols such as Raft are widely
+  keywords     = {workshop},
+  author       = {Jensen, Chris and Howard, Heidi and Mortier, Richard},
+  title        = {Examining Raft's Behaviour during Partial Network Failures},
+  year         = {2021},
+  isbn         = {9781450383363},
+  publisher    = {ACM},
+  doi          = {10.1145/3447851.3458739},
+  abstract     = {State machine replication protocols such as Raft are widely
                   used to build highly-available strongly-consistent services,
                   maintaining liveness even if a minority of servers crash. As
                   these systems are implemented and optimised for production,
@@ -302,231 +295,247 @@
                   highlight the upcoming PreVote optimisation in etcd, which
                   might have prevented the outage from happening in the first
                   place.},
-  booktitle = {Proceedings of the 1st Workshop on High Availability and
+  booktitle    = {Proceedings of the 1st Workshop on High Availability and
                   Observability of Cloud Systems (HAOC)},
-  pages = {11-–17},
-  numpages = 7,
-  location = {Online, United Kingdom}
+  pages        = {11--17},
+  numpages     = {7},
+  location     = {Online, United Kingdom}
 }
 
-@inproceedings{yadav19:enfor.accoun.smart.built.iot,
-  keywords = {workshop, IoT infrastructure, Security, Accountability},
-  author = {Yadav, Poonam and Safronov, Vadim and Mortier, Richard},
-  title = {Enforcing Accountability in Smart Built-in IoT Environment
-                  Using MUD},
-  year = 2019,
-  month = nov,
-  isbn = 9781450370059,
-  publisher = {ACM},
-  doi = {10.1145/3360322.3361004},
-  booktitle = {Proceedings of the 6th ACM International Conference on Systems
-                  for Energy-Efficient Buildings, Cities, and Transportation
-                  (BuildSys)},
-  pages = {368-–369},
-  numpages = 2
-}
 
 @inproceedings{feraudo20:colear,
-  keywords = {workshop, manufacturer usage description, anomaly detection,
+  keywords     = {workshop, manufacturer usage description, anomaly detection,
                   distributed machine learning, traffic filtering, federated
                   learning, edge computing, internet of things (IoT), machine
                   learning},
-  author = {Feraudo, Angelo and Yadav, Poonam and Safronov, Vadim and
-                  Popescu, Diana Andreea and Mortier, Richard and Wang, Shiqiang
-                  and Bellavista, Paolo and Crowcroft, Jon},
-  title = {CoLearn: Enabling Federated Learning in MUD-Compliant IoT Edge
+  author       = {Feraudo, Angelo and Yadav, Poonam and Safronov, Vadim and Popescu, Diana Andreea and Mortier, Richard and Wang, Shiqiang and Bellavista, Paolo and Crowcroft, Jon},
+  title        = {CoLearn: Enabling Federated Learning in MUD-Compliant IoT Edge
                   Networks},
-  year = 2020,
-  month = apr,
-  isbn = 9781450371322,
-  publisher = {ACM},
-  doi = {10.1145/3378679.3394528},
-  booktitle = {Proceedings of the Third ACM International Workshop on Edge
+  year         = {2020},
+  month        = {apr},
+  isbn         = {9781450371322},
+  publisher    = {ACM},
+  doi          = {10.1145/3378679.3394528},
+  booktitle    = {Proceedings of the Third ACM International Workshop on Edge
                   Systems, Analytics and Networking (EdgeSys)},
-  pages = {25-–30},
-  numpages = 6,
-  address = {Heraklion, Greece}
+  pages        = {25--30},
+  numpages     = {6},
+  address      = {Heraklion, Greece}
 }
+
 
 @inproceedings{danish20:deepd,
-  keywords = {workshop, object tracking, object detection, edge computing},
-  author = {Danish, Matthew and Brazauskas, Justas and Bricheno, Rob and
-                  Lewis, Ian and Mortier, Richard},
-  title = {DeepDish: Multi-Object Tracking with an off-the-Shelf
+  keywords     = {workshop, object tracking, object detection, edge computing},
+  author       = {Danish, Matthew and Brazauskas, Justas and Bricheno, Rob and Lewis, Ian and Mortier, Richard},
+  title        = {DeepDish: Multi-Object Tracking with an off-the-Shelf
                   Raspberry Pi},
-  year = 2020,
-  month = apr,
-  isbn = 9781450371322,
-  publisher = {ACM},
-  doi = {10.1145/3378679.3394535},
-  booktitle = {Proceedings of the Third ACM International Workshop on Edge
+  year         = {2020},
+  month        = {apr},
+  isbn         = {9781450371322},
+  publisher    = {ACM},
+  doi          = {10.1145/3378679.3394535},
+  booktitle    = {Proceedings of the Third ACM International Workshop on Edge
                   Systems, Analytics and Networking (EdgeSys)},
-  pages = {37-–42},
-  numpages = 6,
-  address = {Heraklion, Greece}
+  pages        = {37--42},
+  numpages     = {6},
+  address      = {Heraklion, Greece}
 }
+
+
+@inproceedings{howard20:paxos.raft,
+  keywords     = {workshop},
+  author       = {Howard, Heidi and Mortier, Richard},
+  title        = {Paxos vs Raft: have we reached consensus on distributed consensus?},
+  year         = {2020},
+  isbn         = {9781450375245},
+  publisher    = {Association for Computing Machinery},
+  url          = {https://doi.org/10.1145/3380787.3393681},
+  doi          = {10.1145/3380787.3393681},
+  abstract     = {Distributed consensus is a fundamental primitive for constructing fault-tolerant, strongly-consistent distributed systems. Though many distributed consensus algorithms have been proposed, just two dominate production systems: Paxos, the traditional, famously subtle, algorithm; and Raft, a more recent algorithm positioned as a more understandable alternative to Paxos.In this paper, we consider the question of which algorithm, Paxos or Raft, is the better solution to distributed consensus? We analyse both to determine exactly how they differ by describing a simplified Paxos algorithm using Raft's terminology and pragmatic abstractions.We find that both Paxos and Raft take a very similar approach to distributed consensus, differing only in their approach to leader election. Most notably, Raft only allows servers with up-to-date logs to become leaders, whereas Paxos allows any server to be leader provided it then updates its log to ensure it is up-to-date. Raft's approach is surprisingly efficient given its simplicity as, unlike Paxos, it does not require log entries to be exchanged during leader election. We surmise that much of the understandability of Raft comes from the paper's clear presentation rather than being fundamental to the underlying algorithm being presented.},
+  booktitle    = {Proceedings of the 7th Workshop on Principles and Practice of Consistency for Distributed Data (PAPOC)},
+  articleno    = {8},
+  numpages     = {9},
+  address      = {Heraklion, Greece}
+}
+
+
+@inproceedings{yadav19:enfor.accoun.smart.built.iot,
+  keywords     = {workshop, IoT infrastructure, Security, Accountability},
+  author       = {Yadav, Poonam and Safronov, Vadim and Mortier, Richard},
+  title        = {Enforcing Accountability in Smart Built-in IoT Environment
+                  Using MUD},
+  year         = {2019},
+  month        = {nov},
+  isbn         = {9781450370059},
+  publisher    = {ACM},
+  doi          = {10.1145/3360322.3361004},
+  booktitle    = {Proceedings of the 6th ACM International Conference on Systems
+                  for Energy-Efficient Buildings, Cities, and Transportation
+                  (BuildSys)},
+  pages        = {368--369},
+  numpages     = {2}
+}
+
 
 @inproceedings{moore19:zest,
-  keywords = {workshop},
-  author = {J. {Moore} and A. {Arcia-Moret} and P. {Yadav} and R.
-                  {Mortier} and A. {Brown} and D. {McAuley} and A. {Crabtree}
-                  and C. {Greenhalgh} and H. {Haddadi} and Y. {Amar}},
-  booktitle = {Proceedings of the IEEE International Conference on Pervasive
+  keywords     = {workshop},
+  author       = {{Moore}, J. and {Arcia-Moret}, A. and {Yadav}, P. and {Mortier}, R. and {Brown}, A. and {McAuley}, D. and {Crabtree}, A. and {Greenhalgh}, C. and {Haddadi}, H. and {Amar}, Y.},
+  booktitle    = {Proceedings of the IEEE International Conference on Pervasive
                   Computing and Communications Workshops (PerCom Workshops)},
-  title = {Zest: {REST over ZeroMQ}},
-  year = 2019,
-  pages = {1015--1019},
-  pagetotal = 5,
-  doi = {10.1109/PERCOMW.2019.8730686},
-  month = mar
+  title        = {Zest: {REST over ZeroMQ}},
+  year         = {2019},
+  pages        = {1015--1019},
+  pagetotal    = {5},
+  doi          = {10.1109/PERCOMW.2019.8730686},
+  month        = {mar}
 }
+
 
 @inproceedings{tarkhani19:snape,
-  keywords = {workshop},
-  author = {Tarkhani, Zahra and Madhavapeddy, Anil and Mortier, Richard},
-  title = {Snape: The Dark Art of Handling Heterogeneous Enclaves},
-  booktitle = {Proceedings of the 2nd International Workshop on Edge Systems,
+  keywords     = {workshop},
+  author       = {Tarkhani, Zahra and Madhavapeddy, Anil and Mortier, Richard},
+  title        = {Snape: The Dark Art of Handling Heterogeneous Enclaves},
+  booktitle    = {Proceedings of the 2nd International Workshop on Edge Systems,
                   Analytics and Networking (EdgeSys)},
-  year = 2019,
-  isbn = {978-1-4503-6275-7},
-  address = {Dresden, Germany},
-  pages = {48--53},
-  pagetotal = 6,
-  doi = {10.1145/3301418.3313945},
-  acmid = 3313945,
-  publisher = {ACM}
+  year         = {2019},
+  isbn         = {978-1-4503-6275-7},
+  address      = {Dresden, Germany},
+  pages        = {48--53},
+  pagetotal    = {6},
+  doi          = {10.1145/3301418.3313945},
+  acmid        = {3313945},
+  publisher    = {ACM}
 }
 
-@inproceedings{zhao18:data.analy.servic.compos.deploy.iot.devic,
-  keywords = {workshop},
-  author = {Zhao, Jianxin and Tiplea, Tudor and Mortier, Richard and
-                  Crowcroft, Jon and Wang, Liang},
-  title = {Data Analytics Service Composition and Deployment on IoT
+
+@inproceedings{yadav18:provid.occup.as.servic.datab,
+  keywords     = {workshop},
+  author       = {Yadav, Poonam and Moore, John and Li, Qi and Mortier, Richard and Brown, Anthony and Crabtree, Andy and Greenhalgh, Chris and McAuley, Derek and Amar, Yousef and Shamsabadi, Ali Shahin and Haddadi, Hamed},
+  title        = {Providing Occupancy As a Service with Databox},
+  booktitle    = {Proceedings of the 1st ACM International Workshop on Smart
+                  Cities and Fog Computing (CitiFog))},
+  month        = {nov},
+  year         = {2018},
+  isbn         = {978-1-4503-6051-7},
+  address      = {Shenzhen, China},
+  pages        = {29--34},
+  pagetotal    = {6},
+  doi          = {10.1145/3277893.3277894},
+  acmid        = {3277894},
+  publisher    = {ACM}
+}
+
+
+@inproceedings{zhao18:data.analy.servic.compos.deploy.edge.devic,
+  keywords     = {workshop},
+  author       = {Zhao, Jianxin and Tiplea, Tudor and Mortier, Richard and Crowcroft, Jon and Wang, Liang},
+  title        = {Data Analytics Service Composition and Deployment on Edge
                   Devices},
-  booktitle = {Proceedings of the 1st ACM Open IoT Day: Transparency, Trust,
+  booktitle    = {Proceedings of the 2018 Workshop on Big Data Analytics and
+                  Machine Learning for Data Communication Networks (Big-DAMA)},
+  year         = {2018},
+  month        = {aug},
+  isbn         = {978-1-4503-5904-7},
+  address      = {Budapest, Hungary},
+  pages        = {27--32},
+  pagetotal    = {6},
+  doi          = {10.1145/3229607.3229615},
+  acmid        = {3229615},
+  publisher    = {ACM}
+}
+
+
+@inproceedings{zhao18:data.analy.servic.compos.deploy.iot.devic,
+  keywords     = {workshop},
+  author       = {Zhao, Jianxin and Tiplea, Tudor and Mortier, Richard and Crowcroft, Jon and Wang, Liang},
+  title        = {Data Analytics Service Composition and Deployment on IoT
+                  Devices},
+  booktitle    = {Proceedings of the 1st ACM Open IoT Day: Transparency, Trust,
                   and Ethics in the Pervasive Internet of Things at the 16th
                   Annual International Conference on Mobile Systems,
                   Applications, and Services (MOBISYS)},
-  year = 2018,
-  month = jun,
-  isbn = {978-1-4503-5720-3},
-  address = {Munich, Germany},
-  pages = {502--504},
-  pagetotal = 3,
-  doi = {10.1145/3210240.3223570},
-  acmid = 3223570,
-  publisher = {ACM}
+  year         = {2018},
+  month        = {jun},
+  isbn         = {978-1-4503-5720-3},
+  address      = {Munich, Germany},
+  pages        = {502--504},
+  pagetotal    = {3},
+  doi          = {10.1145/3210240.3223570},
+  acmid        = {3223570},
+  publisher    = {ACM}
 }
 
-@inproceedings{zhao18:data.analy.servic.compos.deploy.edge.devic,
-  keywords = {workshop},
-  author = {Zhao, Jianxin and Tiplea, Tudor and Mortier, Richard and
-                  Crowcroft, Jon and Wang, Liang},
-  title = {Data Analytics Service Composition and Deployment on Edge
-                  Devices},
-  booktitle = {Proceedings of the 2018 Workshop on Big Data Analytics and
-                  Machine Learning for Data Communication Networks (Big-DAMA)},
-  year = 2018,
-  month = aug,
-  isbn = {978-1-4503-5904-7},
-  address = {Budapest, Hungary},
-  pages = {27--32},
-  pagetotal = 6,
-  doi = {10.1145/3229607.3229615},
-  acmid = 3229615,
-  publisher = {ACM}
-}
 
 @inproceedings{cozzolino18:empow.cyber.physic.system.fadex,
-  keywords = {workshop, demo, Edge computing, Image processing,
+  keywords     = {workshop, demo, Edge computing, Image processing,
                   Virtualization},
-  author = {Cozzolino, Vittorio and Ding, Aaron Yi and Sani, Ardalan Amiri
-                  and Mortier, Richard and Kutscher, Dirk and Ott, J\"{o}rg},
-  title = {Empowering Cyber-Physical Systems with FADEX},
-  booktitle = {Proceedings of the 16th Annual International Conference on
+  author       = {Cozzolino, Vittorio and Ding, Aaron Yi and Sani, Ardalan Amiri and Mortier, Richard and Kutscher, Dirk and Ott, J\"{o}rg},
+  title        = {Empowering Cyber-Physical Systems with FADEX},
+  booktitle    = {Proceedings of the 16th Annual International Conference on
                   Mobile Systems, Applications, and Services (MobiSys)},
-  year = 2018,
-  isbn = {978-1-4503-5720-3},
-  address = {Munich, Germany},
-  pages = {537--537},
-  pagetotal = 1,
-  month = may,
-  doi = {10.1145/3210240.3211121},
-  acmid = 3211121,
-  publisher = {ACM}
+  year         = {2018},
+  isbn         = {978-1-4503-5720-3},
+  address      = {Munich, Germany},
+  pages        = {537--537},
+  pagetotal    = {1},
+  month        = {may},
+  doi          = {10.1145/3210240.3211121},
+  acmid        = {3211121},
+  publisher    = {ACM}
 }
+
 
 @inproceedings{amar18:infor.theor.approac.time.series.data.privac,
-  keywords = {workshop},
-  author = {Amar, Yousef and Haddadi, Hamed and Mortier, Richard},
-  title = {An Information-Theoretic Approach to Time-Series Data Privacy},
-  booktitle = {Proceedings of the 1st Workshop on Privacy by Design in
+  keywords     = {workshop},
+  author       = {Amar, Yousef and Haddadi, Hamed and Mortier, Richard},
+  title        = {An Information-Theoretic Approach to Time-Series Data Privacy},
+  booktitle    = {Proceedings of the 1st Workshop on Privacy by Design in
                   Distributed Systems (W-P2DS)},
-  year = 2018,
-  isbn = {978-1-4503-5654-1},
-  address = {Porto, Portugal},
-  pages = {1--6},
-  articleno = 3,
-  pagetotal = 6,
-  doi = {10.1145/3195258.3195261},
-  acmid = 3195261,
-  publisher = {ACM},
-  month = apr
+  year         = {2018},
+  isbn         = {978-1-4503-5654-1},
+  address      = {Porto, Portugal},
+  pages        = {1--6},
+  articleno    = {3},
+  pagetotal    = {6},
+  doi          = {10.1145/3195258.3195261},
+  acmid        = {3195261},
+  publisher    = {ACM},
+  month        = {apr}
 }
 
-@inproceedings{yadav18:provid.occup.as.servic.datab,
-  keywords = {workshop},
-  author = {Yadav, Poonam and Moore, John and Li, Qi and Mortier, Richard
-                  and Brown, Anthony and Crabtree, Andy and Greenhalgh, Chris
-                  and McAuley, Derek and Amar, Yousef and Shamsabadi, Ali Shahin
-                  and Haddadi, Hamed},
-  title = {Providing Occupancy As a Service with Databox},
-  booktitle = {Proceedings of the 1st ACM International Workshop on Smart
-                  Cities and Fog Computing (CitiFog))},
-  month = nov,
-  year = 2018,
-  isbn = {978-1-4503-6051-7},
-  address = {Shenzhen, China},
-  pages = {29--34},
-  pagetotal = 6,
-  doi = {10.1145/3277893.3277894},
-  acmid = 3277894,
-  publisher = {ACM}
-}
 
 @inproceedings{zhao18:privac.preser.machin.learn.based,
-  keywords = {workshop},
-  author = {Zhao, Jianxin and Mortier, Richard and Crowcroft, Jon and
-                  Wang, Liang},
-  title = {Privacy-Preserving Machine Learning Based Data Analytics on
+  keywords     = {workshop},
+  author       = {Zhao, Jianxin and Mortier, Richard and Crowcroft, Jon and Wang, Liang},
+  title        = {Privacy-Preserving Machine Learning Based Data Analytics on
                   Edge Devices},
-  booktitle = {Proceedings of the 2018 AAAI/ACM Conference on AI, Ethics, and
+  booktitle    = {Proceedings of the 2018 AAAI/ACM Conference on AI, Ethics, and
                   Society (AIES)},
-  year = 2018,
-  isbn = {978-1-4503-6012-8},
-  address = {New Orleans, LA, USA},
-  pages = {341--346},
-  pagetotal = 6,
-  doi = {10.1145/3278721.3278778},
-  acmid = 3278778,
-  publisher = {ACM}
+  year         = {2018},
+  isbn         = {978-1-4503-6012-8},
+  address      = {New Orleans, LA, USA},
+  pages        = {341--346},
+  pagetotal    = {6},
+  doi          = {10.1145/3278721.3278778},
+  acmid        = {3278778},
+  publisher    = {ACM}
 }
 
+
 @inproceedings{crabtree17:accoun.inter,
-  keywords = {workshop},
-  booktitle = {Proceedings of IEEE 18th International Symposium on A World of
+  keywords     = {workshop},
+  booktitle    = {Proceedings of IEEE 18th International Symposium on A World of
                   Wireless, Mobile and Multimedia Networks (WoWMoM)},
-  doi = {10.1109/WoWMoM.2017.7974335},
-  month = jun,
-  title = {Accountable Internet of Things? Outline of the IoT Databox
+  doi          = {10.1109/WoWMoM.2017.7974335},
+  month        = {jun},
+  title        = {Accountable Internet of Things? Outline of the IoT Databox
                   model},
-  author = {Andy Crabtree and Tom Lodge and James Colley and Chris
-                  Greenhalgh and Richard Mortier},
-  pages = {1--6},
-  pagetotal = 6,
-  year = 2017,
-  url = {https://eprints.nottingham.ac.uk/42233/},
-  abstract = {This paper outlines the IoT Databox model as a means of making
+  author       = {Crabtree, Andy and Lodge, Tom and Colley, James and Greenhalgh, Chris and Mortier, Richard},
+  pages        = {1--6},
+  pagetotal    = {6},
+  year         = {2017},
+  url          = {https://eprints.nottingham.ac.uk/42233/},
+  abstract     = {This paper outlines the IoT Databox model as a means of making
                   the Internet of Things (IoT) accountable to individuals.
                   Accountability is a key to building consumer trust and
                   mandated in data protection legislation. We briefly outline
@@ -541,138 +550,136 @@
                   trust in the IoT.}
 }
 
+
 @inproceedings{mortier16:person.data.manag.datab,
-  keywords = {workshop},
-  author = {Richard Mortier and Jianxin Zhao and Jon Crowcroft and Liang
-                  Wang and Qi Li and Hamed Haddadi and Yousef Amar and Andy
-                  Crabtree and James Colley and Tom Lodge and Tosh Brown and
-                  Derek McAuley and Chris Greenhalgh},
-  title = {Personal Data Management with the {Databox}: What's Inside the
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Zhao, Jianxin and Crowcroft, Jon and Wang, Liang and Li, Qi and Haddadi, Hamed and Amar, Yousef and Crabtree, Andy and Colley, James and Lodge, Tom and Brown, Tosh and McAuley, Derek and Greenhalgh, Chris},
+  title        = {Personal Data Management with the {Databox}: What's Inside the
                   Box?},
-  booktitle = {Proceedings of the ACM Workshop on Cloud-Assisted Networking
+  booktitle    = {Proceedings of the ACM Workshop on Cloud-Assisted Networking
                   (CAN)},
-  isbn = {978-1-4503-4673-3},
-  address = {Irvine, California, USA},
-  pages = {49--54},
-  pagetotal = 6,
-  doi = {10.1145/3010079.3010082},
-  acmid = 3010082,
-  year = 2016,
-  month = dec # {~12},
-  pdf = {pdf/can16-databox.pdf}
+  isbn         = {978-1-4503-4673-3},
+  address      = {Irvine, California, USA},
+  pages        = {49--54},
+  pagetotal    = {6},
+  doi          = {10.1145/3010079.3010082},
+  acmid        = {3010082},
+  year         = {2016},
+  month        = {dec # {~12}},
+  pdf          = {pdf/can16-databox.pdf}
 }
+
 
 @inproceedings{sultana16:kneec,
-  keywords = {workshop},
-  author = {Nik Sultana and Richard Mortier},
-  url = {https://ceur-ws.org/Vol-1617/paper1.pdf},
-  title = {Kneecap: Model-based Generation of Network Traffic},
-  booktitle = {Proceedings of the 14th International Workshop on
+  keywords     = {workshop},
+  author       = {Sultana, Nik and Mortier, Richard},
+  url          = {https://ceur-ws.org/Vol-1617/paper1.pdf},
+  title        = {Kneecap: Model-based Generation of Network Traffic},
+  booktitle    = {Proceedings of the 14th International Workshop on
                   Satisfiability Modulo Theories (SMT) affiliated with the
                   International Joint Conference on Automated Reasoning (IJCAR)},
-  year = 2016,
-  pages = {4--14},
-  pagetotal = 10,
-  month = jul # {~1--2},
-  address = {Coimbra, Portugal}
+  year         = {2016},
+  pages        = {4--14},
+  pagetotal    = {10},
+  month        = {jul # {~1--2}},
+  address      = {Coimbra, Portugal}
 }
 
-@inproceedings{madhavapeddy14:metap.ml.mirag,
-  keywords = {workshop, abstract},
-  author = {Anil Madhavapeddy and Thomas Gazagnaire and David Scott and
-                  Richard Mortier},
-  title = {Metaprogramming with ML modules in the MirageOS},
-  booktitle = {Proceedings of the ML Family Workshop at ICFP'14},
-  year = 2014,
-  month = sep # {~4},
-  pdf = {pdf/mlfamily14-mirage.pdf},
-  pagetotal = 2
-}
 
 @inproceedings{gazagnaire14:irmin,
-  keywords = {workshop},
-  author = {Thomas Gazagnaire and Amir Chaudhry and Jon Crowcroft and Anil
-                  Madhavapeddy and Richard Mortier and David Scott and David
-                  Sheets and Gregory Tsipenyuk},
-  title = {Irminsule; a branch-consistent distributed library database},
-  booktitle = {Proceedings of the OCaml User and Developer Workshop at
+  keywords     = {workshop},
+  author       = {Gazagnaire, Thomas and Chaudhry, Amir and Crowcroft, Jon and Madhavapeddy, Anil and Mortier, Richard and Scott, David and Sheets, David and Tsipenyuk, Gregory},
+  title        = {Irminsule; a branch-consistent distributed library database},
+  booktitle    = {Proceedings of the OCaml User and Developer Workshop at
                   ICFP'14},
-  year = 2014,
-  month = sep # {~5},
-  url = {https://mort.io/publications/pdf/oud14-irmin.pdf},
-  pdf = {pdf/oud14-irmin.pdf},
-  pagetotal = 3
+  year         = {2014},
+  month        = {sep # {~5}},
+  url          = {https://mort.io/publications/pdf/oud14-irmin.pdf},
+  pdf          = {pdf/oud14-irmin.pdf},
+  pagetotal    = {3}
 }
 
-@inproceedings{falahrastegar14:rise.panop,
-  keywords = {workshop},
-  author = {Marjan Falahrastegar and Hamed Haddadi and Steve Uhlig and
-                  Richard Mortier},
-  title = {The Rise of Panopticons: Examining Region-Specific Third-Party
-                  Web Tracking},
-  booktitle = {Proceedings of the 6th International Workshop on Traffic
-                  Monitoring and Analysis},
-  isbn = {978-3-642-54998-4},
-  volume = 8406,
-  series = {Lecture Notes in Computer Science},
-  editor = {Dainotti, Alberto and Mahanti, Anirban and Uhlig, Steve},
-  doi = {10.1007/978-3-642-54999-1_9},
-  pages = {104--114},
-  year = 2014,
-  month = apr # {~14},
-  pdf = {pdf/tma14-panopticons.pdf},
-  pagetotal = 6,
-  publisher = {Springer Berlin Heidelberg},
-  note = {Also as arXiv preprint arXiv:1409.1066}
+
+@inproceedings{madhavapeddy14:metap.ml.mirag,
+  keywords     = {workshop, abstract},
+  author       = {Madhavapeddy, Anil and Gazagnaire, Thomas and Scott, David and Mortier, Richard},
+  title        = {Metaprogramming with ML modules in the MirageOS},
+  booktitle    = {Proceedings of the ML Family Workshop at ICFP'14},
+  year         = {2014},
+  month        = {sep # {~4}},
+  pdf          = {pdf/mlfamily14-mirage.pdf},
+  pagetotal    = {2}
 }
+
 
 @inproceedings{shipp14:wearab,
-  keywords = {workshop},
-  title = {Wearables or infrastructure: contrasting approaches to
+  keywords     = {workshop},
+  title        = {Wearables or infrastructure: contrasting approaches to
                   collecting behavioural data in the home},
-  author = {Victoria Shipp and Tim Coughlan and Sarah Martindale and
-                  Elizabeth Evans and Kher Hui Ng and Richard Mortier and Stuart
-                  Reeves},
-  booktitle = {Proceedings of the HomeSys workshop at the ACM International
+  author       = {Shipp, Victoria and Coughlan, Tim and Martindale, Sarah and Evans, Elizabeth and Ng, Kher Hui and Mortier, Richard and Reeves, Stuart},
+  booktitle    = {Proceedings of the HomeSys workshop at the ACM International
                   Joint Conference on Pervasive and Ubiquitous Computing
                   (UBICOMP)},
-  pages = {931--938},
-  year = 2014,
-  month = sep # {~14},
-  pdf = {pdf/homesys14-wearables.pdf},
-  doi = {10.1145/2638728.2641558},
-  pagetotal = 8,
+  pages        = {931--938},
+  year         = {2014},
+  month        = {sep # {~14}},
+  pdf          = {pdf/homesys14-wearables.pdf},
+  doi          = {10.1145/2638728.2641558},
+  pagetotal    = {8},
   organization = {ACM}
 }
+
 
 @inproceedings{brown14:netfl,
-  keywords = {workshop},
-  title = {An exploration of user recognition on domestic networks using
+  keywords     = {workshop},
+  title        = {An exploration of user recognition on domestic networks using
                   NetFlow records},
-  author = {Anthony Brown and Richard Mortier and Tom Rodden},
-  booktitle = {Proceedings of the HomeSys workshop at the ACM International
+  author       = {Brown, Anthony and Mortier, Richard and Rodden, Tom},
+  booktitle    = {Proceedings of the HomeSys workshop at the ACM International
                   Joint Conference on Pervasive and Ubiquitous Computing
                   (UBICOMP)},
-  pages = {903--910},
-  month = sep # {~14},
-  pagetotal = 8,
-  year = 2014,
-  doi = {10.1145/2638728.2641560},
-  pdf = {pdf/homesys14-netflow.pdf},
+  pages        = {903--910},
+  month        = {sep # {~14}},
+  pagetotal    = {8},
+  year         = {2014},
+  doi          = {10.1145/2638728.2641560},
+  pdf          = {pdf/homesys14-netflow.pdf},
   organization = {ACM}
 }
 
+
+@inproceedings{falahrastegar14:rise.panop,
+  keywords     = {workshop},
+  author       = {Falahrastegar, Marjan and Haddadi, Hamed and Uhlig, Steve and Mortier, Richard},
+  title        = {The Rise of Panopticons: Examining Region-Specific Third-Party
+                  Web Tracking},
+  booktitle    = {Proceedings of the 6th International Workshop on Traffic
+                  Monitoring and Analysis},
+  isbn         = {978-3-642-54998-4},
+  volume       = {8406},
+  series       = {Lecture Notes in Computer Science},
+  editor       = {Dainotti, Alberto and Mahanti, Anirban and Uhlig, Steve},
+  doi          = {10.1007/978-3-642-54999-1_9},
+  pages        = {104--114},
+  year         = {2014},
+  month        = {apr # {~14}},
+  pdf          = {pdf/tma14-panopticons.pdf},
+  pagetotal    = {6},
+  publisher    = {Springer Berlin Heidelberg},
+  note         = {Also as arXiv preprint arXiv:1409.1066}
+}
+
+
 @inproceedings{mortier10:using.dust.cloud.enhan.anony.commun,
-  keywords = {workshop},
-  author = {Richard Mortier and Anil Madhavapeddy and Theodore Hong and
-                  Derek Murray and Malte Schwarzkopf},
-  title = {Using Dust Clouds to Enhance Anonymous Communication},
-  booktitle = {LNCS 7061: Proceedings of the 18th International Security
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Madhavapeddy, Anil and Hong, Theodore and Murray, Derek and Schwarzkopf, Malte},
+  title        = {Using Dust Clouds to Enhance Anonymous Communication},
+  booktitle    = {LNCS 7061: Proceedings of the 18th International Security
                   Protocols Workshop (SPW 2010)},
-  year = 2014,
-  publisher = {Springer Berlin Heidelberg},
-  pagetotal = 17,
-  abstract = {Cloud computing platforms, such as Amazon EC2 [1], enable
+  year         = {2014},
+  publisher    = {Springer Berlin Heidelberg},
+  pagetotal    = {17},
+  abstract     = {Cloud computing platforms, such as Amazon EC2 [1], enable
                   customers to lease several virtual machines (VMs) on a
                   per-hour basis. The customer can now obtain a dynamic and
                   diverse collection of machines spread across the world. In
@@ -680,445 +687,438 @@
                   facilitate anonymous communications over untrusted networks
                   such as the Internet, and discuss some of the challenges that
                   arise as a result.},
-  isbn = {978-3-662-45921-8},
-  doi = {10.1007/978-3-662-45921-8_10},
-  address = {Cambridge, UK},
-  pages = {54--70},
-  pdf = {pdf/iwsp10-dustclouds.pdf},
-  month = apr
+  isbn         = {978-3-662-45921-8},
+  doi          = {10.1007/978-3-662-45921-8_10},
+  address      = {Cambridge, UK},
+  pages        = {54--70},
+  pdf          = {pdf/iwsp10-dustclouds.pdf},
+  month        = {apr}
 }
+
 
 @inproceedings{mortier13:chall.oppor.human.data.inter,
-  keywords = {workshop},
-  author = {Richard Mortier and Hamed Haddadi and Tristan Henderson and
-                  Derek McAuley and Jon Crowcroft},
-  title = {Challenges \& Opportunities in {Human-Data Interaction}},
-  booktitle = {The Fourth Digital Economy All-hands Meeting: Open Digital
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Haddadi, Hamed and Henderson, Tristan and McAuley, Derek and Crowcroft, Jon},
+  title        = {Challenges \& Opportunities in {Human-Data Interaction}},
+  booktitle    = {The Fourth Digital Economy All-hands Meeting: Open Digital
                   (DE)},
-  year = 2013,
-  month = nov # {~4--6},
-  pdf = {pdf/de13-hdi.pdf},
-  address = {Salford, UK},
-  pagetotal = 3,
-  note = {Best paper}
+  year         = {2013},
+  month        = {nov # {~4--6}},
+  pdf          = {pdf/de13-hdi.pdf},
+  address      = {Salford, UK},
+  pagetotal    = {3},
+  note         = {Best paper}
 }
+
 
 @inproceedings{mortier13:dataw.person.data.archit,
-  keywords = {workshop, abstract, demo},
-  author = {Richard Mortier and Tom Lodge and Neelam Bhandari and Robert
-                  Houghton and Anya Skatova and James Goulding and Christian
-                  Wagner and Anil Madhavapeddy and Jon Crowcroft},
-  title = {Dataware, A Personal Data Architecture},
-  booktitle = {The Fourth Digital Economy All-hands Meeting: Open Digital
+  keywords     = {workshop, abstract, demo},
+  author       = {Mortier, Richard and Lodge, Tom and Bhandari, Neelam and Houghton, Robert and Skatova, Anya and Goulding, James and Wagner, Christian and Madhavapeddy, Anil and Crowcroft, Jon},
+  title        = {Dataware, A Personal Data Architecture},
+  booktitle    = {The Fourth Digital Economy All-hands Meeting: Open Digital
                   (DE)},
-  year = 2013,
-  month = nov # {~4--6},
-  pagetotal = 2,
-  pdf = {pdf/de13-dataware-demo.pdf},
-  address = {Salford, UK},
-  note = {Demo abstract}
+  year         = {2013},
+  month        = {nov # {~4--6}},
+  pagetotal    = {2},
+  pdf          = {pdf/de13-dataware-demo.pdf},
+  address      = {Salford, UK},
+  note         = {Demo abstract}
 }
+
 
 @inproceedings{skatova13:perceiv,
-  keywords = {workshop},
-  author = {Anya Skatova and Jaspreet Johal and Robert Houghton and
-                  Richard Mortier and Neelam Bhandari and Tom Lodge and
-                  Christian Wagner and James Goulding and Jon Crowcroft and Anil
-                  Madhavapeddy},
-  title = {Perceived risks of personal data sharing},
-  booktitle = {The Fourth Digital Economy All-hands Meeting: Open Digital
+  keywords     = {workshop},
+  author       = {Skatova, Anya and Johal, Jaspreet and Houghton, Robert and Mortier, Richard and Bhandari, Neelam and Lodge, Tom and Wagner, Christian and Goulding, James and Crowcroft, Jon and Madhavapeddy, Anil},
+  title        = {Perceived risks of personal data sharing},
+  booktitle    = {The Fourth Digital Economy All-hands Meeting: Open Digital
                   (DE)},
-  pagetotal = 3,
-  year = 2013,
-  pdf = {pdf/de13-dataware.pdf},
-  month = nov # {~4--6},
-  address = {Salford, UK}
+  pagetotal    = {3},
+  year         = {2013},
+  pdf          = {pdf/de13-dataware.pdf},
+  month        = {nov # {~4--6}},
+  address      = {Salford, UK}
 }
+
 
 @inproceedings{rowland13:autom.ii,
-  keywords = {workshop, abstract, demo},
-  author = {Duncan Rowland and Richard Mortier and Steve Benford and Umar
-                  Rashid and Shakir Ali and Victoria Shipp and Rupert Meese and
-                  Derek McAuley},
-  title = {Automics {II}},
-  booktitle = {The Fourth Digital Economy All-hands Meeting: Open Digital
+  keywords     = {workshop, abstract, demo},
+  author       = {Rowland, Duncan and Mortier, Richard and Benford, Steve and Rashid, Umar and Ali, Shakir and Shipp, Victoria and Meese, Rupert and McAuley, Derek},
+  title        = {Automics {II}},
+  booktitle    = {The Fourth Digital Economy All-hands Meeting: Open Digital
                   (DE)},
-  year = 2013,
-  pdf = {pdf/de13-automicsii-demo.pdf},
-  month = nov # {~4--6},
-  pagetotal = 2,
-  address = {Salford, UK},
-  note = {Demo abstract}
+  year         = {2013},
+  pdf          = {pdf/de13-automicsii-demo.pdf},
+  month        = {nov # {~4--6}},
+  pagetotal    = {2},
+  address      = {Salford, UK},
+  note         = {Demo abstract}
 }
 
-@inproceedings{radenkovic13:provid,
-  keywords = {workshop},
-  author = {Milena Radenkovic and Heidi Howard and Jon Crowcroft and
-                  Murray Goulden and Christian Greiffenhagen and Derek McAuley
-                  and Richard Mortier},
-  title = {Providing security for wireless community networks},
-  booktitle = {Proceedings of the ACM MobiCom workshop on Lowest Cost
-                  Denominator Networking for Universal Access (LCDNet)},
-  year = 2013,
-  isbn = {978-1-4503-2365-9},
-  address = {Miami, Florida, USA},
-  pages = {29--32},
-  pagetotal = 4,
-  doi = {10.1145/2502880.2502890},
-  pdf = {pdf/lcdnet13-pawssecurity.pdf}
-}
 
 @inproceedings{lodge13:commun,
-  keywords = {workshop},
-  author = {Tom Lodge and Tom Rodden and Richard Mortier},
-  title = {Communities in the clouds: support for high-rise living},
-  booktitle = {HomeSys 2013: Workshop on Design, Technology, Systems and
+  keywords     = {workshop},
+  author       = {Lodge, Tom and Rodden, Tom and Mortier, Richard},
+  title        = {Communities in the clouds: support for high-rise living},
+  booktitle    = {HomeSys 2013: Workshop on Design, Technology, Systems and
                   Applications for the Home at the ACM Conference on Pervasive
                   and Ubiquitous Computing (UBICOMP)},
-  year = 2013,
-  month = sep # {~9},
-  isbn = {978-1-4503-2215-7},
-  address = {Zurich, Switzerland},
-  pages = {829--836},
-  pagetotal = 8,
-  doi = {10.1145/2494091.2497324},
-  acmid = 2497324,
-  publisher = {ACM},
-  pdf = {pdf/homesys13-cloudcommunities.pdf}
+  year         = {2013},
+  month        = {sep # {~9}},
+  isbn         = {978-1-4503-2215-7},
+  address      = {Zurich, Switzerland},
+  pages        = {829--836},
+  pagetotal    = {8},
+  doi          = {10.1145/2494091.2497324},
+  acmid        = {2497324},
+  publisher    = {ACM},
+  pdf          = {pdf/homesys13-cloudcommunities.pdf}
 }
+
 
 @inproceedings{shipp13:under,
-  keywords = {workshop},
-  author = {Victoria Shipp and Martin Flintham and Richard Mortier and
-                  Brigitte A. Graf and Mehdi Maqbool and Behrang Parhizkar},
-  title = {Understanding underutilisation: methods for studying fruit and
+  keywords     = {workshop},
+  author       = {Shipp, Victoria and Flintham, Martin and Mortier, Richard and Graf, Brigitte A. and Maqbool, Mehdi and Parhizkar, Behrang},
+  title        = {Understanding underutilisation: methods for studying fruit and
                   vegetable buying behaviours},
-  booktitle = {Green Food Technology: Ubicomp Opportunities for Reducing the
+  booktitle    = {Green Food Technology: Ubicomp Opportunities for Reducing the
                   Environmental Impacts of Food Workshop at the ACM Conference
                   on Pervasive and Ubiquitous Computing (UBICOMP)},
-  year = 2013,
-  isbn = {978-1-4503-2215-7},
-  address = {Zurich, Switzerland},
-  pages = {571--574},
-  month = sep # {~9},
-  pagetotal = 4,
-  doi = {10.1145/2494091.2497313},
-  acmid = 2497313,
-  publisher = {ACM},
-  pdf = {pdf/greenfoodtech13-understandilisation.pdf}
+  year         = {2013},
+  isbn         = {978-1-4503-2215-7},
+  address      = {Zurich, Switzerland},
+  pages        = {571--574},
+  month        = {sep # {~9}},
+  pagetotal    = {4},
+  doi          = {10.1145/2494091.2497313},
+  acmid        = {2497313},
+  publisher    = {ACM},
+  pdf          = {pdf/greenfoodtech13-understandilisation.pdf}
 }
+
 
 @inproceedings{rotsos13:lost.in.edge,
-  keywords = {workshop},
-  author = {Charalampos Rotsos and Heidi Howard and David Sheets and
-                  Richard Mortier and Anil Madhavapeddy and Amir Chaudhry and
-                  Jon Crowcroft},
-  title = {Lost in the Edge: Finding Your Way with {DNSSEC} Signposts},
-  url = {https://www.usenix.org/conference/foci13/workshop-program/presentation/rotsos},
-  publisher = {USENIX Association},
-  booktitle = {Proceedings of the 3rd USENIX Workshop on Free and Open
+  keywords     = {workshop},
+  author       = {Rotsos, Charalampos and Howard, Heidi and Sheets, David and Mortier, Richard and Madhavapeddy, Anil and Chaudhry, Amir and Crowcroft, Jon},
+  title        = {Lost in the Edge: Finding Your Way with {DNSSEC} Signposts},
+  url          = {https://www.usenix.org/conference/foci13/workshop-program/presentation/rotsos},
+  publisher    = {USENIX Association},
+  booktitle    = {Proceedings of the 3rd USENIX Workshop on Free and Open
                   Communications on the Internet (FOCI)},
-  pagetotal = 8,
-  year = 2013,
-  month = aug # {~13},
-  pdf = {pdf/foci13-signposts.pdf},
-  address = {Washington D.C., USA}
+  pagetotal    = {8},
+  year         = {2013},
+  month        = {aug # {~13}},
+  pdf          = {pdf/foci13-signposts.pdf},
+  address      = {Washington D.C., USA}
 }
+
+
+@inproceedings{radenkovic13:provid,
+  keywords     = {workshop},
+  author       = {Radenkovic, Milena and Howard, Heidi and Crowcroft, Jon and Goulden, Murray and Greiffenhagen, Christian and McAuley, Derek and Mortier, Richard},
+  title        = {Providing security for wireless community networks},
+  booktitle    = {Proceedings of the ACM MobiCom workshop on Lowest Cost
+                  Denominator Networking for Universal Access (LCDNet)},
+  year         = {2013},
+  isbn         = {978-1-4503-2365-9},
+  address      = {Miami, Florida, USA},
+  pages        = {29--32},
+  pagetotal    = {4},
+  doi          = {10.1145/2502880.2502890},
+  pdf          = {pdf/lcdnet13-pawssecurity.pdf}
+}
+
 
 @inproceedings{mortier12:signp,
-  keywords = {workshop, abstract, demo},
-  author = {Richard Mortier and Andrius Aucinas and Amir Chaudhry and Jon
-                  Crowcroft and Sebastian Eide and Steven Hand and Anil
-                  Madhavapeddy and Andrew W. Moore and Charalampos Rotsos and
-                  Narseo Vallina-Rodriguez},
-  title = {Signposts: End-to-End Networking in a World of Middleboxes},
-  booktitle = {The Third Digital Economy All-hands Meeting: Digital
+  keywords     = {workshop, abstract, demo},
+  author       = {Mortier, Richard and Aucinas, Andrius and Chaudhry, Amir and Crowcroft, Jon and Eide, Sebastian and Hand, Steven and Madhavapeddy, Anil and Moore, Andrew W. and Rotsos, Charalampos and Vallina-Rodriguez, Narseo},
+  title        = {Signposts: End-to-End Networking in a World of Middleboxes},
+  booktitle    = {The Third Digital Economy All-hands Meeting: Digital
                   Engagement (DE)},
-  year = 2012,
-  address = {Aberdeen, UK},
-  pdf = {pdf/de12-signposts-demo.pdf},
-  month = oct # {~23--25},
+  year         = {2012},
+  address      = {Aberdeen, UK},
+  pdf          = {pdf/de12-signposts-demo.pdf},
+  month        = {oct # {~23--25}},
   organization = {RCUK},
-  pagetotal = 2,
-  note = {Demo abstract}
+  pagetotal    = {2},
+  note         = {Demo abstract}
 }
+
 
 @inproceedings{mortier12:augmen.dinin.exper.throug.use,
-  keywords = {workshop, abstract, demo},
-  author = {Richard Mortier and Boriana Koleva and Rupert Meese and Shakir
-                  Ali and Steve Benford and Anthony Quinn and Emily-Clare Thorn
-                  and Sharon Baurley},
-  title = {An Augmented Dining Experience Through the Use of Visual
+  keywords     = {workshop, abstract, demo},
+  author       = {Mortier, Richard and Koleva, Boriana and Meese, Rupert and Ali, Shakir and Benford, Steve and Quinn, Anthony and Thorn, Emily-Clare and Baurley, Sharon},
+  title        = {An Augmented Dining Experience Through the Use of Visual
                   Patterns Decorating Tableware Objects},
-  booktitle = {The Third Digital Economy All-hands Meeting: Digital
+  booktitle    = {The Third Digital Economy All-hands Meeting: Digital
                   Engagement (DE)},
-  year = 2012,
-  address = {Aberdeen, UK},
-  pdf = {pdf/de12-aestheticodes-demo.pdf},
-  month = oct # {~23--25},
+  year         = {2012},
+  address      = {Aberdeen, UK},
+  pdf          = {pdf/de12-aestheticodes-demo.pdf},
+  month        = {oct # {~23--25}},
   organization = {RCUK},
-  pagetotal = 2,
-  note = {Demo abstract}
+  pagetotal    = {2},
+  note         = {Demo abstract}
 }
+
 
 @inproceedings{brown12:multin.usabl.secur.wifi.devic.assoc,
-  keywords = {workshop, abstract, demo},
-  author = {Anthony Brown and Richard Mortier and Tom Rodden},
-  title = {MultiNet Usable and Secure {WiFi} Device Association},
-  booktitle = {The Third Digital Economy All-hands Meeting: Digital
+  keywords     = {workshop, abstract, demo},
+  author       = {Brown, Anthony and Mortier, Richard and Rodden, Tom},
+  title        = {MultiNet Usable and Secure {WiFi} Device Association},
+  booktitle    = {The Third Digital Economy All-hands Meeting: Digital
                   Engagement (DE)},
-  year = 2012,
-  address = {Aberdeen, UK},
-  pdf = {pdf/de12-multinet-demo.pdf},
-  month = oct # {~23--25},
+  year         = {2012},
+  address      = {Aberdeen, UK},
+  pdf          = {pdf/de12-multinet-demo.pdf},
+  month        = {oct # {~23--25}},
   organization = {RCUK},
-  pagetotal = 2,
-  note = {Demo abstract}
+  pagetotal    = {2},
+  note         = {Demo abstract}
 }
+
 
 @inproceedings{mortier12:cost.perfor.flexib.openf,
-  keywords = {workshop},
-  author = {Richard Mortier and Charalampos Rotsos and Anil Madhavapeddy
-                  and Balraj Singh and Andrew W. Moore},
-  title = {Cost, Performance \& Flexibility in {OpenFlow}: Pick Three},
-  booktitle = {Proceedings of IEEE International Conference on Communications
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Rotsos, Charalampos and Madhavapeddy, Anil and Singh, Balraj and Moore, Andrew W.},
+  title        = {Cost, Performance \& Flexibility in {OpenFlow}: Pick Three},
+  booktitle    = {Proceedings of IEEE International Conference on Communications
                   (ICC) Software Defined Networking workshop},
-  year = 2012,
-  address = {Ottawa, Canada},
-  issn = {1550-3607},
-  pages = {6601--6605},
-  pagetotal = 5,
-  doi = {10.1109/ICC.2012.6364690},
-  month = jun,
-  pdf = {pdf/iccsdn12-mirageof.pdf},
-  acceptratio = {10/36}
+  year         = {2012},
+  address      = {Ottawa, Canada},
+  issn         = {1550-3607},
+  pages        = {6601--6605},
+  pagetotal    = {5},
+  doi          = {10.1109/ICC.2012.6364690},
+  month        = {jun},
+  pdf          = {pdf/iccsdn12-mirageof.pdf},
+  acceptratio  = {10/36}
 }
 
+
 @inproceedings{smith12:case.recon.i.o.chann,
-  keywords = {workshop},
-  author = {Steven Smith and Anil Madhavapeddy and Christopher Smowton and
-                  Malte Schwarzkopf and Richard Mortier and Robert M. Watson and
-                  Steven Hand},
-  title = {The Case for Reconfigurable {I/O} Channels},
-  booktitle = {RESoLVE Workshop at ASPLOS},
-  year = 2012,
-  pagetotal = 8,
-  address = {London, UK},
-  month = mar # {~3},
-  pdf = {pdf/resolve12-xio.pdf},
+  keywords     = {workshop},
+  author       = {Smith, Steven and Madhavapeddy, Anil and Smowton, Christopher and Schwarzkopf, Malte and Mortier, Richard and Watson, Robert M. and Hand, Steven},
+  title        = {The Case for Reconfigurable {I/O} Channels},
+  booktitle    = {RESoLVE Workshop at ASPLOS},
+  year         = {2012},
+  pagetotal    = {8},
+  address      = {London, UK},
+  month        = {mar # {~3}},
+  pdf          = {pdf/resolve12-xio.pdf},
   organization = {ACM}
 }
 
+
 @inproceedings{goulding11:privac.preser.person.dataw,
-  keywords = {workshop, abstract},
-  author = {James Goulding and Richard Mortier and Derek McAuley},
-  title = {Privacy Preserving Personalization via {Dataware}},
-  booktitle = {The Second Digital Economy All-hands Meeting: Digital
+  keywords     = {workshop, abstract},
+  author       = {Goulding, James and Mortier, Richard and McAuley, Derek},
+  title        = {Privacy Preserving Personalization via {Dataware}},
+  booktitle    = {The Second Digital Economy All-hands Meeting: Digital
                   Engagement (DE)},
-  year = 2011,
-  pagetotal = 2,
-  address = {Newcastle, UK},
-  month = nov,
-  pdf = {pdf/de11-prefstore.pdf},
+  year         = {2011},
+  pagetotal    = {2},
+  address      = {Newcastle, UK},
+  month        = {nov},
+  pdf          = {pdf/de11-prefstore.pdf},
   organization = {RCUK}
 }
+
 
 @inproceedings{shao11:perip.innov.social.media.ecolog,
-  keywords = {workshop},
-  author = {Jianhua Shao and George Kuk and Richard Mortier},
-  title = {Peripheral Innovation in the Social Media Ecology},
-  booktitle = {The Second Digital Economy All-hands Meeting: Digital
+  keywords     = {workshop},
+  author       = {Shao, Jianhua and Kuk, George and Mortier, Richard},
+  title        = {Peripheral Innovation in the Social Media Ecology},
+  booktitle    = {The Second Digital Economy All-hands Meeting: Digital
                   Engagement (DE)},
-  year = 2011,
-  address = {Newcastle, UK},
-  month = nov,
-  pagetotal = 4,
+  year         = {2011},
+  address      = {Newcastle, UK},
+  month        = {nov},
+  pagetotal    = {4},
   organization = {RCUK},
-  pdf = {pdf/de11-apiinnovation.pdf},
-  note = {Short paper}
+  pdf          = {pdf/de11-apiinnovation.pdf},
+  note         = {Short paper}
 }
+
 
 @inproceedings{price11:framew.crowd.sourc.person.data,
-  keywords = {workshop, abstract},
-  author = {Dominic Price and Chris Greenhalgh and Shakir Ali and James
-                  Goulding and Richard Mortier},
-  title = {A Framework for Crowd-Sourcing Personal Data},
-  booktitle = {The Second Digital Economy All-hands Meeting: Digital
+  keywords     = {workshop, abstract},
+  author       = {Price, Dominic and Greenhalgh, Chris and Ali, Shakir and Goulding, James and Mortier, Richard},
+  title        = {A Framework for Crowd-Sourcing Personal Data},
+  booktitle    = {The Second Digital Economy All-hands Meeting: Digital
                   Engagement (DE)},
-  year = 2011,
-  address = {Newcastle, UK},
-  pagetotal = 2,
-  pdf = {pdf/de11-crowdsourcing.pdf},
-  month = nov,
+  year         = {2011},
+  address      = {Newcastle, UK},
+  pagetotal    = {2},
+  pdf          = {pdf/de11-crowdsourcing.pdf},
+  month        = {nov},
   organization = {RCUK}
 }
+
 
 @inproceedings{mulligan11:stand.strat.android.value.chain,
-  keywords = {workshop},
-  author = {Catherine E.A. Mulligan and Christian Nord and Robert Houghton
-                  and Hanif Rahemtulla and Richard Mortier and Martin Flintham},
-  title = {Standardisation Strategies for the {Android} Value Chain: the
+  keywords     = {workshop},
+  author       = {Mulligan, Catherine E.A. and Nord, Christian and Houghton, Robert and Rahemtulla, Hanif and Mortier, Richard and Flintham, Martin},
+  title        = {Standardisation Strategies for the {Android} Value Chain: the
                   Politics of the Stack},
-  booktitle = {Proceedings of the Third International Workshop on Business
+  booktitle    = {Proceedings of the Third International Workshop on Business
                   Models for Mobile Platforms -- Access and Competitiveness in
                   Multi-Sided Markets (BMMP)},
-  year = 2011,
-  address = {Berlin, Germany},
-  pages = {265--270},
-  pagetotal = 6,
-  doi = {10.1109/ICIN.2011.6081087},
-  pdf = {pdf/bmmp11-androidvaluechain.pdf},
-  month = oct # {~7}
+  year         = {2011},
+  address      = {Berlin, Germany},
+  pages        = {265--270},
+  pagetotal    = {6},
+  doi          = {10.1109/ICIN.2011.6081087},
+  pdf          = {pdf/bmmp11-androidvaluechain.pdf},
+  month        = {oct # {~7}}
 }
+
 
 @inproceedings{mortier11:platf.palm.your.hand,
-  keywords = {workshop},
-  author = {Richard Mortier and Catherine E.A. Mulligan},
-  title = {Platforms in the Palm of Your Hand: Mobile Value Chain
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Mulligan, Catherine E.A.},
+  title        = {Platforms in the Palm of Your Hand: Mobile Value Chain
                   Evolution},
-  booktitle = {Proceedings of the Third International Workshop on Business
+  booktitle    = {Proceedings of the Third International Workshop on Business
                   Models for Mobile Platforms -- Access and Competitiveness in
                   Multi-Sided Markets (BMMP)},
-  year = 2011,
-  address = {Berlin, Germany},
-  doi = {10.1109/ICIN.2011.6081089},
-  pagetotal = 6,
-  pdf = {pdf/bmmp11-xendroid.pdf},
-  pages = {277--282},
-  month = oct # {~7}
+  year         = {2011},
+  address      = {Berlin, Germany},
+  doi          = {10.1109/ICIN.2011.6081089},
+  pagetotal    = {6},
+  pdf          = {pdf/bmmp11-xendroid.pdf},
+  pages        = {277--282},
+  month        = {oct # {~7}}
 }
+
 
 @inproceedings{brundell11:networ.above.below,
-  keywords = {workshop},
-  author = {Patrick Brundell and Andy Crabtree and Richard Mortier and Tom
-                  Rodden and Paul Tennent and Peter Tolmie},
-  title = {The Network from Above and Below},
-  booktitle = {Proceedings of ACM SIGCOMM Workshop on Measurements Up the
+  keywords     = {workshop},
+  author       = {Brundell, Patrick and Crabtree, Andy and Mortier, Richard and Rodden, Tom and Tennent, Paul and Tolmie, Peter},
+  title        = {The Network from Above and Below},
+  booktitle    = {Proceedings of ACM SIGCOMM Workshop on Measurements Up the
                   STack (W-MUST)},
-  year = 2011,
-  address = {Toronto, ON, Canada},
-  pdf = {pdf/wmust11-homework.pdf},
-  pages = {1--6},
-  pagetotal = 6,
-  doi = {10.1145/2018602.2018604},
-  month = aug # {~19},
-  note = {Best paper}
+  year         = {2011},
+  address      = {Toronto, ON, Canada},
+  pdf          = {pdf/wmust11-homework.pdf},
+  pages        = {1--6},
+  pagetotal    = {6},
+  doi          = {10.1145/2018602.2018604},
+  month        = {aug # {~19}},
+  note         = {Best paper}
 }
+
 
 @inproceedings{crowcroft10:uncloud.vision,
-  keywords = {workshop},
-  author = {Jon Crowcroft and Anil Madhavapeddy and Malte Schwarzkopf and
-                  Theodore Hong and Richard Mortier},
-  title = {Unclouded Vision},
-  booktitle = {The First Digital Economy All-hands Meeting: Digital Futures
+  keywords     = {workshop},
+  author       = {Crowcroft, Jon and Madhavapeddy, Anil and Schwarzkopf, Malte and Hong, Theodore and Mortier, Richard},
+  title        = {Unclouded Vision},
+  booktitle    = {The First Digital Economy All-hands Meeting: Digital Futures
                   (DE)},
-  year = 2010,
-  pagetotal = 3,
-  address = {Nottingham, UK},
-  month = oct,
+  year         = {2010},
+  pagetotal    = {3},
+  address      = {Nottingham, UK},
+  month        = {oct},
   organization = {RCUK},
-  pdf = {pdf/de10-droplets.pdf}
+  pdf          = {pdf/de10-droplets.pdf}
 }
+
 
 @inproceedings{mortier10:person.contain.your.life.bits,
-  keywords = {workshop},
-  author = {Richard Mortier and Chris Greenhalgh and Derek McAuley and
-                  Alexa Spence and Anil Madhavapeddy and Jon Crowcroft and
-                  Steven Hand},
-  title = {The Personal Container, or Your Life in Bits},
-  booktitle = {The First Digital Economy All-hands Meeting: Digital Futures
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Greenhalgh, Chris and McAuley, Derek and Spence, Alexa and Madhavapeddy, Anil and Crowcroft, Jon and Hand, Steven},
+  title        = {The Personal Container, or Your Life in Bits},
+  booktitle    = {The First Digital Economy All-hands Meeting: Digital Futures
                   (DE)},
-  year = 2010,
-  pagetotal = 3,
-  address = {Nottingham, UK},
-  month = oct,
+  year         = {2010},
+  pagetotal    = {3},
+  address      = {Nottingham, UK},
+  month        = {oct},
   organization = {RCUK},
-  pdf = {pdf/de10-perscon.pdf}
+  pdf          = {pdf/de10-perscon.pdf}
 }
+
 
 @inproceedings{mulligan10:open.data.compet.co.creat.value,
-  keywords = {workshop},
-  author = {Catherine E.A. Mulligan and Richard Mortier},
-  title = {Open Data and the Competitive Co-Creation of Value},
-  booktitle = {The First Digital Economy All-hands Meeting: Digital Futures
+  keywords     = {workshop},
+  author       = {Mulligan, Catherine E.A. and Mortier, Richard},
+  title        = {Open Data and the Competitive Co-Creation of Value},
+  booktitle    = {The First Digital Economy All-hands Meeting: Digital Futures
                   (DE)},
-  year = 2010,
-  pagetotal = 3,
-  address = {Nottingham, UK},
-  month = oct,
+  year         = {2010},
+  pagetotal    = {3},
+  address      = {Nottingham, UK},
+  month        = {oct},
   organization = {RCUK},
-  pdf = {pdf/de10-cocreation.pdf}
+  pdf          = {pdf/de10-cocreation.pdf}
 }
 
+
 @inproceedings{flintham10:towar.platf.urban.games,
-  keywords = {workshop, abstract},
-  author = {Martin Flintham and Chris Greenhalgh and Andrew Greenman and
-                  Tom Lodge and Richard Mortier and Rachel Jacobs and Matt
-                  Watkins and Robin Shackford},
-  title = {Towards a Platform for Urban Games},
-  booktitle = {The First Digital Economy All-hands Meeting: Digital Futures
+  keywords     = {workshop, abstract},
+  author       = {Flintham, Martin and Greenhalgh, Chris and Greenman, Andrew and Lodge, Tom and Mortier, Richard and Jacobs, Rachel and Watkins, Matt and Shackford, Robin},
+  title        = {Towards a Platform for Urban Games},
+  booktitle    = {The First Digital Economy All-hands Meeting: Digital Futures
                   (DE)},
-  pagetotal = 2,
-  year = 2010,
-  address = {Nottingham, UK},
-  month = oct,
-  pdf = {pdf/de10-urbangames.pdf},
+  pagetotal    = {2},
+  year         = {2010},
+  address      = {Nottingham, UK},
+  month        = {oct},
+  pdf          = {pdf/de10-urbangames.pdf},
   organization = {RCUK}
 }
 
+
 @inproceedings{hui10:planet.human.mobil.measur,
-  keywords = {workshop},
-  author = {Pan Hui and Richard Mortier and Michal Piorkowski and Tristan
-                  Henderson and Jon Crowcroft},
-  title = {Planet-scale Human Mobility Measurement},
-  booktitle = {Proceedings of the First ACM Workshop on Hot Topics in
+  keywords     = {workshop},
+  author       = {Hui, Pan and Mortier, Richard and Piorkowski, Michal and Henderson, Tristan and Crowcroft, Jon},
+  title        = {Planet-scale Human Mobility Measurement},
+  booktitle    = {Proceedings of the First ACM Workshop on Hot Topics in
                   Planet-Scale Measurement (HotPlanet)},
-  year = 2010,
-  address = {San Francisco, CA, USA},
-  month = jun,
-  publisher = {ACM},
-  pages = {1:1--1:5},
-  articleno = 1,
-  pagetotal = 5,
-  pdf = {pdf/hotplanet10-planetscalemobility.pdf},
-  doi = {10.1145/1834616.1834618},
-  note = {In conjunction with ACM MobiSys}
+  year         = {2010},
+  address      = {San Francisco, CA, USA},
+  month        = {jun},
+  publisher    = {ACM},
+  pages        = {1:1--1:5},
+  articleno    = {1},
+  pagetotal    = {5},
+  pdf          = {pdf/hotplanet10-planetscalemobility.pdf},
+  doi          = {10.1145/1834616.1834618},
+  note         = {In conjunction with ACM MobiSys}
 }
+
 
 @inproceedings{madhavapeddy10:turnin.lamp,
-  keywords = {workshop},
-  author = {Anil Madhavapeddy and Richard Mortier and Ripduman Sohan and
-                  Thomas Gazagnaire and Steven Hand and Tim Deegan and Derek
-                  McAuley and Jon Crowcroft},
-  title = {Turning down the {LAMP}: Software Specialisation for the
+  keywords     = {workshop},
+  author       = {Madhavapeddy, Anil and Mortier, Richard and Sohan, Ripduman and Gazagnaire, Thomas and Hand, Steven and Deegan, Tim and McAuley, Derek and Crowcroft, Jon},
+  title        = {Turning down the {LAMP}: Software Specialisation for the
                   Cloud},
-  url = {https://www.usenix.org/legacy/events/hotcloud10/tech/tech.html#Madhavapeddy},
-  booktitle = {Proceedings of the 2nd USENIX Workshop on Hot Topics in Cloud
+  url          = {https://www.usenix.org/legacy/events/hotcloud10/tech/tech.html#Madhavapeddy},
+  booktitle    = {Proceedings of the 2nd USENIX Workshop on Hot Topics in Cloud
                   Computing (HotCloud)},
-  pagetotal = 7,
-  year = 2010,
-  address = {Boston, MA, USA},
-  month = jun,
-  pdf = {pdf/hotcloud10-lamp.pdf},
-  publisher = {USENIX}
+  pagetotal    = {7},
+  year         = {2010},
+  address      = {Boston, MA, USA},
+  month        = {jun},
+  pdf          = {pdf/hotcloud10-lamp.pdf},
+  publisher    = {USENIX}
 }
 
+
 @inproceedings{haddadi10:mixin.biases,
-  keywords = {workshop},
-  author = {Hamed Haddadi and Damien Fay and Steve Uhlig and Andrew W.
-                  Moore and Richard Mortier and Almerima Jamakovic},
-  title = {Mixing Biases: Structural Changes in the {AS} Topology
+  keywords     = {workshop},
+  author       = {Haddadi, Hamed and Fay, Damien and Uhlig, Steve and Moore, Andrew W. and Mortier, Richard and Jamakovic, Almerima},
+  title        = {Mixing Biases: Structural Changes in the {AS} Topology
                   Evolution},
-  booktitle = {Proceedings of the 2nd Traffic Monitoring and Analysis (TMA)
+  booktitle    = {Proceedings of the 2nd Traffic Monitoring and Analysis (TMA)
                   Workshop},
-  year = 2010,
-  address = {Zurich, Switzerland},
-  month = apr,
-  pdf = {pdf/tma10-topoevol.pdf},
-  doi = {10.1007/978-3-642-12365-8_3},
-  pages = {32--45},
-  pagetotal = 14,
-  abstract = {In this paper we study the structural evolution of the AS
+  year         = {2010},
+  address      = {Zurich, Switzerland},
+  month        = {apr},
+  pdf          = {pdf/tma10-topoevol.pdf},
+  doi          = {10.1007/978-3-642-12365-8_3},
+  pages        = {32--45},
+  pagetotal    = {14},
+  abstract     = {In this paper we study the structural evolution of the AS
                   topology as inferred from two different datasets over a period
                   of seven years. We use a variety of topological metrics to
                   analyze the structural differences revealed in the AS
@@ -1127,338 +1127,341 @@
                   between the core and the periphery, we make use of a recently
                   introduced topological metric, the weighted spectral
                   distribution.},
-  isbn = {978-3-642-12365-8}
+  isbn         = {978-3-642-12365-8}
 }
+
 
 @inproceedings{hui09:sharin.shair,
-  keywords = {workshop},
-  author = {Pan Hui and Richard Mortier and Kuang Xu and Jon Crowcroft and
-                  Victor O.K. Li},
-  title = {Sharing airtime with {Shair} avoids wasting time and money},
-  booktitle = {Proceedings of the 10th Workshop on Mobile Computing Systems
+  keywords     = {workshop},
+  author       = {Hui, Pan and Mortier, Richard and Xu, Kuang and Crowcroft, Jon and Li, Victor O.K.},
+  title        = {Sharing airtime with {Shair} avoids wasting time and money},
+  booktitle    = {Proceedings of the 10th Workshop on Mobile Computing Systems
                   and Applications (HotMobile)},
-  year = 2009,
-  month = feb,
-  isbn = {978-1-60558-283-2},
-  address = {Santa Cruz, CA, USA},
-  pages = {6:1--6:6},
-  articleno = 6,
-  pagetotal = 6,
-  doi = {10.1145/1514411.1514417},
-  pdf = {pdf/hotmobile09-shair.pdf},
-  publisher = {ACM}
+  year         = {2009},
+  month        = {feb},
+  isbn         = {978-1-60558-283-2},
+  address      = {Santa Cruz, CA, USA},
+  pages        = {6:1--6:6},
+  articleno    = {6},
+  pagetotal    = {6},
+  doi          = {10.1145/1514411.1514417},
+  pdf          = {pdf/hotmobile09-shair.pdf},
+  publisher    = {ACM}
 }
+
 
 @inproceedings{karagiannis08:addres,
-  keywords = {workshop},
-  author = {Thomas Karagiannis and Richard Mortier},
-  title = {Address and traffic dynamics in a large enterprise network},
-  booktitle = {Proceedings of the 16th IEEE Workshop on Local and
+  keywords     = {workshop},
+  author       = {Karagiannis, Thomas and Mortier, Richard},
+  title        = {Address and traffic dynamics in a large enterprise network},
+  booktitle    = {Proceedings of the 16th IEEE Workshop on Local and
                   Metropolitan Area Networks (LANMAN)},
-  pages = {102--107},
-  year = 2008,
-  address = {Cluj-Napoca, Transylvania, Romania},
-  month = sep,
-  publisher = {IEEE},
-  issn = {1944-0367},
-  pagetotal = 6,
-  doi = {10.1109/LANMAN.2008.4675852},
-  pdf = {pdf/lanman08-enterprisedynamics.pdf},
-  slides = {pdf/lanman08-enterprisedynamics-slides.pdf}
+  pages        = {102--107},
+  year         = {2008},
+  address      = {Cluj-Napoca, Transylvania, Romania},
+  month        = {sep},
+  publisher    = {IEEE},
+  issn         = {1944-0367},
+  pagetotal    = {6},
+  doi          = {10.1109/LANMAN.2008.4675852},
+  pdf          = {pdf/lanman08-enterprisedynamics.pdf},
+  slides       = {pdf/lanman08-enterprisedynamics-slides.pdf}
 }
+
 
 @inproceedings{haddadi08:tunin.topol.gener.using.spect.distr,
-  keywords = {workshop},
-  author = {Hamed Haddadi and Damien Fay and Steve Uhlig and Andrew W.
-                  Moore and Richard Mortier and Almerima Jamakovic and Miguel
-                  Rio},
-  title = {Tuning Topology Generators Using Spectral Distributions},
-  booktitle = {Proceedings of the SPEC International Workshop on Performance
+  keywords     = {workshop},
+  author       = {Haddadi, Hamed and Fay, Damien and Uhlig, Steve and Moore, Andrew W. and Mortier, Richard and Jamakovic, Almerima and Rio, Miguel},
+  title        = {Tuning Topology Generators Using Spectral Distributions},
+  booktitle    = {Proceedings of the SPEC International Workshop on Performance
                   Evaluation (SIPEW)},
-  year = 2008,
-  month = jun,
-  isbn = {978-3-540-69813-5},
-  pages = {154--173},
-  address = {Darmstadt, Germany},
-  doi = {10.1007/978-3-540-69814-2_11},
-  pagetotal = 10,
-  pdf = {pdf/sipew08-topotuning.pdf},
-  publisher = {Springer-Verlag}
+  year         = {2008},
+  month        = {jun},
+  isbn         = {978-3-540-69813-5},
+  pages        = {154--173},
+  address      = {Darmstadt, Germany},
+  doi          = {10.1007/978-3-540-69814-2_11},
+  pagetotal    = {10},
+  pdf          = {pdf/sipew08-topotuning.pdf},
+  publisher    = {Springer-Verlag}
 }
+
 
 @inproceedings{barham08:learn.singul,
-  keywords = {workshop},
-  author = {Paul Barham and Rebecca Isaacs and Richard Mortier and Timothy
-                  Harris},
-  title = {Learning communication patterns in {Singularity}},
-  pagetotal = 5,
-  booktitle = {Proceedings of the First SIGMETRICS Workshop on Machine
+  keywords     = {workshop},
+  author       = {Barham, Paul and Isaacs, Rebecca and Mortier, Richard and Harris, Timothy},
+  title        = {Learning communication patterns in {Singularity}},
+  pagetotal    = {5},
+  booktitle    = {Proceedings of the First SIGMETRICS Workshop on Machine
                   Learning Techniques in Systems (SYSML)},
-  year = 2008,
-  pdf = {pdf/sysml06-singularity.pdf},
-  month = jun
+  year         = {2008},
+  pdf          = {pdf/sysml06-singularity.pdf},
+  month        = {jun}
 }
+
 
 @inproceedings{bahl06:discov.depen.networ.manag,
-  keywords = {workshop},
-  author = {Paramvir Bahl and Paul Barham and Richard Black and Ranveer
-                  Chandra and Mois{\'e}s Goldszmidt and Rebecca Isaacs and
-                  Srikanth Kandula and Lun Li and John MacCormick and David
-                  Maltz and Richard Mortier and Mike Wawrzoniak and Ming Zhang},
-  title = {Discovering Dependencies for Network Management},
-  booktitle = {Proceedings of the Fifth ACM Workshop on Hot Topics in
+  keywords     = {workshop},
+  author       = {Bahl, Paramvir and Barham, Paul and Black, Richard and Chandra, Ranveer and Goldszmidt, Mois{\'e}s and Isaacs, Rebecca and Kandula, Srikanth and Li, Lun and MacCormick, John and Maltz, David and Mortier, Richard and Wawrzoniak, Mike and Zhang, Ming},
+  title        = {Discovering Dependencies for Network Management},
+  booktitle    = {Proceedings of the Fifth ACM Workshop on Hot Topics in
                   Networks (HotNets-V)},
-  year = 2006,
-  month = nov,
-  pages = {97--102},
-  pagetotal = 6,
-  pdf = {pdf/hotnets06-constellation.pdf},
-  address = {Irvine, CA, USA},
-  publisher = {ACM}
+  year         = {2006},
+  month        = {nov},
+  pages        = {97--102},
+  pagetotal    = {6},
+  pdf          = {pdf/hotnets06-constellation.pdf},
+  address      = {Irvine, CA, USA},
+  publisher    = {ACM}
 }
+
 
 @inproceedings{mortier06:auton,
-  keywords = {workshop},
-  author = {Richard Mortier and Emre K\'{i}c\'{i}man},
-  booktitle = {Proceedings of the 2006 ACM SIGCOMM Workshop on Internet
+  keywords     = {workshop},
+  author       = {Mortier, Richard and K\'{i}c\'{i}man, Emre},
+  booktitle    = {Proceedings of the 2006 ACM SIGCOMM Workshop on Internet
                   Network Management (INM)},
-  pages = {89--93},
-  posted-at = {2007-11-09 04:26:54},
-  priority = 4,
-  publisher = {ACM},
-  title = {Autonomic network management: Some pragmatic considerations},
-  doi = {10.1145/1162638.1162653},
-  isbn = {1-59593-570-3},
-  address = {Pisa, Italy},
-  pagetotal = 5,
-  pdf = {pdf/inm06-autonomic.pdf},
-  year = 2006,
-  month = aug
+  pages        = {89--93},
+  posted-at    = {2007-11-09 04:26:54},
+  priority     = {4},
+  publisher    = {ACM},
+  title        = {Autonomic network management: Some pragmatic considerations},
+  doi          = {10.1145/1162638.1162653},
+  isbn         = {1-59593-570-3},
+  address      = {Pisa, Italy},
+  pagetotal    = {5},
+  pdf          = {pdf/inm06-autonomic.pdf},
+  year         = {2006},
+  month        = {aug}
 }
+
 
 @inproceedings{mortier06:seaweed,
-  keywords = {workshop},
-  author = {Richard Mortier and Dushyanth Narayanan and Austin Donnelly
-                  and Antony Rowstron },
-  title = {Seaweed: Distributed Scalable Ad Hoc Querying},
-  booktitle = {Proceedings of the 22nd IEEE International Conference on Data
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Narayanan, Dushyanth and Donnelly, Austin and Rowstron, Antony},
+  title        = {Seaweed: Distributed Scalable Ad Hoc Querying},
+  booktitle    = {Proceedings of the 22nd IEEE International Conference on Data
                   Engineering: NetDB Workshop},
-  doi = {10.1109/ICDEW.2006.132},
-  year = 2006,
-  pagetotal = 6,
-  pdf = {pdf/icdew06-seaweed.pdf},
-  month = apr,
-  publisher = {IEEE Computer Society},
-  address = {Atlanta, GA, USA},
-  pages = 30
+  doi          = {10.1109/ICDEW.2006.132},
+  year         = {2006},
+  pagetotal    = {6},
+  pdf          = {pdf/icdew06-seaweed.pdf},
+  month        = {apr},
+  publisher    = {IEEE Computer Society},
+  address      = {Atlanta, GA, USA},
+  pages        = {30}
 }
+
 
 @inproceedings{mortier05:anemon.minenet,
-  keywords = {workshop},
-  author = {Richard Mortier and Rebecca Isaacs and Paul Barham},
-  title = {Anemone: Using end-systems as a rich network management
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Isaacs, Rebecca and Barham, Paul},
+  title        = {Anemone: Using end-systems as a rich network management
                   platform},
-  booktitle = {Proceedings of the First Annual ACM Workshop on Mining Network
+  booktitle    = {Proceedings of the First Annual ACM Workshop on Mining Network
                   Data (MineNet)},
-  year = 2005,
-  month = aug,
-  isbn = {1-59593-026-4},
-  address = {Philadelphia, PA, USA},
-  pages = {203--204},
-  pagetotal = 2,
-  doi = {10.1145/1080173.1080184},
-  pdf = {pdf/minenet05-anemone.pdf},
-  publisher = {ACM}
+  year         = {2005},
+  month        = {aug},
+  isbn         = {1-59593-026-4},
+  address      = {Philadelphia, PA, USA},
+  pages        = {203--204},
+  pagetotal    = {2},
+  doi          = {10.1145/1080173.1080184},
+  pdf          = {pdf/minenet05-anemone.pdf},
+  publisher    = {ACM}
 }
+
 
 @inproceedings{isaacs04:reques.magpie,
-  keywords = {workshop},
-  author = {Rebecca Isaacs and Paul Barham and James Bulpin and Richard
-                  Mortier and Dushyanth Narayanan},
-  title = {Request extraction in {Magpie}: Events, schemas and temporal
+  keywords     = {workshop},
+  author       = {Isaacs, Rebecca and Barham, Paul and Bulpin, James and Mortier, Richard and Narayanan, Dushyanth},
+  title        = {Request extraction in {Magpie}: Events, schemas and temporal
                   joins},
-  booktitle = {Proceedings of the 11th ACM SIGOPS European Workshop
+  booktitle    = {Proceedings of the 11th ACM SIGOPS European Workshop
                   (SIGOPS-EW)},
-  year = 2004,
-  month = sep,
-  pages = {17:1--17:6},
-  pagetotal = 6,
-  address = {Leuven, Belgium},
-  doi = {10.1145/1133572.1133608},
-  pdf = {pdf/sigopsew04-magpie.pdf},
-  publisher = {ACM}
+  year         = {2004},
+  month        = {sep},
+  pages        = {17:1--17:6},
+  pagetotal    = {6},
+  address      = {Leuven, Belgium},
+  doi          = {10.1145/1133572.1133608},
+  pdf          = {pdf/sigopsew04-magpie.pdf},
+  publisher    = {ACM}
 }
+
 
 @inproceedings{stewart04:virtual,
-  keywords = {workshop},
-  author = {David B. Stewart and Richard Mortier},
-  title = {Virtual private machines: User-centric performance},
-  booktitle = {Proceedings of the 11th ACM SIGOPS European Workshop
+  keywords     = {workshop},
+  author       = {Stewart, David B. and Mortier, Richard},
+  title        = {Virtual private machines: User-centric performance},
+  booktitle    = {Proceedings of the 11th ACM SIGOPS European Workshop
                   (SIGOPS-EW)},
-  month = sep,
-  year = 2004,
-  pages = {7:1--7:6},
-  pagetotal = 6,
-  address = {Leuven, Belgium},
-  doi = {10.1145/1133572.1133595},
-  pdf = {pdf/sigopsew04-vpms.pdf},
-  publisher = {ACM}
+  month        = {sep},
+  year         = {2004},
+  pages        = {7:1--7:6},
+  pagetotal    = {6},
+  address      = {Leuven, Belgium},
+  doi          = {10.1145/1133572.1133595},
+  pdf          = {pdf/sigopsew04-vpms.pdf},
+  publisher    = {ACM}
 }
+
 
 @inproceedings{mortier03:incen.based.inter.routein,
-  keywords = {workshop},
-  author = {Richard Mortier and Ian Pratt},
-  title = {Incentive Based Inter-domain Routeing},
-  month = sep,
-  publisher = {Springer},
-  series = {Lecture Notes in Computer Science},
-  volume = 2816,
-  year = 2003,
-  isbn = {978-3-540-39405-1},
-  doi = {10.1007/978-3-540-39405-1_28},
-  booktitle = {Proceedings of the 3rd International Workshop on Internet
+  keywords     = {workshop},
+  author       = {Mortier, Richard and Pratt, Ian},
+  title        = {Incentive Based Inter-domain Routeing},
+  month        = {sep},
+  publisher    = {Springer},
+  series       = {Lecture Notes in Computer Science},
+  volume       = {2816},
+  year         = {2003},
+  isbn         = {978-3-540-39405-1},
+  doi          = {10.1007/978-3-540-39405-1_28},
+  booktitle    = {Proceedings of the 3rd International Workshop on Internet
                   Charging and QoS Technologies (ICQT)},
-  pdf = {pdf/icqt03-bgppricing.pdf},
-  pages = {308--317},
-  pagetotal = 10
+  pdf          = {pdf/icqt03-bgppricing.pdf},
+  pages        = {308--317},
+  pagetotal    = {10}
 }
+
 
 @inproceedings{crowcroft03:plutar,
-  keywords = {workshop},
-  title = {{Plutarch}: An Argument for Network Pluralism},
-  author = {Jon Crowcroft and Steven Hand and Richard Mortier and Timothy
-                  Roscoe and Andrew Warfield},
-  booktitle = {Proceedings of the ACM SIGCOMM Workshop on Future Directions
+  keywords     = {workshop},
+  title        = {{Plutarch}: An Argument for Network Pluralism},
+  author       = {Crowcroft, Jon and Hand, Steven and Mortier, Richard and Roscoe, Timothy and Warfield, Andrew},
+  booktitle    = {Proceedings of the ACM SIGCOMM Workshop on Future Directions
                   in Network Architecture (FDNA)},
-  year = 2003,
-  publisher = {ACM},
-  month = aug,
-  address = {Karlsruhe, Germany},
-  pages = {258--266},
-  pagetotal = 9,
-  doi = {10.1145/944759.944763},
-  pdf = {pdf/fdna03-plutarch.pdf}
+  year         = {2003},
+  publisher    = {ACM},
+  month        = {aug},
+  address      = {Karlsruhe, Germany},
+  pages        = {258--266},
+  pagetotal    = {9},
+  doi          = {10.1145/944759.944763},
+  pdf          = {pdf/fdna03-plutarch.pdf}
 }
+
 
 @inproceedings{crowcroft03:qoss.downf,
-  keywords = {workshop},
-  title = {{QoS's Downfall}: At the bottom or not at all!},
-  author = {Jon Crowcroft and Steven Hand and Richard Mortier and Timothy
-                  Roscoe and Andrew Warfield},
-  booktitle = {Proceedings of the ACM SIGCOMM Workshop on Revisiting IP QoS
+  keywords     = {workshop},
+  title        = {{QoS's Downfall}: At the bottom or not at all!},
+  author       = {Crowcroft, Jon and Hand, Steven and Mortier, Richard and Roscoe, Timothy and Warfield, Andrew},
+  booktitle    = {Proceedings of the ACM SIGCOMM Workshop on Revisiting IP QoS
                   (RIPQOS)},
-  publisher = {ACM},
-  year = 2003,
-  month = aug,
-  address = {Karlsruhe, Germany},
-  pages = {190--114},
-  pagetotal = 6,
-  doi = {10.1145/944592.944594},
-  pdf = {pdf/ripqos03-downfall.pdf}
+  publisher    = {ACM},
+  year         = {2003},
+  month        = {aug},
+  address      = {Karlsruhe, Germany},
+  pages        = {190--114},
+  pagetotal    = {6},
+  doi          = {10.1145/944592.944594},
+  pdf          = {pdf/ripqos03-downfall.pdf}
 }
+
 
 @inproceedings{barham03:magpie,
-  keywords = {workshop},
-  author = {Paul Barham and Rebecca Isaacs and Richard Mortier and
-                  Dushyanth Narayanan},
-  title = {Magpie: Online modelling and performance-aware systems},
-  pdf = {pdf/hotos03-magpie.pdf},
-  url = {https://www.usenix.org/legacy/events/hotos03/tech/barham.html},
-  pagetotal = 6,
-  booktitle = {Proceedings of the 9th USENIX Workshop on Hot Topics in
+  keywords     = {workshop},
+  author       = {Barham, Paul and Isaacs, Rebecca and Mortier, Richard and Narayanan, Dushyanth},
+  title        = {Magpie: Online modelling and performance-aware systems},
+  pdf          = {pdf/hotos03-magpie.pdf},
+  url          = {https://www.usenix.org/legacy/events/hotos03/tech/barham.html},
+  pagetotal    = {6},
+  booktitle    = {Proceedings of the 9th USENIX Workshop on Hot Topics in
                   Operating Systems (HotOS-IX)},
-  year = 2003,
-  month = may # {~18--21},
-  pages = {85--90},
-  address = {Lihue, Hawaii, USA},
-  publisher = {USENIX Association}
+  year         = {2003},
+  month        = {may # {~18--21}},
+  pages        = {85--90},
+  address      = {Lihue, Hawaii, USA},
+  publisher    = {USENIX Association}
 }
 
-@inproceedings{roscoe02:predic.routin,
-  keywords = {workshop},
-  title = {{Predicate Routing}: Enabling Controlled Networking},
-  author = {Timothy Roscoe and Steven Hand and Rebecca Isaacs and Richard
-                  Mortier and Paul Jardetzky},
-  booktitle = {Proceedings of the First ACM Workshop on Hot Topics in
-                  Networks (HotNets-I)},
-  pdf = {pdf/hotnets02-predrout.pdf},
-  pagetotal = 6,
-  publisher = {ACM},
-  year = 2002,
-  month = oct,
-  address = {Princeton, NJ, USA},
-  doi = {10.1145/774763.774773}
-}
 
 @inproceedings{iannacone02:analy.link.failur.ip.backb,
-  keywords = {workshop},
-  author = {Gianluca Iannaccone and {Chen-Nee} Chuah and Richard Mortier
-                  and Supratik Bhattacharyya and Christophe Diot},
-  title = {Analysis of Link Failures in an {IP} Backbone},
-  booktitle = {Proceedings of the Second ACM SIGCOMM Internet Measurement
+  keywords     = {workshop},
+  author       = {Iannaccone, Gianluca and Chuah, {Chen-Nee} and Mortier, Richard and Bhattacharyya, Supratik and Diot, Christophe},
+  title        = {Analysis of Link Failures in an {IP} Backbone},
+  booktitle    = {Proceedings of the Second ACM SIGCOMM Internet Measurement
                   Workshop (IMW)},
-  pages = {237--242},
-  address = {Marseille, France},
-  pagetotal = 6,
-  doi = {10.1145/637201.637238},
-  year = 2002,
-  pdf = {pdf/imw02-linkfailures.pdf},
-  month = nov,
-  note = {Short paper. Also available as Sprint ATL Technical Report
+  pages        = {237--242},
+  address      = {Marseille, France},
+  pagetotal    = {6},
+  doi          = {10.1145/637201.637238},
+  year         = {2002},
+  pdf          = {pdf/imw02-linkfailures.pdf},
+  month        = {nov},
+  note         = {Short paper. Also available as Sprint ATL Technical Report
                   TR02-ATL-051025, May 2002},
-  publisher = {ACM}
+  publisher    = {ACM}
 }
+
 
 @inproceedings{hengartner02:routin.loops,
-  keywords = {workshop},
-  author = {Urs Hengartner and Sue Moon and Richard Mortier and Christophe
-                  Diot},
-  title = {Detection and Analysis of Routing Loops in Packet Traces},
-  pagetotal = 6,
-  doi = {10.1145/637201.637217},
-  booktitle = {Proceedings of the Second ACM SIGCOMM Internet Measurement
+  keywords     = {workshop},
+  author       = {Hengartner, Urs and Moon, Sue and Mortier, Richard and Diot, Christophe},
+  title        = {Detection and Analysis of Routing Loops in Packet Traces},
+  pagetotal    = {6},
+  doi          = {10.1145/637201.637217},
+  booktitle    = {Proceedings of the Second ACM SIGCOMM Internet Measurement
                   Workshop (IMW)},
-  month = nov,
-  pdf = {pdf/imw02-routingloops.pdf},
-  note = {Short paper. Also available as Sprint ATL Technical Report
+  month        = {nov},
+  pdf          = {pdf/imw02-routingloops.pdf},
+  note         = {Short paper. Also available as Sprint ATL Technical Report
                   TR02-ATL-051001, May 2002},
-  publisher = {ACM},
-  pages = {107--112},
-  year = 2002
+  publisher    = {ACM},
+  pages        = {107--112},
+  year         = {2002}
 }
+
+
+@inproceedings{roscoe02:predic.routin,
+  keywords     = {workshop},
+  title        = {{Predicate Routing}: Enabling Controlled Networking},
+  author       = {Roscoe, Timothy and Hand, Steven and Isaacs, Rebecca and Mortier, Richard and Jardetzky, Paul},
+  booktitle    = {Proceedings of the First ACM Workshop on Hot Topics in
+                  Networks (HotNets-I)},
+  pdf          = {pdf/hotnets02-predrout.pdf},
+  pagetotal    = {6},
+  publisher    = {ACM},
+  year         = {2002},
+  month        = {oct},
+  address      = {Princeton, NJ, USA},
+  doi          = {10.1145/774763.774773}
+}
+
 
 @inproceedings{roscoe02:infos,
-  keywords = {workshop},
-  title = {{InfoSpect: Using a Logic Language for System Health
+  keywords     = {workshop},
+  title        = {{InfoSpect: Using a Logic Language for System Health
                   Monitoring in Distributed Systems}},
-  author = {Timothy Roscoe and Richard Mortier and Paul Jardetzky and
-                  Steven Hand},
-  booktitle = {Proceedings of the 2002 ACM SIGOPS European Workshop
+  author       = {Roscoe, Timothy and Mortier, Richard and Jardetzky, Paul and Hand, Steven},
+  booktitle    = {Proceedings of the 2002 ACM SIGOPS European Workshop
                   (SIGOPS-EW)},
-  year = 2002,
-  pagetotal = 7,
-  pages = {31--37},
-  month = sep,
-  address = {Saint-Emilion, France},
-  publisher = {ACM},
-  doi = {10.1145/1133373.1133379},
-  pdf = {pdf/sigopsew02-infospect.pdf}
+  year         = {2002},
+  pagetotal    = {7},
+  pages        = {31--37},
+  month        = {sep},
+  address      = {Saint-Emilion, France},
+  publisher    = {ACM},
+  doi          = {10.1145/1133373.1133379},
+  pdf          = {pdf/sigopsew02-infospect.pdf}
 }
 
+
 @inproceedings{stratford99:econom.approac.adapt.resour.manag,
-  keywords = {workshop},
-  author = {Neil Stratford and Richard Mortier},
-  title = {An Economic Approach to Adaptive Resource Management},
-  booktitle = {Proceedings of the Seventh USENIX Workshop on Hot Topics in
+  keywords     = {workshop},
+  author       = {Stratford, Neil and Mortier, Richard},
+  title        = {An Economic Approach to Adaptive Resource Management},
+  booktitle    = {Proceedings of the Seventh USENIX Workshop on Hot Topics in
                   Operating Systems (HotOS-VII)},
-  month = mar,
-  doi = {10.1109/HOTOS.1999.798391},
-  pagetotal = 6,
-  pdf = {pdf/hotos99-econos.pdf},
-  ps = {https://www.cl.cam.ac.uk/~rmm1002/publications/papers/hotos-ecos.ps.gz},
-  year = 1999,
-  pages = {142--147},
-  address = {Rio Rico, AZ, USA},
-  publisher = {USENIX}
+  month        = {mar},
+  doi          = {10.1109/HOTOS.1999.798391},
+  pagetotal    = {6},
+  pdf          = {pdf/hotos99-econos.pdf},
+  ps           = {https://www.cl.cam.ac.uk/~rmm1002/publications/papers/hotos-ecos.ps.gz},
+  year         = {1999},
+  pages        = {142--147},
+  address      = {Rio Rico, AZ, USA},
+  publisher    = {USENIX}
 }
 
